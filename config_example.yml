@@ -1,0 +1,6 @@
+:amazon:
+  :access_key:  ACCESS_KEY
+  :secret_key:  SECRET_KEY
+  :source_path: 'build'
+  :bucket_name: 'example.com'
+  :target_path: ''
