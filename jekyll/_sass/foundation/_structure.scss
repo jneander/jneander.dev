@@ -1,0 +1,55 @@
+/* Grid */
+
+.container {
+  @extend %clearfix;
+
+  margin: 1.5rem auto;
+  max-width: $content-width;
+  padding: 1rem 0;
+  position: relative;
+  width: 90%;
+
+  @media #{$medium} {
+    margin: 2rem auto;
+  }
+}
+
+.slim-container {
+  @extend .container;
+  max-width: $content-slim;
+}
+
+.column {
+  @media #{$medium} {
+    float: left;
+    margin-left: 4%;
+
+    &:first-child { margin-left: 0; }
+
+    &.half { width: 48%; }
+    &.one-third { width: 30.6%; }
+    &.two-thirds { width: 63.9%; }
+  }
+}
+
+.row {
+  @extend %clearfix;
+
+  &.border {
+    border-top: 1px solid $border-light;
+    padding-top: 2em;
+    margin-bottom: 2em;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.overhead-space {
+  margin: 5rem auto;
+}

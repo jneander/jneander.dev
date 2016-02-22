@@ -1,0 +1,83 @@
+html {
+  font-size: 100%;
+
+  @media #{$medium} {
+    font-size: 112%;
+  }
+}
+
+body {
+  font: $body-font;
+  font-style: normal;
+  color: $black;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 2.200rem;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.692rem;
+  margin-bottom: 0.630em;
+}
+
+h3 {
+  font-size: 1.300rem;
+  margin-bottom: 0.794em;
+}
+
+h4 {
+  font-size: 1.000rem;
+  margin-bottom: 1.0em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $header-font-family;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: $secondary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary-accent;
+    text-decoration: none;
+  }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clean-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.spacer {
+  color: $secondary-color;
+  margin: 0 0.5rem;
+}

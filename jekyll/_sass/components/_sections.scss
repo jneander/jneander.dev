@@ -1,0 +1,133 @@
+.identity {
+  .profile-image {
+    background-image: url("/images/profile.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    height: 186px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 186px;
+
+    .overlay {
+      background-color: $secondary-accent;
+      bottom: 0;
+      display: block;
+      left: 0;
+      opacity: 0.3;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 100;
+    }
+  }
+
+  .name {
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+
+    h4 {
+      font-weight: $regular;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .social-links {
+    font-size: 1.25rem;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+
+    a {
+      color: desaturate($secondary-accent, 50%);
+      padding: 0 0.25rem;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.writing-list-item {
+  border-bottom: 1px solid $light-gray;
+  padding: 1rem 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .title {
+    display: block;
+    font: $header-font;
+    font-size: 1.25em;
+    font-weight: $bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .date {
+    display: block;
+    font: $header-font;
+    font-size: 0.8em;
+    margin-bottom: 0.75rem;
+  }
+
+  .description {
+    margin: 0;
+  }
+}
+
+.role {
+  font-style: italic;
+}
+
+.download-link {
+  font-family: $header-font-family;
+  font-size: 1.0rem;
+  padding-top: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  .download-text {
+    display: inline-block;
+    line-height: 1.8rem;
+    padding-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .download-icon {
+    font-size: 1.8rem;
+  }
+}
+
+
+.work, .resume {
+  margin-bottom: 3rem;
+
+  h1 {
+    border-bottom: 1px solid $border-medium;
+    display: block;
+    padding-bottom: 0.25em;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    line-height: 1.15em;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5em;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  header {
+    margin-bottom: 1rem;
+
+    .date-range {
+      font: $header-font;
+    }
+  }
+}

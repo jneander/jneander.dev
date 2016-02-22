@@ -1,0 +1,25 @@
+.post {
+  header {
+    margin-bottom: 1rem;
+
+    .title {
+      line-height: 1em;
+    }
+
+    .publish-date {
+      font: $header-font;
+    }
+  }
+}
+
+#pagination {
+  @extend %clearfix;
+
+  #last {
+    float: left;
+  }
+
+  #next {
+    float: right;
+  }
+}

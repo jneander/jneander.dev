@@ -1,0 +1,47 @@
+.site-header {
+  background: $primary-color;
+  font-family: $header-font-family;
+  font-weight: $light;
+
+  .container {
+    margin: 0 auto;
+    max-width: $header-width;
+  }
+
+  .site-title {
+    color: $white;
+    display: inline-block;
+    font-weight: $regular;
+    margin: 0 0 1rem 0;
+
+    @media #{$medium} {
+      margin: 0;
+    }
+  }
+
+  a {
+    display: inline;
+    color: $primary-accent;
+    font-size: 0.9em;
+    margin: 0;
+    padding-bottom: 0.2em;
+
+    &:hover, &.current {
+      color: $white;
+    }
+  }
+
+  nav {
+    @media #{$medium} {
+      float: right;
+    }
+
+    a {
+      padding-right: 2em;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

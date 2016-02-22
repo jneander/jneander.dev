@@ -1,0 +1,14 @@
+html { box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  // // Temporary for structural design
+  // -webkit-filter: grayscale(100%);
+  // filter: grayscale(100%);
+
+  background: $light-gray;
+  color: $black;
+}

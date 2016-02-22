@@ -1,0 +1,16 @@
+---
+permalink: "/writing/"
+layout: slim
+group: writing
+title: "Writing"
+---
+
+{% for post in site.posts %}
+<div class="writing-list-item">
+  <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+  <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+  {% if post.description %}
+  <p class="description">{{ post.description }}</p>
+  {% endif %}
+</div>
+{% endfor %}

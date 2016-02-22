@@ -16,9 +16,9 @@ markdown:    kramdown
 source:      "./jekyll"
 destination: "./build"
 include:     ["_pages"]
-sections:    ["work", "writing", "resume"]
+sections:    ["writing", "resume"]
 
-permalink:   "/writing/:title"
+permalink:   "/writing/:title/"
 excerpt_separator: ""
 
 gems:
