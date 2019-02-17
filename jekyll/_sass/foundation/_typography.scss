@@ -48,11 +48,16 @@ p {
 
 a {
   color: $secondary-color;
-  text-decoration: none;
+
+  &:focus {
+    outline-color: $secondary-color;
+    outline-offset: 0.25rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
+  }
 
   &:hover {
     color: $secondary-accent;
-    text-decoration: none;
   }
 }
 

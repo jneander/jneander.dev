@@ -1,7 +1,11 @@
 require "jekyll"
 
+def config
+  Jekyll.configuration(options)
+end
+
 def options
-  @options ||= Jekyll.configuration(source: "jekyll")
+  @options ||= {port: 4000, source: "jekyll"}
 end
 
 def set_port(port)
@@ -14,12 +18,12 @@ end
 
 def build
   inform("\nBuilding the Jekyll site")
-  Jekyll::Commands::Build.process(options)
+  Jekyll::Commands::Build.process(config)
 end
 
 def serve
-  inform("\nServing the Jekyll site on port #{options[:port]}")
-  Jekyll::Commands::Serve.process(options)
+  inform("\nServing the Jekyll site")
+  Jekyll::Commands::Serve.process(config)
 end
 
 def build_and_serve

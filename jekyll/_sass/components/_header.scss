@@ -24,7 +24,11 @@
     color: $primary-accent;
     font-size: 0.9em;
     margin: 0;
-    padding-bottom: 0.2em;
+
+    &:focus {
+      outline-color: $primary-accent;
+      text-decoration: none;
+    }
 
     &:hover, &.current {
       color: $white;
@@ -36,12 +40,8 @@
       float: right;
     }
 
-    a {
-      padding-right: 2em;
-
-      &:last-child {
-        padding-right: 0;
-      }
+    a:not(:last-child) {
+      margin-inline-end: 2em;
     }
   }
 }

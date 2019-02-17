@@ -1,35 +1,18 @@
 .identity {
-  .profile-image {
-    background-image: url("/images/profile.jpg");
+  img.profile-image {
     background-size: cover;
     border-radius: 50%;
     height: 186px;
     margin: 0 auto;
-    overflow: hidden;
-    position: relative;
     width: 186px;
-
-    .overlay {
-      background-color: $secondary-accent;
-      bottom: 0;
-      display: block;
-      left: 0;
-      opacity: 0.3;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 100;
-    }
   }
 
   .name {
+    font-family: $header-font-family;
     margin-top: 1.5rem;
     text-transform: uppercase;
-
-    h4 {
-      font-weight: $regular;
-      margin-bottom: 0.25rem;
-    }
+    font-weight: $regular;
+    margin-bottom: 0.25rem;
   }
 
   .social-links {
@@ -38,9 +21,13 @@
     text-align: center;
 
     a {
-      color: desaturate($secondary-accent, 50%);
-      padding: 0 0.25rem;
+      align-items: center;
+      display: inline-flex;
+      height: 1.5rem;
+      justify-content: center;
+      margin: 0 0.25rem;
       text-decoration: none;
+      width: 1.5rem;
 
       &:hover {
         color: $secondary-color;

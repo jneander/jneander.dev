@@ -53,3 +53,18 @@
 .overhead-space {
   margin: 5rem auto;
 }
+
+.visually-hidden {
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 0.0625rem;
+  position: absolute;
+  top: 0px;
+  width: 0.0625rem;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  margin: -0.0625rem;
+  overflow: hidden;
+  padding: 0px;
+}

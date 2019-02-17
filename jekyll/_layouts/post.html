@@ -13,13 +13,13 @@ layout: full
   </article>
 
   <section id="pagination">
-    {% if page.previous %} 
-      <a id="last" href="{{ page.previous.url }}">< {{ page.previous.title }}</a> 
+    {% if page.previous %}
+      <a id="last" href="{{ page.previous.url }}">< {{ page.previous.title }}</a>
     {% else %}
       <a id="last">&nbsp;</a>
     {% endif %}
     {% if page.next %}
-      <a id="next" href="{{ page.next.url }}">{{ page.next.title }} ></a> 
+      <a id="next" href="{{ page.next.url }}">{{ page.next.title }} ></a>
     {% else %}
       <a id="next">&nbsp;</a>
     {% endif %}
