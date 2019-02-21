@@ -7,45 +7,55 @@ title: "Resume"
 
 <div class="download-link">
   <a href="https://docs.google.com/document/d/1SAU58e4Xm-hONomFHzZrFUEczRyqDfuB896gMhj-rkU/export?format=pdf">
-    PDF<span class="download-text">
+    PDF
+    <span class="download-text">
       <i class="fa fa-file-pdf-o download-icon"></i>
     </span>
   </a>
 </div>
 
 <section class="resume">
-  <h1>Experience</h1>
   <header>
-    <h2><a href="https://www.8thlight.com">8th Light</a> — Software Development Consultancy</h2>
-    <span class="date-range">June, 2012 ~ February, 2016</span>
+    <h1>Experience</h1>
   </header>
 
-  {% include _experience/blustor-gatekeeper.html %}
-  {% include _experience/ideo-ojai.html %}
-  {% include _experience/vushaper.html %}
-  {% include _experience/axus.html %}
-  {% include _experience/ncsa-recruitrms.html %}
-  {% include _experience/groupon-unified-tool.html %}
-  {% include _experience/groupon-sales-workbench.html %}
-  {% include _experience/groupon-voucher-inventory.html %}
-  {% include _experience/ideo-progenitor.html %}
-  {% include _experience/ncsa-clientrms.html %}
-  {% include _experience/groupon-aaa.html %}
-  {% include _experience/csgi.html %}
+  <section class="position">
+    <header>
+      <h2>
+        <a href="https://www.instructure.com">Instructure</a> ~ Educational Technology Company
+      </h2>
+    </header>
+
+    {% include experience/instructure/canvas-final-grade-override.html %}
+    {% include experience/instructure/canvas-amm.html %}
+    {% include experience/instructure/canvas-builds.html %}
+    {% include experience/instructure/canvas-new-gradebook.html %}
+    {% include experience/instructure/canvas-mgp.html %}
+    {% include experience/instructure/instui.html %}
+  </section>
+
+  <section class="position">
+    <header>
+      <h2>
+        <a href="https://www.8thlight.com">8th Light</a> ~ Software Development Consultancy
+      </h2>
+    </header>
+
+    {% include experience/8th_light/blustor-gatekeeper.html %}
+    {% include experience/8th_light/ideo-ojai.html %}
+    {% include experience/8th_light/vushaper.html %}
+    {% include experience/8th_light/axus.html %}
+    {% include experience/8th_light/ncsa-recruitrms.html %}
+    {% include experience/8th_light/groupon-unified-tool.html %}
+    {% include experience/8th_light/groupon-sales-workbench.html %}
+    {% include experience/8th_light/groupon-voucher-inventory.html %}
+    {% include experience/8th_light/ideo-progenitor.html %}
+    {% include experience/8th_light/ncsa-clientrms.html %}
+    {% include experience/8th_light/groupon-aaa.html %}
+    {% include experience/8th_light/csgi.html %}
+  </section>
 </section>
 
 <section class="resume">
-  <h1>Traits</h1>
-  <h2>Languages</h2>
-  <span class="spacer"><i class="fa fa-angle-right"></i></span>
-  <span>JavaScript, Java, Ruby, Clojure, C, Python, Go, Node.js</span>
-  <h2>SDKs</h2>
-  <span class="spacer"><i class="fa fa-angle-right"></i></span>
-  <span>Android, Neurotechnology, BluStor GateKeeper, Rails, Sinatra</span>
-  <h2>APIs</h2>
-  <span class="spacer"><i class="fa fa-angle-right"></i></span>
-  <span>Goodreads, Amazon (Product Advertising, S3), Plaid.io</span>
-  <h2>Practices</h2>
-  <span class="spacer"><i class="fa fa-angle-right"></i></span>
-  <span>TDD/BDD, Clean Code, Agile</span>
+  {% include overview.html %}
 </section>
