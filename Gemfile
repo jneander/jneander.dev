@@ -1,14 +1,14 @@
 source "https://rubygems.org"
 
-gem "aws-sdk", "~> 2.0.33"
-gem "jekyll", "~> 3.1.1"
-gem "jekyll-redirect-from", "~> 0.9.1"
+gem "aws-sdk", "~> 3.0.1"
+gem "jekyll", "~> 3.8.5"
+gem "jekyll-redirect-from", "~> 0.14.0"
 
 group :development do
-  gem "rake", "~> 10.4.2"
+  gem "rake", "~> 12.3.2"
 end
 
 group :test do
-  gem "rspec"
-  gem "webmock"
+  gem "rspec", "~> 3.8.0"
+  gem "webmock", "~> 3.5.1"
 end

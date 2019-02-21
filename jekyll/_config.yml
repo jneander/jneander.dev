@@ -19,7 +19,7 @@ sections:    ["writing", "resume"]
 permalink:   "/writing/:title/"
 excerpt_separator: ""
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 defaults:
