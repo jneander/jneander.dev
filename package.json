@@ -1,0 +1,17 @@
+{
+  "name": "jneander.com",
+  "version": "2.0.0",
+  "description": "The \"professional\" site of Jeremy Neander, software engineer",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jneander/jneander.com.git"
+  },
+  "author": "Jeremy Neander <jeremy.neander@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jneander/jneander.com/issues"
+  },
+  "homepage": "https://github.com/jneander/jneander.com#readme"
+}
