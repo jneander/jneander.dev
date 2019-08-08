@@ -785,6 +785,3 @@ DEPENDENCIES
   rake (~> 12.3.2)
   rspec (~> 3.8.0)
   webmock (~> 3.5.1)
-
-BUNDLED WITH
-   1.14.3
