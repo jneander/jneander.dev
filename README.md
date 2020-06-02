@@ -1,18 +1,5 @@
 # jneander.com
 
-## Configuration
-
-The `config.yml` file is required for all tasks. Use `config_example.yml` as a
-basis.
-
-* `:amazon`
-    * `:access_key` and `:secret_key` can be obtained through the Amazon AWS
-      site, or from those with access.
-    * `:source_path` is the local build path for Jekyll.
-    * `:bucket_name` is the Amazon S3 bucket name that will receive the files.
-    * `:target_path` is the optional directory in the bucket to which the files
-      will be uploaded.
-
 ## Writing
 
 ### Filenames
@@ -50,10 +37,10 @@ given browser page to load the updated content.
 
 ## Publishing
 
-To publish all content, use the `rake publish` task. This will run all specs in
-the project, rebuild all files, then upload them to the desired Amazon S3
-bucket. If any specs fail, or if the content does not successfully rebuild, the
-upload to Amazon will not begin.
+To publish all content, commit and push to GitHub. CI will run all specs in the
+project, rebuild all files, then serve them. If any specs fail, or if the
+content does not successfully rebuild, the new version of the site will not
+deploy.
 
 ## Commands
 
@@ -63,7 +50,6 @@ Task                            | Description
 `rake build:all`                | Build all posts for the Jekyll site
 `rake build:recent[limit]`      | Build the most recent :limit posts for the Jekyll site
 `rake build`                    | alias of 'build:all'
-`rake publish`                  | Run all specs, build all posts, then deploy to Amazon on success
 `rake serve:all[port]`          | Build all posts, then serve the Jekyll site (optional: :port)
 `rake serve:recent[limit,port]` | Build the most recent :limit posts, then serve the Jekyll site (optional: :port)
 `rake serve`                    | alias of 'serve:all'
