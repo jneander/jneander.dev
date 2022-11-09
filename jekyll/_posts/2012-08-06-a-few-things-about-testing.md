@@ -11,7 +11,7 @@ In my tests, I have found myself tending towards some bad habits. Namely, my tes
 *"A good design is independent design."*
 
 ###Helper Method or Prisoner Class
-As I was building a class to serve as a command line interface, my mentor noticed a small group of helper methods. Each was serving a purpose similar to the others, converting data from an unrelated class into an ascii-printed visual element. There were two problems with these methods. The first was that they were difficult to test. They had too much responsibility. The second was that they were fulfilling a purpose tangental to that of the class in which they resided.
+As I was building a class to serve as a command line interface, my mentor noticed a small group of helper methods. Each was serving a purpose similar to the others, converting data from an unrelated class into an ascii-printed visual element. There were two problems with these methods. The first was that they were difficult to test. They had too much responsibility. The second was that they were fulfilling a purpose tangential to that of the class in which they resided.
 
 It was expressed to me that this is an indication of a class trying to escape. The most apparent solution was to extract these methods into a new class responsible for converting data structures to visual ascii structures. To be more precise, the conversion was extracted to the new class. The display of these elements remained in the original command line interface class. This eased the testing, as the methods in the new class only had return values to test. It also slimmed down the original class file, both in size and in responsibility.
 
