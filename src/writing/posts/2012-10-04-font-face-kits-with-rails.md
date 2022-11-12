@@ -2,6 +2,7 @@
 title: Font-face Kits with Rails
 description: Using font-face kits with a Rails 3.2 project
 slug: font-face-kits-with-rails
+date: '2012-10-04'
 ---
 
 Sometimes, the standard fonts just aren't going to support the look and feel that a site needs.

@@ -2,6 +2,7 @@
 title: Kata Presentation Feedback
 description: Thinking about improvements for my kata and its presentation
 slug: kata-presentation-feedback
+date: '2012-07-20'
 ---
 
 Today, I performed my prime factors kata for Colin. I was nervous, despite my familiarity with the

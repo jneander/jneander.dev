@@ -2,6 +2,7 @@
 title: Assumptions
 description: A narrative about mistakes and the assumptions which led to them
 slug: assumptions
+date: '2012-09-13'
 ---
 
 **_"Assumption is the mother of all mistakes."_** <br /> - _Eugene Lewis Fordsworthe_

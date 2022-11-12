@@ -2,6 +2,7 @@
 title: Do Something So You Can Change It
 description: Helping to spur progress using the words of a famous theatre director
 slug: do-something-so-you-can-change-it
+date: '2012-08-28'
 ---
 
 While I haven't practiced this enough, there are times when a particular anecdote comes to mind to

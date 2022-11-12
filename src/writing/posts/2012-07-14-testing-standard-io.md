@@ -2,6 +2,7 @@
 title: Testing by Mocking Standard I/O
 description: Thoughts on thorough testing using mocks and the console
 slug: testing-standard-io
+date: '2012-07-14'
 ---
 
 My current assignment at 8th Light, a Ruby-based game of unbeatable Tic Tac Toe, depends on some

@@ -2,6 +2,7 @@
 title: Being Wrong and Thinking Right
 description: Thoughts on personal development and feedback
 slug: being-wrong-and-thinking-right
+date: '2012-07-26'
 ---
 
 _Nobody will have the right answer all of the time._

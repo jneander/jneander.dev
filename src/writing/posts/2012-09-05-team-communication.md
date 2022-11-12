@@ -2,6 +2,7 @@
 title: Team Communication
 description: Avoiding potential pitfalls by keeping a team informed
 slug: team-communication
+date: '2012-09-05'
 ---
 
 Mike Ebert summarized a major concern best in his post entitled

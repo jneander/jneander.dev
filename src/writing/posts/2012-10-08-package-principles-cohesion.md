@@ -2,6 +2,7 @@
 title: 'Package Principles: Cohesion'
 description: An introduction to the first three package principles
 slug: package-principles-cohesion
+date: '2012-10-08'
 ---
 
 The Package Principles are a way of organizing classes in larger systems to make them more organized

@@ -2,6 +2,7 @@
 title: Testing Execution Order
 description: Accounting for order-dependent expectations in unit tests
 slug: testing-execution-order
+date: '2012-08-07'
 ---
 
 I continue to work on tightening my tests and accounting for all behavior on which the success of my

@@ -2,6 +2,7 @@
 title: Quick and Dirty TDD
 description: Carrying game development ideas over into test-driven development
 slug: quick-and-dirty-tdd
+date: '2012-07-23'
 ---
 
 ### What is TDD?

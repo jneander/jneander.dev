@@ -2,6 +2,7 @@
 title: Mapping the Path Between Problem and Solution
 description: A process to help unscramble a problem and realize the solution
 slug: mapping-problem-and-solution
+date: '2012-08-19'
 ---
 
 As I'm working with new ideas and unfamiliar concepts, I occasionally find myself confronted with a

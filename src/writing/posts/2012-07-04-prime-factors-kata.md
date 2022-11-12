@@ -2,6 +2,7 @@
 title: Prime Factors Kata
 description: The rough first result of my first real assignment
 slug: prime-factors-kata
+date: '2012-07-04'
 ---
 
 The requirements are fairly straightforward. We should have a 'PrimeFactors' module with one method

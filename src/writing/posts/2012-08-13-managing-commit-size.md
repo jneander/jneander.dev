@@ -2,6 +2,7 @@
 title: Managing Commit Size
 description: Two git commands to aid committing individual ideas
 slug: managing-commit-size
+date: '2012-08-13'
 ---
 
 A minor challenge with using version control is maintaining appropriately-sized commits. I have been

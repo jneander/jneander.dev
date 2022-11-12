@@ -2,6 +2,7 @@
 title: Hash Breakage
 description: Discovering that Hashes work best with immutability
 slug: hash-breakage
+date: '2012-08-14'
 ---
 
 I was having issues with my Minimax cache and felt the need to debug using pry. While I was

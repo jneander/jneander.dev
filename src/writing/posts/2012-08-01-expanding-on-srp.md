@@ -2,6 +2,7 @@
 title: Expanding on the Single-Responsibility Principle
 description: Thoughts on applying SRP to methods as well as classes
 slug: expanding-on-srp
+date: '2012-08-01'
 ---
 
 Towards the end of last week, my coworker Ginny gave an informal talk about the SOLID Principles. I

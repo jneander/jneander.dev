@@ -17,8 +17,7 @@ async function loadPostFile(fileName: string): Promise<Post> {
   const content = await readFile(join(postsPath, fileName))
   const matter = grayMatter(content)
 
-  const date = fileName.slice(0, 10)
-  const {description, slug, title} = matter.data
+  const {date, description, slug, title} = matter.data
 
   const bundle = await bundleMDX({
     source: content.toString(),

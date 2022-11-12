@@ -2,6 +2,7 @@
 title: Being Humble
 description: Advice for contributing to a professional environment
 slug: being-humble
+date: '2012-09-09'
 ---
 
 There is an important aspect to being a professional that is necessary to learn, but difficult to
