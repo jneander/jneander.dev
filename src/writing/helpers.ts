@@ -3,11 +3,11 @@ import {dirname, join} from 'path'
 import {fileURLToPath} from 'url'
 
 import grayMatter from 'gray-matter'
+import {bundleMDX} from 'mdx-bundler'
 import rehypeHighlight from 'rehype-highlight'
 
 import type {YearMonthDayString} from '../utils'
 import type {Post} from './types'
-import {bundleMDX} from 'mdx-bundler'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
