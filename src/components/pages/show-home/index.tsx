@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import {LogoGithub, LogoLinkedin, LogoMastodon} from '../../icons'
 import {DefaultLayout} from '../../layouts'
 
 export function ShowHome() {
@@ -18,19 +19,19 @@ export function ShowHome() {
 
           <div className="social-links">
             <a href="https://github.com/jneander">
-              <i aria-hidden="true" className="fa fa-github"></i>
+              <LogoGithub className="social-link-icon" />
 
               <span className="visually-hidden">GitHub</span>
             </a>
 
             <a href="https://mastodon.social/@jneander" rel="me">
-              <i aria-hidden="true" className="fa fa-twitter"></i>
+              <LogoMastodon className="social-link-icon" />
 
               <span className="visually-hidden">Mastodon</span>
             </a>
 
             <a href="https://www.linkedin.com/in/jeremyneander">
-              <i aria-hidden="true" className="fa fa-linkedin-square"></i>
+              <LogoLinkedin className="social-link-icon" />
 
               <span className="visually-hidden">LinkedIn</span>
             </a>

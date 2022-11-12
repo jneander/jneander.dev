@@ -16,7 +16,7 @@
   }
 
   .social-links {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 0 auto 2rem auto;
     text-align: center;
 
@@ -35,6 +35,16 @@
       }
     }
   }
+
+  .social-link-icon {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+}
+
+.icon-pdf {
+  height: 1.75em;
+  width: 1.75em;
 }
 
 .writing-list-item {
@@ -87,6 +97,10 @@
   .download-icon {
     font-size: 1.8rem;
   }
+
+  & > a {
+    display: flex;
+  }
 }
 
 .work,
@@ -117,4 +131,26 @@
       font: $header-font;
     }
   }
+}
+
+.chevron::before {
+  --size: 0.4em;
+  --thickness: 0.0875em;
+  border-style: solid;
+  border-width: var(--thickness) var(--thickness) 0 0;
+  content: '';
+
+  display: inline-flex;
+  justify-items: start;
+
+  transform: rotate(45deg);
+
+  height: var(--size);
+  width: var(--size);
+
+  position: relative;
+  top: -0.125em;
+
+  margin-inline-start: 0.4em;
+  margin-inline-end: 0.5em;
 }

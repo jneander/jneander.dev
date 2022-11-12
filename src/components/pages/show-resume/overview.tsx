@@ -7,66 +7,48 @@ export function Overview() {
 
       <ul className="Overview__List">
         <li>
-          <span className="spacer">
-            <i className="fa fa-angle-right"></i>
-          </span>
+          <span className="chevron" />
           <a href="https://www.glassdoor.com">Glassdoor</a> ~ Company Reviews and Conversation
           <ul>
             <li>
-              <span className="spacer">
-                <i className="fa fa-angle-right"></i>
-              </span>
+              <span className="chevron" />
               Lead Software Engineer, November 2022–Present
             </li>
 
             <li>
-              <span className="spacer">
-                <i className="fa fa-angle-right"></i>
-              </span>
+              <span className="chevron" />
               Senior Front End Engineer, July 2020–November 2022
             </li>
           </ul>
         </li>
 
         <li>
-          <span className="spacer">
-            <i className="fa fa-angle-right"></i>
-          </span>
+          <span className="chevron" />
           <a href="https://www.instructure.com">Instructure</a> ~ Educational Technology Company
           <ul>
             <li>
-              <span className="spacer">
-                <i className="fa fa-angle-right"></i>
-              </span>
+              <span className="chevron" />
               Senior Software Engineer, August 2018–June 2020
             </li>
 
             <li>
-              <span className="spacer">
-                <i className="fa fa-angle-right"></i>
-              </span>
+              <span className="chevron" />
               Software Engineer, March 2016–August 2018
             </li>
           </ul>
         </li>
 
         <li>
-          <span className="spacer">
-            <i className="fa fa-angle-right"></i>
-          </span>
+          <span className="chevron" />
           <a href="https://www.8thlight.com">8th Light</a> ~ Software Development Consultancy
           <ul>
             <li>
-              <span className="spacer">
-                <i className="fa fa-angle-right"></i>
-              </span>
+              <span className="chevron" />
               Software Crafter, December 2012–February 2016
             </li>
 
             <li>
-              <span className="spacer">
-                <i className="fa fa-angle-right"></i>
-              </span>
+              <span className="chevron" />
               Software Apprentice, June 2012–December 2012
             </li>
           </ul>
@@ -74,9 +56,7 @@ export function Overview() {
       </ul>
 
       <h2>Languages</h2>
-      <span className="spacer">
-        <i className="fa fa-angle-right"></i>
-      </span>
+      <span className="chevron" />
       <ul className="comma-list">
         <li className="comma-list-item">JavaScript</li>
         <li className="comma-list-item">Node.js</li>
@@ -89,9 +69,7 @@ export function Overview() {
       </ul>
 
       <h2>Libraries, Frameworks, and SDKs</h2>
-      <span className="spacer">
-        <i className="fa fa-angle-right"></i>
-      </span>
+      <span className="chevron" />
       <ul className="comma-list">
         <li className="comma-list-item">React</li>
         <li className="comma-list-item">Webpack</li>
@@ -103,9 +81,7 @@ export function Overview() {
       </ul>
 
       <h2>APIs</h2>
-      <span className="spacer">
-        <i className="fa fa-angle-right"></i>
-      </span>
+      <span className="chevron" />
       <ul className="comma-list">
         <li className="comma-list-item">Goodreads</li>
         <li className="comma-list-item">Canvas LMS</li>
@@ -113,9 +89,7 @@ export function Overview() {
       </ul>
 
       <h2>Practices</h2>
-      <span className="spacer">
-        <i className="fa fa-angle-right"></i>
-      </span>
+      <span className="chevron" />
       <ul className="comma-list">
         <li className="comma-list-item">BDD/TDD</li>
         <li className="comma-list-item">Clean Code</li>
