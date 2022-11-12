@@ -1,11 +1,3 @@
-@mixin prefix-property($property, $value) {
-  -webkit-#{$property}: $value;
-  -moz-#{$property}: $value;
-  -ms-#{$property}: $value;
-  -o-#{$property}: $value;
-  #{$property}: $value;
-}
-
 /* Clearfix created by Nicolas Gallagher */
 @mixin clearfix {
   *zoom: 1;
@@ -19,10 +11,4 @@
   &:after {
     clear: both;
   }
-}
-
-@mixin ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
