@@ -1,3 +1,4 @@
+export * from './show-404'
 export * from './show-home'
 export * from './show-resume'
 export * from './show-writing'
