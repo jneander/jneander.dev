@@ -1,6 +1,7 @@
 ---
 title: Development Logs
 description: Detailed accounts of activities and decisions as a personal learning tool
+slug: development-logs
 ---
 
 As I have been learning the craft of software development, I have naturally had the occasional

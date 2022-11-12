@@ -1,6 +1,7 @@
 ---
 title: Assumptions
 description: A narrative about mistakes and the assumptions which led to them
+slug: assumptions
 ---
 
 **_"Assumption is the mother of all mistakes."_** <br /> - _Eugene Lewis Fordsworthe_

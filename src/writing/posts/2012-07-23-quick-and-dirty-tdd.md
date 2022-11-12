@@ -1,6 +1,7 @@
 ---
 title: Quick and Dirty TDD
 description: Carrying game development ideas over into test-driven development
+slug: quick-and-dirty-tdd
 ---
 
 ### What is TDD?

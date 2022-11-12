@@ -1,6 +1,7 @@
 ---
 title: == vs. eql vs. equals
 description: Thoughts on the subtle differences between these three similar operators
+slug: ==-vs-eql-vs-equals
 ---
 
 It was suggested to me that it is common for Ruby developers to default to _==_ when testing

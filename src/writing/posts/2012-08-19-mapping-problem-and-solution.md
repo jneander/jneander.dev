@@ -1,6 +1,7 @@
 ---
 title: Mapping the Path Between Problem and Solution
 description: A process to help unscramble a problem and realize the solution
+slug: mapping-problem-and-solution
 ---
 
 As I'm working with new ideas and unfamiliar concepts, I occasionally find myself confronted with a

@@ -1,6 +1,7 @@
 ---
 title: A Few More Things Learned About Testing
 description: Behavior over implementation; extracted classes; and wet assertions
+slug: a-few-things-about-testing
 ---
 
 ### Testing the Behavior, Not the Implementation

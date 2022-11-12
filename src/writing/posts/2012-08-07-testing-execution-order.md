@@ -1,6 +1,7 @@
 ---
 title: Testing Execution Order
 description: Accounting for order-dependent expectations in unit tests
+slug: testing-execution-order
 ---
 
 I continue to work on tightening my tests and accounting for all behavior on which the success of my

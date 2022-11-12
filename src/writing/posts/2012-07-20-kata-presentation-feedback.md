@@ -1,6 +1,7 @@
 ---
 title: Kata Presentation Feedback
 description: Thinking about improvements for my kata and its presentation
+slug: kata-presentation-feedback
 ---
 
 Today, I performed my prime factors kata for Colin. I was nervous, despite my familiarity with the

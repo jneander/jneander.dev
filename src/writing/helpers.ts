@@ -18,7 +18,7 @@ async function loadPostFile(fileName: string): Promise<Post> {
   const matter = grayMatter(content)
 
   const date = fileName.slice(0, 10)
-  const slug = fileName.slice(11).replace(/\.md$/, '')
+  const {description, slug, title} = matter.data
 
   const bundle = await bundleMDX({
     source: content.toString(),
@@ -38,8 +38,8 @@ async function loadPostFile(fileName: string): Promise<Post> {
   })
 
   return {
-    title: matter.data.title,
-    description: matter.data.description,
+    title,
+    description,
     publishedAt: date as YearMonthDayString,
     url: `/writing/${slug}`,
     slug,

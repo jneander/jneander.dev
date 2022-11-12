@@ -1,6 +1,7 @@
 ---
 title: Hash Breakage
 description: Discovering that Hashes work best with immutability
+slug: hash-breakage
 ---
 
 I was having issues with my Minimax cache and felt the need to debug using pry. While I was

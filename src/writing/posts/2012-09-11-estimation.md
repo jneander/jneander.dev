@@ -1,6 +1,7 @@
 ---
 title: Estimation
 description: Things to keep in mind when estimating project stories
+slug: estimation
 ---
 
 At 8th Light, we determine our commitments over the course of any given iteration by estimating how

@@ -1,6 +1,7 @@
 ---
 title: Bowling Game Kata in Clojure
 description: An approach to the bowling game kata using Clojure
+slug: bowling-game-kata-in-clojure
 ---
 
 To begin, we will set up our project directory. For testing, I prefer to use a library called

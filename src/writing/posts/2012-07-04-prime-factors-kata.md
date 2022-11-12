@@ -1,6 +1,7 @@
 ---
 title: Prime Factors Kata
 description: The rough first result of my first real assignment
+slug: prime-factors-kata
 ---
 
 The requirements are fairly straightforward. We should have a 'PrimeFactors' module with one method

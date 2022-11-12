@@ -1,6 +1,7 @@
 ---
 title: Do Something So You Can Change It
 description: Helping to spur progress using the words of a famous theatre director
+slug: do-something-so-you-can-change-it
 ---
 
 While I haven't practiced this enough, there are times when a particular anecdote comes to mind to

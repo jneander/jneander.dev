@@ -1,6 +1,7 @@
 ---
 title: do...while vs. braces
 description: Visual consistency with regard to code block delimiters
+slug: do-while-vs-braces
 ---
 
 Consistency in style is an important part of readable source. It can be jarring when reading one
