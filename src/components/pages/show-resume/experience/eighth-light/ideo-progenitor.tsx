@@ -1,0 +1,15 @@
+export function IdeoProgenitor() {
+  return (
+    <article>
+      <h3>
+        <span className="role">JavaScript Interface Engineer</span> : Automotive Dashboard Prototype
+      </h3>
+
+      <p>
+        Implemented automotive console UI using Qt. Integrated with CAN bus using both C and
+        Qt-JavaScript bindings. Deployed on-site with client team&quot;s prototype hardware
+        installed in the vehicle.
+      </p>
+    </article>
+  )
+}
