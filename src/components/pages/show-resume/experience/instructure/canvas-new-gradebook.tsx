@@ -11,7 +11,7 @@ export function CanvasNewGradebook() {
 
       <p>
         Each member of the team led milestones for subsets of new features. I was responsible for
-        enhancing teachers&quot; experiences with entering grades in the Gradebook. I established
+        enhancing teachers&#39; experiences with entering grades in the Gradebook. I established
         expertise on legacy tools and their maintenance. We worked together to improve practices for
         implementation-agnostic UI testing and code reviews. I also contributed thousands of
         additional specs to front and back end spec suites.
