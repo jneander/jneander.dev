@@ -1,43 +1,45 @@
+@use '../foundation/settings';
+
 .site-header {
-  background: $primary-color;
-  font-family: $header-font-family;
-  font-weight: $light;
+  background: settings.$primary-color;
+  font-family: settings.$header-font-family;
+  font-weight: settings.$light;
 
   .container {
     margin: 0 auto;
-    max-width: $header-width;
+    max-width: settings.$header-width;
   }
 
   .site-title {
-    color: $white;
+    color: settings.$white;
     display: inline-block;
-    font-weight: $regular;
+    font-weight: settings.$regular;
     margin: 0 0 1rem 0;
 
-    @media #{$medium} {
+    @media #{settings.$medium} {
       margin: 0;
     }
   }
 
   a {
     display: inline;
-    color: $primary-accent;
+    color: settings.$primary-accent;
     font-size: 0.9em;
     margin: 0;
 
     &:focus {
-      outline-color: $primary-accent;
+      outline-color: settings.$primary-accent;
       text-decoration: none;
     }
 
     &:hover,
     &.current {
-      color: $white;
+      color: settings.$white;
     }
   }
 
   nav {
-    @media #{$medium} {
+    @media #{settings.$medium} {
       float: right;
     }
 

@@ -7,7 +7,7 @@
 }
 
 /* Clearfix created by Nicolas Gallagher */
-%clearfix {
+@mixin clearfix {
   *zoom: 1;
 
   &:before,

@@ -1,15 +1,17 @@
+@use './settings';
+
 html {
   font-size: 100%;
 
-  @media #{$medium} {
+  @media #{settings.$medium} {
     font-size: 112%;
   }
 }
 
 body {
-  font: $body-font;
+  font: settings.$body-font;
   font-style: normal;
-  color: $black;
+  color: settings.$black;
   line-height: 1.5em;
 }
 
@@ -37,7 +39,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $header-font-family;
+  font-family: settings.$header-font-family;
   margin-top: 0;
 }
 
@@ -47,17 +49,17 @@ p {
 }
 
 a {
-  color: $secondary-color;
+  color: settings.$secondary-color;
 
   &:focus {
-    outline-color: $secondary-color;
+    outline-color: settings.$secondary-color;
     outline-offset: 0.25rem;
     outline-style: solid;
     outline-width: 0.125rem;
   }
 
   &:hover {
-    color: $secondary-accent;
+    color: settings.$secondary-accent;
   }
 }
 
@@ -83,6 +85,6 @@ a {
 }
 
 .spacer {
-  color: $secondary-color;
+  color: settings.$secondary-color;
   margin: 0 0.5rem;
 }

@@ -1,26 +1,29 @@
+@use './mixins';
+@use './settings';
+
 /* Grid */
 
 .container {
-  @extend %clearfix;
+  @include mixins.clearfix;
 
   margin: 1.5rem auto;
-  max-width: $content-width;
+  max-width: settings.$content-width;
   padding: 1rem 0;
   position: relative;
   width: 90%;
 
-  @media #{$medium} {
+  @media #{settings.$medium} {
     margin: 2rem auto;
   }
 }
 
 .slim-container {
   @extend .container;
-  max-width: $content-slim;
+  max-width: settings.$content-slim;
 }
 
 .column {
-  @media #{$medium} {
+  @media #{settings.$medium} {
     float: left;
     margin-left: 4%;
 
@@ -41,10 +44,10 @@
 }
 
 .row {
-  @extend %clearfix;
+  @include mixins.clearfix;
 
   &.border {
-    border-top: 1px solid $border-light;
+    border-top: 1px solid settings.$border-light;
     padding-top: 2em;
     margin-bottom: 2em;
 
