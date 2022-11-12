@@ -49,7 +49,7 @@ async function loadPostFile(fileName: string): Promise<Post> {
 
 export async function getAllPosts(): Promise<Post[]> {
   const fileNames = await readdir(postsPath)
-  const postFiles = fileNames.filter(fileName => fileName.endsWith('.md'))
+  const postFiles = fileNames.filter(fileName => fileName.endsWith('.mdx'))
 
   const posts: Post[] = []
 
