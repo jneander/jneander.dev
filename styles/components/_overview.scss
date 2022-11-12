@@ -1,7 +1,9 @@
 .Overview__List {
   padding-left: 0;
 
-  &, ul, li {
+  &,
+  ul,
+  li {
     list-style: none;
   }
 
@@ -20,10 +22,10 @@
   }
 
   .comma-list-item:after {
-    content: ", ";
+    content: ', ';
   }
 
   .comma-list-item:last-child:after {
-    content: "";
+    content: '';
   }
 }

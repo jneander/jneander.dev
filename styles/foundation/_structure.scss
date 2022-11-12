@@ -24,11 +24,19 @@
     float: left;
     margin-left: 4%;
 
-    &:first-child { margin-left: 0; }
+    &:first-child {
+      margin-left: 0;
+    }
 
-    &.half { width: 48%; }
-    &.one-third { width: 30.6%; }
-    &.two-thirds { width: 63.9%; }
+    &.half {
+      width: 48%;
+    }
+    &.one-third {
+      width: 30.6%;
+    }
+    &.two-thirds {
+      width: 63.9%;
+    }
   }
 }
 

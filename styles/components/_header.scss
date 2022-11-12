@@ -30,7 +30,8 @@
       text-decoration: none;
     }
 
-    &:hover, &.current {
+    &:hover,
+    &.current {
       color: $white;
     }
   }

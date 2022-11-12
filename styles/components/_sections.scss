@@ -71,7 +71,7 @@
 
 .download-link {
   font-family: $header-font-family;
-  font-size: 1.0rem;
+  font-size: 1rem;
   padding-top: 1rem;
   position: absolute;
   right: 0;
@@ -89,8 +89,8 @@
   }
 }
 
-
-.work, .resume {
+.work,
+.resume {
   margin-bottom: 3rem;
 
   h1 {

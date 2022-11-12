@@ -13,7 +13,7 @@ interface Params extends ParsedUrlQuery {
 export async function getStaticPaths() {
   const posts = await getAllPosts()
 
-  const paths = posts.map((post) => {
+  const paths = posts.map(post => {
     return {
       params: {slug: post.slug},
     }
@@ -29,7 +29,7 @@ export async function getStaticProps(
 
   const posts = await getAllPosts()
 
-  const postIndex = posts.findIndex((post) => post.slug === slug)
+  const postIndex = posts.findIndex(post => post.slug === slug)
 
   if (postIndex === -1) {
     return {

@@ -50,7 +50,7 @@ async function loadPostFile(fileName: string): Promise<Post> {
 
 export async function getAllPosts(): Promise<Post[]> {
   const fileNames = await readdir(postsPath)
-  const postFiles = fileNames.filter((fileName) => fileName.endsWith('.md'))
+  const postFiles = fileNames.filter(fileName => fileName.endsWith('.md'))
 
   const posts: Post[] = []
 
@@ -66,5 +66,5 @@ export async function getAllPosts(): Promise<Post[]> {
 export async function getPostBySlug(slug: string): Promise<Post | null> {
   const posts = await getAllPosts()
 
-  return posts.find((post) => post.slug === slug) || null
+  return posts.find(post => post.slug === slug) || null
 }

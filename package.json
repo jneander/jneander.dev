@@ -8,6 +8,8 @@
   "scripts": {
     "build:prod": "next build",
     "lint": "next lint",
+    "lint:prettier": "prettier --check .",
+    "lint:prettier:fix": "prettier --write .",
     "start:dev": "next dev",
     "start:prod": "next start"
   },
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "gray-matter": "^4.0.3",
+    "prettier": "^2.7.1",
     "react-markdown": "^8.0.3",
     "sass": "^1.56.1"
   }

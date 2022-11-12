@@ -3,7 +3,9 @@ title: == vs. eql vs. equals
 description: Thoughts on the subtle differences between these three similar operators
 ---
 
-It was suggested to me that it is common for Ruby developers to default to _==_ when testing comparisons in their spec tests. This seemed odd to me, but it merited a little research in any case.
+It was suggested to me that it is common for Ruby developers to default to _==_ when testing
+comparisons in their spec tests. This seemed odd to me, but it merited a little research in any
+case.
 
 The operators act as follows
 
@@ -35,4 +37,7 @@ In testing, the operators differ only visually
 
 As a rule of thumb: the longer the operator, the more restrictive the test it performs.
 
-It may be true that programmers tend to use the _==_ operator. For me, the information being compared - not personal style or preference - should be the deciding factor for the choice between one operator or another. After all, I want to be absolutely certain that my tests are passing for the right reasons.
+It may be true that programmers tend to use the _==_ operator. For me, the information being
+compared - not personal style or preference - should be the deciding factor for the choice between
+one operator or another. After all, I want to be absolutely certain that my tests are passing for
+the right reasons.

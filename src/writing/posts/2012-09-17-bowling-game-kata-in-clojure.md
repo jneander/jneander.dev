@@ -3,15 +3,20 @@ title: Bowling Game Kata in Clojure
 description: An approach to the bowling game kata using Clojure
 ---
 
-To begin, we will set up our project directory. For testing, I prefer to use a library called speclj, along with leiningen for project management. For information on how to use these tools, please refer to the [leiningen](https://github.com/technomancy/leiningen) and [speclj](http://speclj.com) project sites.
+To begin, we will set up our project directory. For testing, I prefer to use a library called
+speclj, along with leiningen for project management. For information on how to use these tools,
+please refer to the [leiningen](https://github.com/technomancy/leiningen) and
+[speclj](http://speclj.com) project sites.
 
-Use the following command in a directory of your choice to create a simple leiningen + speclj project.
+Use the following command in a directory of your choice to create a simple leiningen + speclj
+project.
 
 ```bash
 lein new speclj bowling-game
 ```
 
-This command will generate, among a few other things, a 'src' and 'spec' directory, each containing a clojure source file for our use.
+This command will generate, among a few other things, a 'src' and 'spec' directory, each containing
+a clojure source file for our use.
 
 ##### _src/bowling_game/core.clj_
 
@@ -31,17 +36,20 @@ This command will generate, among a few other things, a 'src' and 'spec' directo
     (should= 0 1)))
 ```
 
-In a separate terminal, navigate to the project directory we just created and run the following command.
+In a separate terminal, navigate to the project directory we just created and run the following
+command.
 
 ```bash
 lein spec -a
 ```
 
-This command executes a leiningen process which runs all tests in the spec directory of our project. The '-a' flag keeps it running, automatically re-running tests when file contents have changed.
+This command executes a leiningen process which runs all tests in the spec directory of our project.
+The '-a' flag keeps it running, automatically re-running tests when file contents have changed.
 
 ### Gutterballs
 
-The example test provided isn't very useful. We'll replace that with our own test. We shall test that a complete game of gutter balls results in a score of zero.
+The example test provided isn't very useful. We'll replace that with our own test. We shall test
+that a complete game of gutter balls results in a score of zero.
 
 ##### _spec/bowling_game/core_spec.clj_
 
@@ -51,7 +59,8 @@ The example test provided isn't very useful. We'll replace that with our own tes
     (should= 0 (score (repeat 0)))))
 ```
 
-Without a 'score' function in the source, this test will generate an error. We need to create this function.
+Without a 'score' function in the source, this test will generate an error. We need to create this
+function.
 
 ##### _src/bowling_game/core.clj_
 
@@ -59,7 +68,9 @@ Without a 'score' function in the source, this test will generate an error. We n
 (defn score [rolls] 0)
 ```
 
-In keeping with the practice of test-driven development, we write the minimum amount of code to make our tests pass. In this case, we expect that a "gutter game" in bowling will result in a score of zero. Without any other concerns, we explicitly return a value of zero.
+In keeping with the practice of test-driven development, we write the minimum amount of code to make
+our tests pass. In this case, we expect that a "gutter game" in bowling will result in a score of
+zero. Without any other concerns, we explicitly return a value of zero.
 
 ### One Pin Frames
 
@@ -72,7 +83,8 @@ For our next step, we will test that a game of one-pin rolls results in a score 
   (should= 20 (score (repeat 1))))
 ```
 
-Now, we have two sequences of rolls that both should yield a score equal to their sum. We can change our 'score' function to match that expectation.
+Now, we have two sequences of rolls that both should yield a score equal to their sum. We can change
+our 'score' function to match that expectation.
 
 ##### _src/bowling_game/core.clj_
 
@@ -81,7 +93,8 @@ Now, we have two sequences of rolls that both should yield a score equal to thei
   (reduce + (take 20 rolls)))
 ```
 
-The 'score' function now sums the first twenty values in the supplied sequences, yielding the appropriate values for both the gutter game and one-pin rolls game.
+The 'score' function now sums the first twenty values in the supplied sequences, yielding the
+appropriate values for both the gutter game and one-pin rolls game.
 
 No significant changes were made, leaving nothing to refactor.
 
@@ -96,7 +109,10 @@ The next step is to test a game with a spare.
   (should= 16 (score (concat [5 5 3] (repeat 0)))))
 ```
 
-Given that the first two rolls total ten pins, this spare should be scored as the sum of these two rolls plus the next roll for a total of thirteen. The score for the next frame is the roll of three plus the next roll of zero. The total so far is sixteen, which should also be the final score after all other rolls are zero.
+Given that the first two rolls total ten pins, this spare should be scored as the sum of these two
+rolls plus the next roll for a total of thirteen. The score for the next frame is the roll of three
+plus the next roll of zero. The total so far is sixteen, which should also be the final score after
+all other rolls are zero.
 
 This test relies on some logic in the 'score' function, so we must write that in.
 
@@ -114,11 +130,17 @@ This test relies on some logic in the 'score' function, so we must write that in
                  (take 10 (to-frames rolls)))))
 ```
 
-The function 'score' now retrieves a sequence of lists from the function 'to-frames'. Each of these inner lists represents a frame, holding the rolls that contribute to each frame's score. In addition to the two rolls of a frame, the next roll in the sequence is included if the sum of the first two rolls is ten, indicating a spare.
+The function 'score' now retrieves a sequence of lists from the function 'to-frames'. Each of these
+inner lists represents a frame, holding the rolls that contribute to each frame's score. In addition
+to the two rolls of a frame, the next roll in the sequence is included if the sum of the first two
+rolls is ten, indicating a spare.
 
-When receiving the lazy sequence from 'to-frames', function 'score' takes the first ten "frames" and maps them using the sum of their rolls. The resulting list is then reduced to a single sum as before.
+When receiving the lazy sequence from 'to-frames', function 'score' takes the first ten "frames" and
+maps them using the sum of their rolls. The resulting list is then reduced to a single sum as
+before.
 
-With our tests passing, it's time to consider refactoring the source. Without an explanation, it's difficult to follow what the algorithm is doing. Let's extract some helper functions.
+With our tests passing, it's time to consider refactoring the source. Without an explanation, it's
+difficult to follow what the algorithm is doing. Let's extract some helper functions.
 
 ##### _src/bowling_game/core.clj_
 
@@ -140,11 +162,15 @@ With our tests passing, it's time to consider refactoring the source. Without an
                  (take 10 (to-frames rolls)))))
 ```
 
-We have created two helper functions, 'spare?' and 'rest-rolls', to clarify what our 'to-frames' function is doing. Function 'spare?' evaluates the next two rolls in a sequence and compares their sum to a value of ten. True is returned if the sum qualifies as a spare, false otherwise.
+We have created two helper functions, 'spare?' and 'rest-rolls', to clarify what our 'to-frames'
+function is doing. Function 'spare?' evaluates the next two rolls in a sequence and compares their
+sum to a value of ten. True is returned if the sum qualifies as a spare, false otherwise.
 
-Function 'rest-rolls' removes the first two rolls from a sequence so that the sequence now begins with the first roll of the next frame.
+Function 'rest-rolls' removes the first two rolls from a sequence so that the sequence now begins
+with the first roll of the next frame.
 
-We're not done, yet. Our two original functions are still a little unclear. We can extract another pair of functions.
+We're not done, yet. Our two original functions are still a little unclear. We can extract another
+pair of functions.
 
 ##### _src/bowling_game/core.clj_
 
@@ -171,7 +197,10 @@ We're not done, yet. Our two original functions are still a little unclear. We c
   (sum (map sum (take 10 (to-frames rolls)))))
 ```
 
-Function 'sum' simply adds together the values in a sequence, rolls in this case, and returns that sum. Function 'rolls-for-frame' returns the first two rolls in the sequence, or the first three if the result of the first two is a spare. These are the rolls which contribute to a given frame's score.
+Function 'sum' simply adds together the values in a sequence, rolls in this case, and returns that
+sum. Function 'rolls-for-frame' returns the first two rolls in the sequence, or the first three if
+the result of the first two is a spare. These are the rolls which contribute to a given frame's
+score.
 
 ### Strikes
 
@@ -184,7 +213,8 @@ The next step is to write a test for scoring strikes.
   (should= 26 (score (concat [10 5 3] (repeat 0)))))
 ```
 
-A strike is scored by taking ten (the number of pins knocked down) plus the total of the next two rolls. We currently check for spares. We need to do the same for strikes.
+A strike is scored by taking ten (the number of pins knocked down) plus the total of the next two
+rolls. We currently check for spares. We need to do the same for strikes.
 
 ##### _src/bowling_game/core.clj_
 
@@ -213,7 +243,8 @@ A strike is scored by taking ten (the number of pins knocked down) plus the tota
   (sum (map sum (take 10 (to-frames rolls)))))
 ```
 
-With the tests passing, we have a chance to refactor again. There's some duplication we can eliminate by extracting another helper function.
+With the tests passing, we have a chance to refactor again. There's some duplication we can
+eliminate by extracting another helper function.
 
 ##### _src/bowling_game/core.clj_
 
@@ -245,11 +276,15 @@ With the tests passing, we have a chance to refactor again. There's some duplica
   (sum (map sum (take 10 (to-frames rolls)))))
 ```
 
-Function 'strike?' is very similar to function 'spare?'. They are both used when grouping rolls together in 'rolls-for-frame', since both a strike and a spare use three consecutive rolls in the sequence. Additionally, 'strike?' is used to determine whether the next frame begins with the next roll or the one after that.
+Function 'strike?' is very similar to function 'spare?'. They are both used when grouping rolls
+together in 'rolls-for-frame', since both a strike and a spare use three consecutive rolls in the
+sequence. Additionally, 'strike?' is used to determine whether the next frame begins with the next
+roll or the one after that.
 
 ### The Perfect Game
 
-There is one final test to write. This one will confirm that a perfect game (all strikes) evaluates with a score of three hundred.
+There is one final test to write. This one will confirm that a perfect game (all strikes) evaluates
+with a score of three hundred.
 
 ##### _spec/bowling_game/core_spec.clj_
 
@@ -258,7 +293,8 @@ There is one final test to write. This one will confirm that a perfect game (all
   (should= 300 (score (repeat 10)))))
 ```
 
-Without making any changes, all of our tests are passing. We now have a function to score a game of bowling.
+Without making any changes, all of our tests are passing. We now have a function to score a game of
+bowling.
 
 ### The Complete Source
 

@@ -29,7 +29,7 @@ export function ShowWritingIndex(props: ShowWritingIndexProps) {
         <p className="description">Musings on the path of an aspiring software developer</p>
       </div>
 
-      {posts.map((post) => {
+      {posts.map(post => {
         const date = formatDate(post.publishedAt)
 
         return (

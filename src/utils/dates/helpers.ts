@@ -7,7 +7,7 @@ export function formatDate(date: Date | YearMonthDayString): string {
   let day = 0
 
   if (typeof date === 'string') {
-    ;[year, month, day] = date.split('-').map((value) => Number.parseInt(value, 10))
+    ;[year, month, day] = date.split('-').map(value => Number.parseInt(value, 10))
   } else {
     day = date.getDate()
     year = date.getFullYear()
