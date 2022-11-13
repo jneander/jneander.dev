@@ -1,49 +1,5 @@
 @use '../foundation/settings';
 
-.identity {
-  img.profile-image {
-    background-size: cover;
-    border-radius: 50%;
-    height: 186px;
-    margin: 0 auto;
-    width: 186px;
-  }
-
-  .name {
-    font-family: settings.$header-font-family;
-    margin-top: 1.5rem;
-    text-transform: uppercase;
-    font-weight: settings.$regular;
-    margin-bottom: 0.25rem;
-  }
-
-  .social-links {
-    font-size: 1rem;
-    margin: 0 auto 2rem auto;
-    text-align: center;
-
-    a {
-      align-items: center;
-      display: inline-flex;
-      height: 1.5rem;
-      justify-content: center;
-      margin: 0 0.25rem;
-      text-decoration: none;
-      width: 1.5rem;
-
-      &:hover {
-        color: settings.$secondary-color;
-        text-decoration: none;
-      }
-    }
-  }
-
-  .social-link-icon {
-    height: 1.25rem;
-    width: 1.25rem;
-  }
-}
-
 .writing-list-item {
   border-bottom: 1px solid settings.$light-gray;
   padding: 1rem 0;
@@ -69,29 +25,5 @@
 
   .description {
     margin: 0;
-  }
-}
-
-.download-link {
-  font-family: settings.$header-font-family;
-  font-size: 1rem;
-  padding-top: 1rem;
-  position: absolute;
-  right: 0;
-  top: 0;
-
-  .download-text {
-    display: inline-block;
-    line-height: 1.8rem;
-    padding-left: 0.5rem;
-    vertical-align: middle;
-  }
-
-  .download-icon {
-    font-size: 1.8rem;
-  }
-
-  & > a {
-    display: flex;
   }
 }

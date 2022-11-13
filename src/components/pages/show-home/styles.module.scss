@@ -1,0 +1,43 @@
+@use '../../../../styles/foundation/settings';
+
+.Avatar {
+  background-size: cover;
+  border-radius: 50%;
+  height: 186px;
+  margin: 0 auto;
+  width: 186px;
+}
+
+.Name {
+  font-family: settings.$header-font-family;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  font-weight: settings.$regular;
+  margin-bottom: 0.25rem;
+}
+
+.SocialLinkList {
+  font-size: 1rem;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+.SocialLink {
+  align-items: center;
+  display: inline-flex;
+  height: 1.5rem;
+  justify-content: center;
+  margin: 0 0.25rem;
+  text-decoration: none;
+  width: 1.5rem;
+
+  &:hover {
+    color: settings.$secondary-color;
+    text-decoration: none;
+  }
+}
+
+.SocialLinkIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
