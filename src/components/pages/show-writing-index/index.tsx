@@ -4,6 +4,8 @@ import type {Post} from '../../../writing'
 import {SlimLayout} from '../../layouts'
 import {ExternalLink, InternalLink} from '../../links'
 
+import styles from './styles.module.scss'
+
 export interface ShowWritingIndexProps {
   posts: Post[]
 }
@@ -17,30 +19,30 @@ export function ShowWritingIndex(props: ShowWritingIndexProps) {
     <SlimLayout pageGroup={PageGroup.WRITING}>
       <h1 className="visually-hidden">Blog Posts</h1>
 
-      <div className="writing-list-item">
-        <div className="title">
+      <div className={styles.WritingListItem}>
+        <div className={styles.Title}>
           <ExternalLink href="https://8thlight.com/insights/an-apprentices-community">
             {"An Apprentice's Community"}
           </ExternalLink>
         </div>
 
-        <span className="date">January 21, 2013</span>
+        <span className={styles.Date}>January 21, 2013</span>
 
-        <p className="description">Musings on the path of an aspiring software developer</p>
+        <p className={styles.Description}>Musings on the path of an aspiring software developer</p>
       </div>
 
       {posts.map(post => {
         const date = formatDate(post.publishedAt)
 
         return (
-          <div className="writing-list-item" key={post.url}>
-            <div className="title">
+          <div className={styles.WritingListItem} key={post.url}>
+            <div className={styles.Title}>
               <InternalLink href={post.url}>{post.title}</InternalLink>
             </div>
 
-            <span className="date">{date}</span>
+            <span className={styles.Date}>{date}</span>
 
-            {post.description != null && <p className="description">{post.description}</p>}
+            {post.description != null && <p className={styles.Description}>{post.description}</p>}
           </div>
         )
       })}
