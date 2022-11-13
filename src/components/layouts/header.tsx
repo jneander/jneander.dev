@@ -1,6 +1,5 @@
-import Link from 'next/link'
-
 import {PageGroup} from '../../constants'
+import {InternalLink} from '../links'
 
 export interface HeaderProps {
   noName?: boolean
@@ -14,25 +13,25 @@ export function Header(props: HeaderProps) {
     <header className="site-header">
       <div className="container">
         {noName !== true && (
-          <Link className="site-title" href="/">
+          <InternalLink className="site-title" href="/">
             Jeremy Neander
-          </Link>
+          </InternalLink>
         )}
 
         <nav>
-          <Link
+          <InternalLink
             className={`section ${pageGroup === PageGroup.WRITING ? 'current' : ''}`}
             href="/writing"
           >
             Writing
-          </Link>
+          </InternalLink>
 
-          <Link
+          <InternalLink
             className={`section ${pageGroup === PageGroup.RESUME ? 'current' : ''}`}
             href="/resume"
           >
             Resume
-          </Link>
+          </InternalLink>
         </nav>
       </div>
     </header>
