@@ -1,6 +1,17 @@
 @use './mixins';
 @use './settings';
 
+:root {
+  --spacing-xxs-px: 4px;
+  --spacing-xs-px: 8px;
+  --spacing-s-px: 12px;
+  --spacing-m-px: 16px;
+  --spacing-l-px: 24px;
+  --spacing-xl-px: 32px;
+  --spacing-xxl-px: 48px;
+  --spacing-xxxl-px: 64px;
+}
+
 /* Grid */
 
 .container {

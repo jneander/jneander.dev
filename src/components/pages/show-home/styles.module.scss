@@ -1,35 +1,57 @@
 @use '../../../../styles/foundation/settings';
 
+.Main {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: var(--spacing-xxl-px) auto;
+  width: 90%;
+  gap: var(--spacing-xl-px);
+
+  @media (settings.$medium) {
+    grid-template-columns: 1fr 2fr;
+    max-width: 1050px;
+  }
+}
+
+.Identity {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .Avatar {
+  --size: 186px;
+
+  order: -1; // Avatar is visually first, but ordered after the heading.
   background-size: cover;
   border-radius: 50%;
-  height: 186px;
+  height: var(--size);
   margin: 0 auto;
-  width: 186px;
+  width: var(--size);
 }
 
 .Name {
   font-family: settings.$header-font-family;
-  margin-top: 1.5rem;
+  font-size: 1.12rem;
+  margin-block-start: var(--spacing-l-px);
   text-transform: uppercase;
   font-weight: settings.$regular;
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--spacing-s-px);
 }
 
 .SocialLinkList {
   font-size: 1rem;
-  margin: 0 auto 2rem auto;
-  text-align: center;
 }
 
 .SocialLink {
-  align-items: center;
   display: inline-flex;
-  height: 1.5rem;
+  align-items: center;
   justify-content: center;
-  margin: 0 0.25rem;
-  text-decoration: none;
+
+  height: 1.5rem;
   width: 1.5rem;
+
+  margin-inline: var(--spacing-xxs-px);
 
   &:hover {
     color: settings.$secondary-color;
