@@ -6,6 +6,8 @@ import {Post} from '../../../writing'
 import {FullLayout} from '../../layouts'
 import {InternalLink} from '../../links'
 
+import styles from './styles.module.scss'
+
 export interface ShowWritingProps {
   post: Post
   nextPost: Post | null
@@ -31,33 +33,34 @@ export function ShowWriting(props: ShowWritingProps) {
 
   return (
     <FullLayout>
-      <div className="slim-container post">
-        <header>
-          <h1 className="title">{post.title}</h1>
-          <span className="publish-date">{formatDate(post.publishedAt)}</span>
+      <div className={`slim-container ${styles.Post}`}>
+        <header className={styles.Header}>
+          <h1 className={styles.Title}>{post.title}</h1>
+
+          <span className={styles.PublishDate}>{formatDate(post.publishedAt)}</span>
         </header>
 
         <article>
           <Component components={components} />
         </article>
 
-        <section id="pagination">
+        <section className={styles.Pagination}>
           {previousPost != null ? (
-            <InternalLink id="last" href={previousPost.url}>
+            <InternalLink className={styles.Previous} href={previousPost.url}>
               {'< '}
               {previousPost.title}
             </InternalLink>
           ) : (
-            <a id="last">&nbsp;</a>
+            <span className={styles.Previous} />
           )}
 
           {nextPost != null ? (
-            <InternalLink id="next" href={nextPost.url}>
+            <InternalLink className={styles.Next} href={nextPost.url}>
               {nextPost.title}
               {' >'}
             </InternalLink>
           ) : (
-            <a id="next">&nbsp;</a>
+            <span className={styles.Next} />
           )}
         </section>
       </div>

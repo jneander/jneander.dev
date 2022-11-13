@@ -1,0 +1,28 @@
+@use '../../../../styles/foundation/mixins';
+@use '../../../../styles/foundation/settings';
+
+.Post {
+  .Header {
+    margin-bottom: 1rem;
+
+    .Title {
+      line-height: 1em;
+    }
+
+    .PublishDate {
+      font: settings.$header-font;
+    }
+  }
+}
+
+.Pagination {
+  @include mixins.clearfix;
+
+  .Previous {
+    float: left;
+  }
+
+  .Next {
+    float: right;
+  }
+}
