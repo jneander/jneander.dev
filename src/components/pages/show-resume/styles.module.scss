@@ -1,0 +1,66 @@
+@use '../../../../styles/foundation/settings';
+
+.DownloadLink {
+  display: flex;
+  font-size: 1rem;
+  position: absolute;
+  display: inline-flex;
+  right: 0;
+  top: 1rem;
+}
+
+.IconPdf {
+  height: 1.75em;
+  width: 1.75em;
+}
+
+.ResumeSection {
+  margin-bottom: 3rem;
+
+  h1 {
+    border-bottom: 1px solid settings.$border-medium;
+    display: block;
+    padding-bottom: 0.25em;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    line-height: 1.15em;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5em;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+}
+
+.PositionHeader {
+  margin-bottom: 1rem;
+}
+
+.Role {
+  font-style: italic;
+}
+
+.Chevron::before {
+  --size: 0.4em;
+  --thickness: 0.0875em;
+  border-style: solid;
+  border-width: var(--thickness) var(--thickness) 0 0;
+  content: '';
+
+  display: inline-flex;
+  justify-items: start;
+
+  transform: rotate(45deg);
+
+  height: var(--size);
+  width: var(--size);
+
+  position: relative;
+  top: -0.125em;
+
+  margin-inline-start: 0.4em;
+  margin-inline-end: 0.5em;
+}

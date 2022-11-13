@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function InstUi() {
   return (
     <article>
       <h3>
-        <span className="role">React UI Engineer</span> :{' '}
+        <span className={styles.Role}>React UI Engineer</span> :{' '}
         <a href="https://instructure.design/">Instructure UI</a>, Open Source React UI Library
       </h3>
 

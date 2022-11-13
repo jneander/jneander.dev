@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function GrouponAaa() {
   return (
     <article>
       <h3>
-        <span className="role">Ruby Developer</span> : Group Coupon E-Commerce Platform
+        <span className={styles.Role}>Ruby Developer</span> : Group Coupon E-Commerce Platform
       </h3>
 
       <p>

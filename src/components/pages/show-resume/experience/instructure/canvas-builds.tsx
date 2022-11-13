@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function CanvasBuilds() {
   return (
     <article>
       <h3>
-        <span className="role">JavaScript & Rails Engineer</span> :{' '}
+        <span className={styles.Role}>JavaScript & Rails Engineer</span> :{' '}
         <a href="http://www.canvaslms.com">Canvas</a>, Build Tools
       </h3>
 

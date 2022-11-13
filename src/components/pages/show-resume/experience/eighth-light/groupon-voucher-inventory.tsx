@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function GrouponVoucherInventory() {
   return (
     <article>
       <h3>
-        <span className="role">Rails Engineer</span> : Group Coupon E-Commerce Platform
+        <span className={styles.Role}>Rails Engineer</span> : Group Coupon E-Commerce Platform
       </h3>
 
       <p>

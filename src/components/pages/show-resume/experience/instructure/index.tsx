@@ -5,10 +5,12 @@ import {CanvasMgp} from './canvas-mgp'
 import {CanvasNewGradebook} from './canvas-new-gradebook'
 import {InstUi} from './instui'
 
+import styles from '../../styles.module.scss'
+
 export function Instructure() {
   return (
-    <section className="position">
-      <header>
+    <section>
+      <header className={styles.PositionHeader}>
         <h2>
           <a href="https://www.instructure.com">Instructure</a> ~ Educational Technology Company
         </h2>

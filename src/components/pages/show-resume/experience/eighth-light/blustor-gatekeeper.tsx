@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function BlustorGatekeeper() {
   return (
     <article>
       <h3>
-        <span className="role">Lead Engineer</span> :{' '}
+        <span className={styles.Role}>Lead Engineer</span> :{' '}
         <a href="https://www.blustor.co">BluStor GateKeeper</a>, Biometrics-Secured Android SDK &
         Apps
       </h3>

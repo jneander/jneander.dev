@@ -1,9 +1,11 @@
+import styles from '../../styles.module.scss'
+
 export function IdeoOjai() {
   return (
     <article>
       <h3>
-        <span className="role">Lead Node.js & JavaScript Engineer</span> : Immersive Home Refresh
-        Product Experience
+        <span className={styles.Role}>Lead Node.js & JavaScript Engineer</span> : Immersive Home
+        Refresh Product Experience
       </h3>
 
       <p>

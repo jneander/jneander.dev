@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function Axus() {
   return (
     <article>
       <h3>
-        <span className="role">Full-Stack Web & Mobile Developer</span> :{' '}
+        <span className={styles.Role}>Full-Stack Web & Mobile Developer</span> :{' '}
         <a href="https://www.axustravelapp.com">AXUS</a>, Traveler Itinerary Curation Tool
       </h3>
 

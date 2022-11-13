@@ -11,10 +11,12 @@ import {NcsaClientRms} from './ncsa-client-rms'
 import {NcsaRecruitRms} from './ncsa-recruit-rms'
 import {Vushaper} from './vushaper'
 
+import styles from '../../styles.module.scss'
+
 export function EighthLight() {
   return (
-    <section className="position">
-      <header>
+    <section>
+      <header className={styles.PositionHeader}>
         <h2>
           <a href="https://www.8thlight.com">8th Light</a> ~ Software Development Consultancy
         </h2>

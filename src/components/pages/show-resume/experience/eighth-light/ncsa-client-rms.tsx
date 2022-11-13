@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function NcsaClientRms() {
   return (
     <article>
       <h3>
-        <span className="role">Rails Developer</span> : College Athletics Recruiting Platform
+        <span className={styles.Role}>Rails Developer</span> : College Athletics Recruiting Platform
       </h3>
 
       <p>

@@ -1,8 +1,11 @@
+import styles from '../../styles.module.scss'
+
 export function Csgi() {
   return (
     <article>
       <h3>
-        <span className="role">Android Developer</span> : White-Label Video on Demand Platform
+        <span className={styles.Role}>Android Developer</span> : White-Label Video on Demand
+        Platform
       </h3>
 
       <p>

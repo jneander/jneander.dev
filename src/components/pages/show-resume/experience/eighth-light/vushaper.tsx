@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function Vushaper() {
   return (
     <article>
       <h3>
-        <span className="role">Full-Stack Clojure & ClojureScript Developer</span> :{' '}
+        <span className={styles.Role}>Full-Stack Clojure & ClojureScript Developer</span> :{' '}
         <a href="http://www.vushaper.com">VuShaper</a>, Dynamic Video Streaming Platform
       </h3>
 

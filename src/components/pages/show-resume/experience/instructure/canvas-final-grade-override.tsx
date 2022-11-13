@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function CanvasFinalGradeOverride() {
   return (
     <article>
       <h3>
-        <span className="role">React UI Engineer</span> :{' '}
+        <span className={styles.Role}>React UI Engineer</span> :{' '}
         <a href="http://www.canvaslms.com">Canvas</a>,{' '}
         <a href="https://community.canvaslms.com/docs/DOC-16298-735531045366">
           Final Grade Override

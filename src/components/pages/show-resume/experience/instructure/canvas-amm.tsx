@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function CanvasAmm() {
   return (
     <article>
       <h3>
-        <span className="role">React UI & Rails Engineer</span> :{' '}
+        <span className={styles.Role}>React UI & Rails Engineer</span> :{' '}
         <a href="http://www.canvaslms.com">Canvas</a>,{' '}
         <a href="https://community.canvaslms.com/docs/DOC-14924-canvas-release-anonymous-moderated-grading">
           Anonymous Moderated Marking

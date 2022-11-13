@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function GrouponSalesWorkbench() {
   return (
     <article>
       <h3>
-        <span className="role">Full-Stack Node.js & JavaScript Engineer</span> : Group Coupon
+        <span className={styles.Role}>Full-Stack Node.js & JavaScript Engineer</span> : Group Coupon
         E-Commerce Platform
       </h3>
 

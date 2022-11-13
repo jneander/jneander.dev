@@ -1,8 +1,11 @@
+import styles from '../../styles.module.scss'
+
 export function NcsaRecruitRms() {
   return (
     <article>
       <h3>
-        <span className="role">Lead Android Developer</span> : College Athletics Recruiting Platform
+        <span className={styles.Role}>Lead Android Developer</span> : College Athletics Recruiting
+        Platform
       </h3>
 
       <p>

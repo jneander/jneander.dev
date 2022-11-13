@@ -1,8 +1,10 @@
+import styles from '../../styles.module.scss'
+
 export function CanvasMgp() {
   return (
     <article>
       <h3>
-        <span className="role">Full-Stack Web Engineer</span> :{' '}
+        <span className={styles.Role}>Full-Stack Web Engineer</span> :{' '}
         <a href="http://www.canvaslms.com">Canvas</a>,{' '}
         <a href="https://community.canvaslms.com/docs/DOC-10006-4152465815">
           Multiple Grading Periods
