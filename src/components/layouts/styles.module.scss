@@ -1,16 +1,16 @@
-@use '../foundation/settings';
+@use '../../../styles/foundation/settings';
 
-.site-header {
+.Header {
   background: settings.$primary-color;
   font-family: settings.$header-font-family;
   font-weight: settings.$light;
 
-  .container {
+  :global(.container) {
     margin: 0 auto;
     max-width: settings.$header-width;
   }
 
-  .site-title {
+  .SiteTitle {
     color: settings.$white;
     display: inline-block;
     font-weight: settings.$regular;
