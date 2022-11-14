@@ -44,25 +44,19 @@ export function ShowWriting(props: ShowWritingProps) {
           <Component components={components} />
         </article>
 
-        <section className={styles.Pagination}>
-          {previousPost != null ? (
+        <div className={styles.Pagination}>
+          {previousPost != null && (
             <InternalLink className={styles.Previous} href={previousPost.url}>
-              {'< '}
               {previousPost.title}
             </InternalLink>
-          ) : (
-            <span className={styles.Previous} />
           )}
 
-          {nextPost != null ? (
+          {nextPost != null && (
             <InternalLink className={styles.Next} href={nextPost.url}>
               {nextPost.title}
-              {' >'}
             </InternalLink>
-          ) : (
-            <span className={styles.Next} />
           )}
-        </section>
+        </div>
       </div>
     </FullLayout>
   )
