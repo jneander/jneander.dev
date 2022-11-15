@@ -15,7 +15,7 @@ export function Overview() {
 
       <CompanyList>
         <Company
-          description="Company Reviews and Conversation"
+          description="Company Reviews and Conversations"
           name="Glassdoor"
           url="https://www.glassdoor.com"
         >
@@ -25,7 +25,7 @@ export function Overview() {
         </Company>
 
         <Company
-          description="Educational Technology Company"
+          description="Education Technology Company"
           name="Instructure"
           url="https://www.instructure.com"
         >
