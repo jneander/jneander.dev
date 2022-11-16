@@ -1,51 +1,47 @@
 @use '../../../../styles/foundation/settings';
 
-.DownloadLink {
+.Header {
+  border-block-end: 1px solid settings.$border-medium;
+  margin-block-end: var(--spacing-xl-px);
   display: flex;
-  font-size: 1rem;
-  position: absolute;
+  justify-content: space-between;
+  align-items: baseline;
+
+  h1 {
+    padding-block-end: var(--spacing-xs-rem);
+    margin: 0;
+  }
+}
+
+.DownloadLink {
   display: inline-flex;
-  right: 0;
-  top: 1rem;
 }
 
 .IconPdf {
-  height: 1.75em;
-  width: 1.75em;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 .ResumeSection {
-  margin-bottom: 3rem;
+  margin-block-end: var(--spacing-xxl-px);
 
-  h1 {
-    border-bottom: 1px solid settings.$border-medium;
-    display: block;
-    padding-bottom: 0.25em;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-    line-height: 1.15em;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5em;
-  }
-
-  h3 {
-    font-size: 1.15rem;
+  & > *:not(:first-child) {
+    margin-block-start: var(--spacing-m-px);
   }
 }
 
-.PositionHeader {
-  margin-bottom: 1rem;
+.ResumeSectionHeading {
+  margin-block-end: var(--spacing-l-px);
 }
 
-.Role {
-  font-style: italic;
+.ResumeSubsectionHeading {
+  margin-block-end: var(--spacing-s-px);
 }
 
 .Chevron::before {
   --size: 0.4em;
   --thickness: 0.0875em;
+
   border-style: solid;
   border-width: var(--thickness) var(--thickness) 0 0;
   content: '';

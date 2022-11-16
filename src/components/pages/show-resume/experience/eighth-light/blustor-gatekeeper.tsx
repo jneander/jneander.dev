@@ -1,13 +1,12 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function BlustorGatekeeper() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Lead Engineer</span> :{' '}
+      <RoleHeading role="Lead Engineer">
         <a href="https://www.blustor.co">BluStor GateKeeper</a>, Biometrics-Secured Android SDK &
         Apps
-      </h3>
+      </RoleHeading>
 
       <p>
         Created an Android-based SDK and app for bluetooth communication with a biometrics-secured

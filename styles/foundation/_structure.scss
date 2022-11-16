@@ -3,13 +3,36 @@
 
 :root {
   --spacing-xxs-px: 4px;
+  --spacing-xxs-em: 0.25em;
+  --spacing-xxs-rem: 0.25rem;
+
   --spacing-xs-px: 8px;
+  --spacing-xs-em: 0.5em;
+  --spacing-xs-rem: 0.5rem;
+
   --spacing-s-px: 12px;
+  --spacing-s-em: 0.75em;
+  --spacing-s-rem: 0.75rem;
+
   --spacing-m-px: 16px;
+  --spacing-m-em: 1em;
+  --spacing-m-rem: 1rem;
+
   --spacing-l-px: 24px;
+  --spacing-l-em: 1.5em;
+  --spacing-l-rem: 1.5rem;
+
   --spacing-xl-px: 32px;
+  --spacing-xl-em: 2em;
+  --spacing-xl-rem: 2rem;
+
   --spacing-xxl-px: 48px;
+  --spacing-xxl-em: 3em;
+  --spacing-xxl-rem: 3rem;
+
   --spacing-xxxl-px: 64px;
+  --spacing-xxxl-em: 4em;
+  --spacing-xxxl-rem: 4rem;
 }
 
 /* Grid */

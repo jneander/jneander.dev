@@ -1,12 +1,9 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function NcsaRecruitRms() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Lead Android Developer</span> : College Athletics Recruiting
-        Platform
-      </h3>
+      <RoleHeading role="Lead Android Developer">College Athletics Recruiting Platform</RoleHeading>
 
       <p>
         Developed Android counterpart to existing iOS app. Integrated with internal API for

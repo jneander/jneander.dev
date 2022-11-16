@@ -1,11 +1,9 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function NcsaClientRms() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Rails Developer</span> : College Athletics Recruiting Platform
-      </h3>
+      <RoleHeading role="Rails Developer">College Athletics Recruiting Platform</RoleHeading>
 
       <p>
         Extracted business behavior from legacy Java application into Ruby application. Extended

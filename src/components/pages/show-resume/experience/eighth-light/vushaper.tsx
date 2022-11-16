@@ -1,12 +1,11 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function Vushaper() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Full-Stack Clojure & ClojureScript Developer</span> :{' '}
+      <RoleHeading role="Full-Stack Clojure & ClojureScript Developer">
         <a href="http://www.vushaper.com">VuShaper</a>, Dynamic Video Streaming Platform
-      </h3>
+      </RoleHeading>
 
       <p>
         Developed dynamic video streaming platform with configurable viewer prompts. Created a rules

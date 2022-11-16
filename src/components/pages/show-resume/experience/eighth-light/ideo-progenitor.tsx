@@ -1,12 +1,9 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function IdeoProgenitor() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>JavaScript Interface Engineer</span> : Automotive Dashboard
-        Prototype
-      </h3>
+      <RoleHeading role="JavaScript Interface Engineer">Automotive Dashboard Prototype</RoleHeading>
 
       <p>
         Implemented automotive console UI using Qt. Integrated with CAN bus using both C and

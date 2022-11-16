@@ -1,3 +1,4 @@
+import {CompanyHeading} from '../shared'
 import {Axus} from './axus'
 import {BlustorGatekeeper} from './blustor-gatekeeper'
 import {Csgi} from './csgi'
@@ -11,16 +12,15 @@ import {NcsaClientRms} from './ncsa-client-rms'
 import {NcsaRecruitRms} from './ncsa-recruit-rms'
 import {Vushaper} from './vushaper'
 
-import styles from '../../styles.module.scss'
-
 export function EighthLight() {
   return (
-    <section>
-      <header className={styles.PositionHeader}>
-        <h2>
-          <a href="https://www.8thlight.com">8th Light</a> ~ Software Development Consultancy
-        </h2>
-      </header>
+    <section aria-labelledby="8th-light">
+      <CompanyHeading
+        description="Software Development Consultancy"
+        headingId="8th-light"
+        name="8th Light"
+        url="https://www.8thlight.com"
+      />
 
       <BlustorGatekeeper />
       <IdeoOjai />

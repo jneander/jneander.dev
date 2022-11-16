@@ -1,12 +1,9 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function GrouponUnifiedTool() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Full-Stack Rails & JavaScript Engineer</span> : Group Coupon
-        E-Commerce Platform
-      </h3>
+      <RoleHeading role="Full-Stack Rails & JavaScript Engineer">Groupon</RoleHeading>
 
       <p>
         Developed Rails and Marionette.js single-page application to replace existing sales pipeline

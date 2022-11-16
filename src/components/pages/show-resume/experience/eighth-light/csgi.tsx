@@ -1,12 +1,9 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function Csgi() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Android Developer</span> : White-Label Video on Demand
-        Platform
-      </h3>
+      <RoleHeading role="Android Developer">White-Label Video on Demand Platform</RoleHeading>
 
       <p>
         Contributed to a widely-distributed Android SDK and associated apps with an emphasis on

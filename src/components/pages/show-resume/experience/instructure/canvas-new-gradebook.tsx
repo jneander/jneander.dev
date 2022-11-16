@@ -1,15 +1,14 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function CanvasNewGradebook() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>JavaScript & Rails Engineer</span> :{' '}
+      <RoleHeading role="JavaScript & Rails Engineer">
         <a href="http://www.canvaslms.com">Canvas</a>,{' '}
         <a href="https://community.canvaslms.com/docs/DOC-13333-canvas-release-new-gradebook">
           New Gradebook
         </a>
-      </h3>
+      </RoleHeading>
 
       <p>
         Each member of the team led milestones for subsets of new features. I was responsible for

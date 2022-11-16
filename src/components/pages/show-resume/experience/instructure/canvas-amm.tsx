@@ -1,15 +1,14 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function CanvasAmm() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>React UI & Rails Engineer</span> :{' '}
+      <RoleHeading role="React UI & Rails Engineer">
         <a href="http://www.canvaslms.com">Canvas</a>,{' '}
         <a href="https://community.canvaslms.com/docs/DOC-14924-canvas-release-anonymous-moderated-grading">
           Anonymous Moderated Marking
         </a>
-      </h3>
+      </RoleHeading>
 
       <p>
         The team was given large feature request with a short deadline. Retooled data associations

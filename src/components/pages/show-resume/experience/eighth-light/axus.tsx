@@ -1,12 +1,11 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function Axus() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Full-Stack Web & Mobile Developer</span> :{' '}
+      <RoleHeading role="Full-Stack Web & Mobile Developer">
         <a href="https://www.axustravelapp.com">AXUS</a>, Traveler Itinerary Curation Tool
-      </h3>
+      </RoleHeading>
 
       <p>
         Maintained and further developed Clojure-based web application and API. Integrated with

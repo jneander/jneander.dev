@@ -1,12 +1,11 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function CanvasBuilds() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>JavaScript & Rails Engineer</span> :{' '}
+      <RoleHeading role="JavaScript & Rails Engineer">
         <a href="http://www.canvaslms.com">Canvas</a>, Build Tools
-      </h3>
+      </RoleHeading>
 
       <p>
         My experiences across past client work and side projects provided tools and methods for

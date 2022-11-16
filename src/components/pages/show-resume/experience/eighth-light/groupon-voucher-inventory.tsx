@@ -1,11 +1,9 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function GrouponVoucherInventory() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Rails Engineer</span> : Group Coupon E-Commerce Platform
-      </h3>
+      <RoleHeading role="Rails Engineer">Groupon</RoleHeading>
 
       <p>
         Collaborated with developer team to scale an inventory system through service extraction.

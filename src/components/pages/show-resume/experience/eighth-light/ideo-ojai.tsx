@@ -1,12 +1,11 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function IdeoOjai() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Lead Node.js & JavaScript Engineer</span> : Immersive Home
-        Refresh Product Experience
-      </h3>
+      <RoleHeading role="Lead Node.js & JavaScript Engineer">
+        Immersive Home Refresh Product Experience
+      </RoleHeading>
 
       <p>
         Led development on a dynamic touch interface for a home improvement products catalog which

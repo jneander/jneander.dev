@@ -1,11 +1,9 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function GrouponAaa() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Ruby Developer</span> : Group Coupon E-Commerce Platform
-      </h3>
+      <RoleHeading role="Ruby Developer">Groupon</RoleHeading>
 
       <p>
         Implemented rules-based account automation for the sales team. Iteratively refined and

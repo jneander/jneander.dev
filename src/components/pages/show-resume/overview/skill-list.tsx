@@ -1,5 +1,7 @@
 import type {ReactNode} from 'react'
 
+import {ResumeSubsection} from '../resume-subsection'
+
 import overviewStyles from '../styles.module.scss'
 import styles from './styles.module.scss'
 
@@ -12,9 +14,7 @@ export function SkillList(props: SkillListProps) {
   const {skills, title} = props
 
   return (
-    <>
-      <h2>{title}</h2>
-
+    <ResumeSubsection headingChildren={title}>
       <span className={overviewStyles.Chevron} />
 
       <ul className={styles.SkillList}>
@@ -22,6 +22,6 @@ export function SkillList(props: SkillListProps) {
           <li key={skill}>{skill}</li>
         ))}
       </ul>
-    </>
+    </ResumeSubsection>
   )
 }

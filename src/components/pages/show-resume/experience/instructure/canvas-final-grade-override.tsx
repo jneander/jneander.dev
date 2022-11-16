@@ -1,15 +1,14 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function CanvasFinalGradeOverride() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>React UI Engineer</span> :{' '}
+      <RoleHeading role="React UI Engineer">
         <a href="http://www.canvaslms.com">Canvas</a>,{' '}
         <a href="https://community.canvaslms.com/docs/DOC-16298-735531045366">
           Final Grade Override
         </a>
-      </h3>
+      </RoleHeading>
 
       <p>
         We added a way for teachers to manually adjust calculated grades for students on the cusp of

@@ -1,15 +1,14 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function CanvasMgp() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Full-Stack Web Engineer</span> :{' '}
+      <RoleHeading role="Full-Stack Web Engineer">
         <a href="http://www.canvaslms.com">Canvas</a>,{' '}
         <a href="https://community.canvaslms.com/docs/DOC-10006-4152465815">
           Multiple Grading Periods
         </a>
-      </h3>
+      </RoleHeading>
 
       <p>
         We extended business logic to accommodate needs of institutions using multiple levels of

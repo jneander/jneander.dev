@@ -1,12 +1,9 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function GrouponSalesWorkbench() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>Full-Stack Node.js & JavaScript Engineer</span> : Group Coupon
-        E-Commerce Platform
-      </h3>
+      <RoleHeading role="Full-Stack Node.js & JavaScript Engineer">Groupon</RoleHeading>
 
       <p>
         Refactored legacy Node application in production. Harnessed untested code with test suite to

@@ -1,12 +1,11 @@
-import styles from '../../styles.module.scss'
+import {RoleHeading} from '../shared'
 
 export function InstUi() {
   return (
     <article>
-      <h3>
-        <span className={styles.Role}>React UI Engineer</span> :{' '}
+      <RoleHeading role="React UI Engineer">
         <a href="https://instructure.design/">Instructure UI</a>, Open Source React UI Library
-      </h3>
+      </RoleHeading>
 
       <p>
         Through use, feedback, discussions, and direct contributions, I helped the InstUI team
