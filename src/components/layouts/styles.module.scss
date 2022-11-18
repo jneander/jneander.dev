@@ -1,20 +1,28 @@
-@use '../../../styles/foundation/settings';
+@use '../../../styles/settings';
+@use '../../../styles/mixins';
+@use '../../../styles/layouts';
 
 .Header {
   background: settings.$primary-color;
   font-family: settings.$header-font-family;
   font-weight: settings.$light;
 
-  :global(.container) {
+  .HeaderContent {
     margin: 0 auto;
+    padding: var(--spacing-m-px) 0;
     max-width: settings.$header-width;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--spacing-m-px);
   }
 
   .SiteTitle {
     color: settings.$white;
     display: inline-block;
     font-weight: settings.$regular;
-    margin: 0 0 1rem 0;
 
     @media #{settings.$medium} {
       margin: 0;
@@ -27,7 +35,7 @@
     font-size: 0.9em;
     margin: 0;
 
-    &:focus {
+    @include mixins.focusVisible {
       outline-color: settings.$primary-accent;
       text-decoration: none;
     }
@@ -40,11 +48,28 @@
 
   nav {
     @media #{settings.$medium} {
-      float: right;
+      margin-inline-start: auto;
     }
 
     a:not(:last-child) {
-      margin-inline-end: 2em;
+      margin-inline-end: var(--spacing-xl-px);
     }
   }
+}
+
+.Container {
+  --container-inline-spacing: var(--spacing-xl-px);
+  --container-max-width: #{settings.$content-width};
+
+  margin: var(--container-inline-spacing) auto;
+  max-width: var(--container-max-width);
+  width: 90%;
+
+  @media #{settings.$medium} {
+    --container-inline-spacing: var(--spacing-xxxl-px);
+  }
+}
+
+.SlimContainer {
+  --container-max-width: var(--text-max-inline-size);
 }

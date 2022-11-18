@@ -33,16 +33,14 @@ export function ShowWriting(props: ShowWritingProps) {
 
   return (
     <FullLayout>
-      <div className={`slim-container ${styles.Post}`}>
+      <div className={styles.Post}>
         <header className={styles.Header}>
           <h1 className={styles.Title}>{post.title}</h1>
 
           <span className={styles.PublishDate}>{formatDate(post.publishedAt)}</span>
         </header>
 
-        <article>
-          <Component components={components} />
-        </article>
+        <Component components={components} />
 
         <div className={styles.Pagination}>
           {previousPost != null && (

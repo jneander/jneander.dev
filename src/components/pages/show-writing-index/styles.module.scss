@@ -1,11 +1,10 @@
-@use '../../../../styles/foundation/settings';
+@use '../../../../styles/settings';
 
 .WritingListItem {
-  border-bottom: 1px solid settings.$light-gray;
-  padding: 1rem 0;
-
-  &:last-child {
-    border-bottom: none;
+  &:not(:last-child) {
+    margin-block-end: var(--spacing-m-px);
+    padding-block-end: var(--spacing-m-px);
+    border-block-end: 1px solid settings.$light-gray;
   }
 
   .Title {
@@ -13,14 +12,14 @@
     font: settings.$header-font;
     font-size: 1.25em;
     font-weight: settings.$bold;
-    margin-bottom: 0.25rem;
+    margin-block-end: var(--spacing-xs-px);
   }
 
   .Date {
     display: block;
     font: settings.$header-font;
     font-size: 0.8em;
-    margin-bottom: 0.75rem;
+    margin-block-end: var(--spacing-s-px);
   }
 
   .Description {

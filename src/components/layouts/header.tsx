@@ -13,7 +13,7 @@ export function Header(props: HeaderProps) {
 
   return (
     <header className={styles.Header}>
-      <div className="container">
+      <div className={styles.HeaderContent}>
         {noName !== true && (
           <InternalLink className={styles.SiteTitle} href="/">
             Jeremy Neander

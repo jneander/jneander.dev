@@ -1,11 +1,21 @@
-@use '../../../../styles/foundation/settings';
+@use '../../../../styles/settings';
+@use '../../../../styles/layouts';
 
 .Post {
+  margin: var(--spacing-m-px) auto;
+  padding: var(--spacing-m-px) 0;
+  max-width: settings.$content-slim;
+  width: 90%;
+
+  @media #{settings.$medium} {
+    margin: var(--spacing-xxl-px) auto;
+  }
+
   .Header {
-    margin-bottom: 1rem;
+    margin-block-end: var(--spacing-m-px);
 
     .Title {
-      line-height: 1em;
+      // line-height: 1;
     }
 
     .PublishDate {

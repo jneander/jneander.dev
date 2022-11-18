@@ -2,6 +2,7 @@ import type {ComponentPropsWithoutRef} from 'react'
 
 import type {SvgProps} from '../../icons'
 import {ExternalLink} from '../../links'
+import {VisuallyHidden} from '../../utils'
 
 import styles from './styles.module.scss'
 
@@ -19,7 +20,7 @@ export function SocialLink(props: SocialLinkProps) {
     <ExternalLink {...anchorProps} className={styles.SocialLink}>
       <SvgIcon className={styles.SocialLinkIcon} />
 
-      <span className="visually-hidden">{name}</span>
+      <VisuallyHidden>{name}</VisuallyHidden>
     </ExternalLink>
   )
 }

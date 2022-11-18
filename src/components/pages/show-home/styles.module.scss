@@ -1,4 +1,4 @@
-@use '../../../../styles/foundation/settings';
+@use '../../../../styles/settings';
 
 .Main {
   display: grid;
@@ -36,7 +36,7 @@
   margin-block-start: var(--spacing-l-px);
   text-transform: uppercase;
   font-weight: settings.$regular;
-  margin-bottom: var(--spacing-s-px);
+  margin-block-end: var(--spacing-s-px);
 }
 
 .SocialLinkList {

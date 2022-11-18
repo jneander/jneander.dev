@@ -1,0 +1,11 @@
+@mixin focusVisible {
+  &:focus-visible {
+    @content;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @content;
+    }
+  }
+}

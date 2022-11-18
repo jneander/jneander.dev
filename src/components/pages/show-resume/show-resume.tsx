@@ -1,6 +1,7 @@
 import {PageGroup} from '../../../constants'
 import {IconPdf} from '../../icons'
 import {DefaultLayout} from '../../layouts'
+import {VisuallyHidden} from '../../utils'
 import {EighthLight, Instructure} from './experience'
 import {
   CompanyList,
@@ -26,7 +27,7 @@ export function ShowResume() {
         >
           <IconPdf className={styles.IconPdf} />
 
-          <span className="visually-hidden">Download PDF</span>
+          <VisuallyHidden>Download PDF</VisuallyHidden>
         </a>
       </header>
 
