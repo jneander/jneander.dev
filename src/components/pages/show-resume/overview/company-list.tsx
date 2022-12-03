@@ -6,9 +6,7 @@ import styles from './styles.module.scss'
 
 export function CompanyList() {
   return (
-    <ResumeSubsection>
-      <h3>Companies</h3>
-
+    <ResumeSubsection headingChildren="Companies">
       <ul className={styles.CompanyList}>
         <Company
           description="Company Reviews and Conversations"
