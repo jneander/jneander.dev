@@ -19,7 +19,7 @@ export function ShowHome() {
 
             <SocialLink
               SvgIcon={LogoMastodon}
-              href="https://uiuxdev.social/@jeremyneander"
+              href="https://masto.jln.io/@jeremy"
               name="Mastodon"
               rel="me"
             />
