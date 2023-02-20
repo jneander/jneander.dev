@@ -2,7 +2,7 @@ import {PageGroup} from '../../../constants'
 import {IconPdf} from '../../icons'
 import {DefaultLayout} from '../../layouts'
 import {VisuallyHidden} from '../../utils'
-import {EighthLight, Instructure} from './experience'
+import {EighthLight, Glassdoor, Instructure} from './experience'
 import {
   CompanyList,
   SkillList,
@@ -23,7 +23,7 @@ export function ShowResume() {
 
         <a
           className={styles.DownloadLink}
-          href="https://docs.google.com/document/d/1SAU58e4Xm-hONomFHzZrFUEczRyqDfuB896gMhj-rkU/export?format=pdf"
+          href="https://docs.google.com/document/d/1igfyrSsDog1jb26UwjJ2WkWqJiIiRQWtdeMpfMiNjF8/export?format=pdf"
         >
           <IconPdf className={styles.IconPdf} />
 
@@ -32,6 +32,8 @@ export function ShowResume() {
       </header>
 
       <ResumeSection headingChildren="Experience" headingId="experience">
+        <Glassdoor />
+
         <Instructure />
 
         <EighthLight />
