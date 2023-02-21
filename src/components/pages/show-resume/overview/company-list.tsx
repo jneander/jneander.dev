@@ -9,7 +9,7 @@ export function CompanyList() {
     <ResumeSubsection headingChildren="Companies">
       <ul className={styles.CompanyList}>
         <Company
-          description="Company Reviews and Conversations"
+          description="Employer Reviews and Conversations"
           name="Glassdoor"
           url="https://www.glassdoor.com"
         >
