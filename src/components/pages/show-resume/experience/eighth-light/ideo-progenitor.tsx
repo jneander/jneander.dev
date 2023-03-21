@@ -3,7 +3,9 @@ import {RoleHeading} from '../shared'
 export function IdeoProgenitor() {
   return (
     <article>
-      <RoleHeading role="JavaScript Interface Engineer">Automotive Dashboard Prototype</RoleHeading>
+      <RoleHeading role="Qt/JavaScript Interface Engineer">
+        Automotive Dashboard Prototype
+      </RoleHeading>
 
       <p>
         Implemented automotive console UI using Qt. Integrated with CAN bus using both C and

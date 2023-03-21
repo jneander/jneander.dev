@@ -21,11 +21,14 @@ export const librarySkills = [
   'InstUI',
 ]
 
-export const apiSkills = ['Goodreads', 'Canvas LMS', 'Amazon (Product Advertising, S3)']
+export const apiSkills = ['Notion', 'Goodreads']
 
 export const practiceSkills = [
-  'BDD/TDD',
+  'Accessibility',
+  'BDD/TDD Testing',
   'Design Systems',
+  'Large-scale Refactoring',
+  'API Design',
   'Mentoring',
   'Documentation',
   'Estimations',

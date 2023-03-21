@@ -3,14 +3,7 @@ import {IconPdf} from '../../icons'
 import {DefaultLayout} from '../../layouts'
 import {VisuallyHidden} from '../../utils'
 import {EighthLight, Glassdoor, Instructure} from './experience'
-import {
-  CompanyList,
-  SkillList,
-  apiSkills,
-  languageSkills,
-  librarySkills,
-  practiceSkills,
-} from './overview'
+import {CompanyList, SkillList, languageSkills, librarySkills, practiceSkills} from './overview'
 import {ResumeSection} from './resume-section'
 
 import styles from './styles.module.scss'
@@ -42,11 +35,9 @@ export function ShowResume() {
       <ResumeSection headingChildren="Overview" headingId="overview">
         <CompanyList />
 
-        <SkillList skills={languageSkills} title="Languages" />
+        <SkillList skills={languageSkills} title="Languages & Environments" />
 
         <SkillList skills={librarySkills} title="Libraries, Frameworks, and SDKs" />
-
-        <SkillList skills={apiSkills} title="APIs" />
 
         <SkillList skills={practiceSkills} title="Practices" />
       </ResumeSection>
