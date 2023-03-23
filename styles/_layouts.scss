@@ -1,8 +1,0 @@
-@use 'settings';
-
-@mixin container() {
-  margin-inline: auto;
-  max-width: settings.$content-width;
-  padding: var(--spacing-m-px) 0;
-  width: 90%;
-}

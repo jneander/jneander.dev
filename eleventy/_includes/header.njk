@@ -1,0 +1,14 @@
+<header class="SiteHeader">
+  <div class="HeaderContent">
+    {% if page.url != "/" %}
+      <a class="SiteTitle" href="/">Jeremy Neander</a>
+    {% endif %}
+
+    <nav>
+      {% set regExp = r/^\/writing\/?$/ %}
+      <a {% if regExp.test(page.url) %} aria-current="page"{% endif %} class="section" href="/writing">Writing</a>
+      {% set regExp = r/^\/resume\/?$/ %}
+      <a {% if regExp.test(page.url) %} aria-current="page"{% endif %} class="section" href="/resume">Resume</a>
+    </nav>
+  </div>
+</header>

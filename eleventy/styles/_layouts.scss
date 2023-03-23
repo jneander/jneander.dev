@@ -1,0 +1,75 @@
+@use 'mixins';
+@use 'settings';
+
+.SiteHeader {
+  background: settings.$primary-color;
+  font-family: settings.$header-font-family;
+  font-weight: settings.$light;
+
+  .HeaderContent {
+    margin: 0 auto;
+    padding: var(--spacing-m-px) 0;
+    max-width: settings.$header-width;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--spacing-m-px);
+  }
+
+  .SiteTitle {
+    color: settings.$white;
+    display: inline-block;
+    font-weight: settings.$regular;
+
+    @media #{settings.$medium} {
+      margin: 0;
+    }
+  }
+
+  a {
+    color: settings.$primary-accent;
+    font-size: 0.9em;
+    margin: 0;
+
+    @include mixins.focusVisible {
+      outline-color: settings.$primary-accent;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &.current {
+      color: settings.$white;
+    }
+  }
+
+  nav {
+    display: inline-flex;
+
+    @media #{settings.$medium} {
+      margin-inline-start: auto;
+    }
+
+    a:not(:last-child) {
+      margin-inline-end: var(--spacing-xl-px);
+    }
+  }
+}
+
+.LayoutContainer {
+  --container-inline-spacing: var(--spacing-xl-px);
+  --container-max-width: #{settings.$content-width};
+
+  margin: var(--container-inline-spacing) auto;
+  max-width: var(--container-max-width);
+  width: 90%;
+
+  @media #{settings.$medium} {
+    --container-inline-spacing: var(--spacing-xxxl-px);
+  }
+}
+
+.SlimLayoutContainer {
+  --container-max-width: var(--text-max-inline-size);
+}

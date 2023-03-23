@@ -1,38 +1,23 @@
 {
   "name": "jneander.dev",
-  "version": "3.0.0",
   "description": "The \"professional\" site of Jeremy Neander, software engineer",
   "private": true,
   "author": "Jeremy Neander <jeremy.neander@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "build:prod": "next build",
-    "lint": "next lint",
+    "build": "eleventy",
+    "dev": "eleventy --serve --quiet",
+    "lint:eslint": "eslint .",
+    "lint:eslint:fix": "eslint --fix .",
     "lint:prettier": "prettier --check .",
-    "lint:prettier:fix": "prettier --write .",
-    "start:dev": "next dev",
-    "start:prod": "next start"
-  },
-  "dependencies": {
-    "@svgr/webpack": "^6.5.1",
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.8",
-    "esbuild": "^0.14.54",
-    "eslint": "8.27.0",
-    "eslint-config-next": "13.0.2",
-    "mdx-bundler": "^9.0.1",
-    "next": "13.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "rehype-highlight": "^6.0.0",
-    "typescript": "4.8.4"
+    "lint:prettier:fix": "prettier --write ."
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "gray-matter": "^4.0.3",
-    "prettier": "^2.7.1",
-    "react-markdown": "^8.0.3",
-    "sass": "^1.56.1"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "eleventy-sass": "^2.2.1",
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.7",
+    "sass": "^1.60.0"
   }
 }
