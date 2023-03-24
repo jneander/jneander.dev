@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve --quiet",
+    "dev": "ELEVENTY_ENV=development eleventy --serve --quiet",
     "lint:eslint": "eslint .",
     "lint:eslint:fix": "eslint --fix .",
     "lint:prettier": "prettier --check .",
@@ -15,11 +15,17 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "@jneander/browserslist-config": "^1.0.0",
     "@jneander/prettier-config": "^1.0.0",
+    "autoprefixer": "^10.4.14",
     "eleventy-sass": "^2.2.1",
     "eslint": "^8.36.0",
+    "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "sass": "^1.60.0"
   },
+  "browserslist": [
+    "extends @jneander/browserslist-config"
+  ],
   "prettier": "@jneander/prettier-config"
 }
