@@ -5,14 +5,14 @@ slug: quick-and-dirty-tdd
 date: 2012-07-23
 ---
 
-### What is TDD?
+## What is TDD?
 
 TDD (Test-Driven Development) is the an approach to software development which allows for the
 production of clean and thoroughly-tested code. In practice, it reduces or altogether eliminates the
 waste and risk associated with debugging and breaking/repairing of code that goes along with other
 approaches.
 
-### The Three Phases
+## The Three Phases
 
 TDD consists of a repeated cycle of three linked steps:
 
@@ -26,7 +26,7 @@ Performing each step supplies the conditions needed for the following step. The 
 is a new element of code, be it a class, method, or other such component, which has a passing test
 confirming that all functionality performs as expected and/or required.
 
-### The Three Rules
+## The Three Rules
 
 In his [post](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd) on the subject, Uncle Bob
 discusses some of the many advantages to TDD. He focuses on outlining the three rules which give TDD
@@ -44,7 +44,7 @@ increasingly difficult to ensure that the design elements are solid and adaptabl
 requirements list grows between iterations. The design must support the process, or the process
 itself will grind to a halt. But that's a discussion for a future post.
 
-### Quick and Dirty Development
+## Quick and Dirty Development
 
 Having spent time developing games, I sense some familiarity with the ideas present in TDD. While
 not directly transposable to or from TDD, the design cycle of

@@ -54,7 +54,7 @@ We've changed the call order, but the tests still pass! If method #do_second is 
 effect #do_first, the behavior will have changed without our test warning us about it. If we would
 prefer to stick with this type of test, we need to account for the execution order requirement.
 
-### Ordered Method Expectations
+## Ordered Method Expectations
 
 As concisely illustrated in
 [this post](http://openmonkey.com/blog/2009/07/02/rspec-ordered-message-expectations/) by
@@ -73,7 +73,7 @@ obj.run
 Making this addition to the expectations in this test ensures that the methods are called in the
 correct order.
 
-### Other Thoughts
+## Other Thoughts
 
 There are many different ways to test the ideas implemented in code. Some are more effective than
 others. Though, there doesn't appear to be magic bullet that slims down tests while both increasing

@@ -5,7 +5,7 @@ slug: a-few-things-about-testing
 date: 2012-08-06
 ---
 
-### Testing the Behavior, Not the Implementation
+## Testing the Behavior, Not the Implementation
 
 A class and its tests, as with any two classes in an application, should follow a very simple
 guideline: they can know about each other and how to interact with each other, but should not know
@@ -20,7 +20,7 @@ their classes away from dependencies that build fragility into my test suite.
 
 _"A good design is independent design."_
 
-### Helper Method or Prisoner Class
+## Helper Method or Prisoner Class
 
 As I was building a class to serve as a command line interface, my mentor noticed a small group of
 helper methods. Each was serving a purpose similar to the others, converting data from an unrelated
@@ -35,7 +35,7 @@ display of these elements remained in the original command line interface class.
 testing, as the methods in the new class only had return values to test. It also slimmed down the
 original class file, both in size and in responsibility.
 
-### One Assertion Per Test?
+## One Assertion Per Test?
 
 I am a fan of thorough test coverage. However, testing can easily become overwhelming as the
 individual aspects of a method become more numerous, even when the responsibility of the method is

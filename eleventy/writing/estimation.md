@@ -17,7 +17,7 @@ have yet to settle into an approach which shows promise. Lately, I've been takin
 know can impact my efficiency. Each story being relatively unique, it's tough to find some common
 concerns between them.
 
-### Optimistic
+## Optimistic
 
 Given what I know needs to be done, and assuming there are no surprises, how long will the given
 story take to reach completion?
@@ -26,7 +26,7 @@ Unless I am extremely confident that I've accounted for all requirements in a st
 this estimate to be a rather unrealistic expectation. The chances that I'll hit this goal will be
 quite slim.
 
-### Realistic
+## Realistic
 
 Given the requirements, and accounting for past experience, what is the most likely duration for
 this story? How will this story likely play out? What sorts of problems have arisen in the past? How
@@ -37,7 +37,7 @@ loose approach to use after accounting for all other factors is to consider the 
 versus actual duration of previous stories. If I am repeatedly taking an extra point or two beyond
 my original estimate, then perhaps I should incorporate that into future estimates.
 
-### Pessimistic
+## Pessimistic
 
 What can possibly go wrong to add time to this story? This is the worst-case-scenario. This should
 be as unlikely to occur as absolutely everything going right.

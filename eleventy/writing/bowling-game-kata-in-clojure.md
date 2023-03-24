@@ -20,13 +20,13 @@ lein new speclj bowling-game
 This command will generate, among a few other things, a 'src' and 'spec' directory, each containing
 a clojure source file for our use.
 
-##### _src/bowling_game/core.clj_
+_src/bowling_game/core.clj_
 
 ```clojure
 (ns bowling-game.core)
 ```
 
-##### _spec/bowling_game/core_spec.clj_
+_spec/bowling_game/core_spec.clj_
 
 ```clojure
 (ns bowling-game.core-spec
@@ -48,12 +48,12 @@ lein spec -a
 This command executes a leiningen process which runs all tests in the spec directory of our project.
 The '-a' flag keeps it running, automatically re-running tests when file contents have changed.
 
-### Gutterballs
+## Gutterballs
 
 The example test provided isn't very useful. We'll replace that with our own test. We shall test
 that a complete game of gutter balls results in a score of zero.
 
-##### _spec/bowling_game/core_spec.clj_
+_spec/bowling_game/core_spec.clj_
 
 ```clojure
 (describe "score"
@@ -64,7 +64,7 @@ that a complete game of gutter balls results in a score of zero.
 Without a 'score' function in the source, this test will generate an error. We need to create this
 function.
 
-##### _src/bowling_game/core.clj_
+_src/bowling_game/core.clj_
 
 ```clojure
 (defn score [rolls] 0)
@@ -74,11 +74,11 @@ In keeping with the practice of test-driven development, we write the minimum am
 our tests pass. In this case, we expect that a "gutter game" in bowling will result in a score of
 zero. Without any other concerns, we explicitly return a value of zero.
 
-### One Pin Frames
+## One Pin Frames
 
 For our next step, we will test that a game of one-pin rolls results in a score of twenty.
 
-##### _spec/bowling_game/core_spec.clj_
+_spec/bowling_game/core_spec.clj_
 
 ```clojure
 (it "one-pin frames game results in a score of twenty"
@@ -88,7 +88,7 @@ For our next step, we will test that a game of one-pin rolls results in a score 
 Now, we have two sequences of rolls that both should yield a score equal to their sum. We can change
 our 'score' function to match that expectation.
 
-##### _src/bowling_game/core.clj_
+_src/bowling_game/core.clj_
 
 ```clojure
 (defn score [rolls]
@@ -100,11 +100,11 @@ appropriate values for both the gutter game and one-pin rolls game.
 
 No significant changes were made, leaving nothing to refactor.
 
-### Spares
+## Spares
 
 The next step is to test a game with a spare.
 
-##### _spec/bowling_game/core_spec.clj_
+_spec/bowling_game/core_spec.clj_
 
 ```clojure
 (it "spare frame adds next roll to score"
@@ -118,7 +118,7 @@ all other rolls are zero.
 
 This test relies on some logic in the 'score' function, so we must write that in.
 
-##### _src/bowling_game/core.clj_
+_src/bowling_game/core.clj_
 
 ```clojure
 (defn- to-frames [rolls]
@@ -144,7 +144,7 @@ before.
 With our tests passing, it's time to consider refactoring the source. Without an explanation, it's
 difficult to follow what the algorithm is doing. Let's extract some helper functions.
 
-##### _src/bowling_game/core.clj_
+_src/bowling_game/core.clj_
 
 ```clojure
 (defn- spare? [rolls]
@@ -174,7 +174,7 @@ with the first roll of the next frame.
 We're not done, yet. Our two original functions are still a little unclear. We can extract another
 pair of functions.
 
-##### _src/bowling_game/core.clj_
+_src/bowling_game/core.clj_
 
 ```clojure
 (defn- sum [rolls]
@@ -204,11 +204,11 @@ sum. Function 'rolls-for-frame' returns the first two rolls in the sequence, or 
 the result of the first two is a spare. These are the rolls which contribute to a given frame's
 score.
 
-### Strikes
+## Strikes
 
 The next step is to write a test for scoring strikes.
 
-##### _spec/bowling_game/core_spec.clj_
+_spec/bowling_game/core_spec.clj_
 
 ```clojure
 (it "strike game adds next two rolls to score"
@@ -218,7 +218,7 @@ The next step is to write a test for scoring strikes.
 A strike is scored by taking ten (the number of pins knocked down) plus the total of the next two
 rolls. We currently check for spares. We need to do the same for strikes.
 
-##### _src/bowling_game/core.clj_
+_src/bowling_game/core.clj_
 
 ```clojure
 (defn- sum [rolls]
@@ -248,7 +248,7 @@ rolls. We currently check for spares. We need to do the same for strikes.
 With the tests passing, we have a chance to refactor again. There's some duplication we can
 eliminate by extracting another helper function.
 
-##### _src/bowling_game/core.clj_
+_src/bowling_game/core.clj_
 
 ```clojure
 (defn- sum [rolls]
@@ -283,12 +283,12 @@ together in 'rolls-for-frame', since both a strike and a spare use three consecu
 sequence. Additionally, 'strike?' is used to determine whether the next frame begins with the next
 roll or the one after that.
 
-### The Perfect Game
+## The Perfect Game
 
 There is one final test to write. This one will confirm that a perfect game (all strikes) evaluates
 with a score of three hundred.
 
-##### _spec/bowling_game/core_spec.clj_
+_spec/bowling_game/core_spec.clj_
 
 ```clojure
 (it "perfect game results in a score of three hundred"
@@ -298,9 +298,9 @@ with a score of three hundred.
 Without making any changes, all of our tests are passing. We now have a function to score a game of
 bowling.
 
-### The Complete Source
+## The Complete Source
 
-##### _spec/bowling_game/core_spec.clj_
+_spec/bowling_game/core_spec.clj_
 
 ```clojure
 (ns bowling-game.core-spec
@@ -324,7 +324,7 @@ bowling.
   (should= 300 (score (repeat 10))))
 ```
 
-##### _src/bowling_game/core.clj_
+_src/bowling_game/core.clj_
 
 ```clojure
 (ns bowling-game.core)

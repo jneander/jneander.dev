@@ -11,7 +11,7 @@ mistakes is disheartening. Unfortunately, I've fallen into the trap of not remem
 approaches to familiar problems. Why is that? ...because I haven't been documenting my
 decision-making.
 
-### Missing the Estimate
+## Missing the Estimate
 
 On my most recent iteration, I had two primary stories. I estimated that they wouldn't take more
 than a couple of days each. On the first story, I ran into trouble almost right away. I misjudged
@@ -26,7 +26,7 @@ being modified, the tests being written (which described the change being made),
 for the change. When I had unforeseen difficulties, they were detailed as they occurred along with
 the solutions I found to overcome them.
 
-### Logs
+## Logs
 
 By the time I was done, I had a near-complete breakdown of not only what I did, but where my mind
 was along the way. It helped keep the goal in focus, which in turn helped to manage my pace. Perhaps
@@ -41,7 +41,7 @@ value in this case as there would have been if I had logged the previous story. 
 with future stories, I intend on having a clear record of why my estimates were over, under, or
 right on target.
 
-### What Went Right/Wrong, or What I Predicted/Missed
+## What Went Right/Wrong, or What I Predicted/Missed
 
 One more thing I'll do with my logs is include a miniature postmortem of sorts. I'll briefly
 summarize the major points of learning which I can apply towards future estimates. Understanding my
