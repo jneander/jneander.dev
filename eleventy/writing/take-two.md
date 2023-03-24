@@ -19,7 +19,7 @@ changes which needed to be made. Sadly, this happens to everyone at one time or 
 After this experience, which is certainly not the first and likely won't be the last, I feel the
 need to understand what went wrong and how to help prevent these circumstances from arising again.
 
-### What went wrong?
+## What went wrong?
 
 A previous design decision involved an assumption of compatibility with a not-yet-chosen database.
 Implementation details, however few, preceded the choice of database. Essentially, we were building
@@ -29,7 +29,7 @@ The next problem, which is beginning to reveal itself, is limited abstraction se
 our application from the library governing the persistence layer. Too much of our application is
 using direct calls to external library functions.
 
-### What could have prevented this?
+## What could have prevented this?
 
 Both issues stem from the same root cause: a lapse in discipline. Following acceptable programming
 practices should have clued us in to the mistakes we were making, at a time when correcting or

@@ -21,7 +21,7 @@ past missteps, the less likely I am to follow the same line of thinking. That's 
 what of viewing it, which is why I still include "making few mistakes" as an inadvertent goal in the
 list above.
 
-### It's an impulse, not a plan.
+## It's an impulse, not a plan.
 
 I try not to view "doing well" or "repeating no mistakes" as primary concerns. The best goal I have
 is to hold on to every last bit of value from the learning I do every day. The hope is that the
@@ -29,7 +29,7 @@ other things happen as a result. However, it's not a plan. Time spent concerning
 result is time stolen away from working to achieve that end. Despite my best efforts, I do have bad
 habits to which I occasionally resort. The important thing is to keep moving forward.
 
-### A Feedback Loop
+## A Feedback Loop
 
 I enjoy getting feedback on projects, especially as they are progressing. Getting criticism after
 completion, while very much helpful and always welcome, is not nearly as beneficial as hearing where
@@ -45,7 +45,7 @@ The novice needs to get over the fear of looking foolish or intruding on a craft
 time. Asking questions shows a willingness to learn, which is a desirable trait in developers of all
 experience levels.
 
-### Responding to Feedback
+## Responding to Feedback
 
 I make a point to choose the most accurate words to reflect what I'm thinking or feeling. Sometimes,
 I get it wrong - hopefully not too often. When it comes to receiving criticism, some see it as a
@@ -64,7 +64,7 @@ Feedback should be treated as a resource. A person can take advantage of it, or 
 It is up to the receiver to evaluate it and determine how to respond. That is, if a response is
 warranted at all.
 
-### Criticism in Perspective
+## Criticism in Perspective
 
 Having gone to art school, I have experienced the thickening of the skin in the face of criticism of
 my work, as well as the work of others. Not all criticism has merit. Some of it has no grounding in

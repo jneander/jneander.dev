@@ -14,7 +14,7 @@ There are a total of six principles. The first three are concerned with package 
 determining which classes should go into which packages. The principles of package cohesion aid in
 determining how software is packaged and distributed.
 
-### The Reuse-Release Equivalence Principle
+## The Reuse-Release Equivalence Principle
 
 _"The unit of reuse is the unit of release."_
 
@@ -48,7 +48,7 @@ design are observed. Classes become too plentiful to track individually, making 
 appropriate choice. A package as the granule of release promotes cohesion between the elements in a
 package.
 
-### The Common-Reuse Principle
+## The Common-Reuse Principle
 
 _How do these classes relate to one another?_
 
@@ -70,7 +70,7 @@ ever be used without collections, whereas collections can sometimes be used with
 iterators. However, many implementations of collections still use iterators in an opaque way. These
 two sets of classes are inseparable and should remain packaged together.
 
-### The Common-Closure Principle
+## The Common-Closure Principle
 
 _A change which affects a package affects all of the classes within that package._
 
