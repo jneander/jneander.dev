@@ -1,9 +1,13 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const autoprefixer = require('autoprefixer')
 const eleventySass = require('eleventy-sass')
 const {DateTime} = require('luxon')
+const postcss = require('postcss')
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(eleventySass)
+  eleventyConfig.addPlugin(eleventySass, {
+    postcss: postcss([autoprefixer]),
+  })
   eleventyConfig.addPlugin(syntaxHighlight)
 
   eleventyConfig.addPassthroughCopy({'./public/*.*': '/'})
