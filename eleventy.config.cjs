@@ -1,3 +1,4 @@
+const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const autoprefixer = require('autoprefixer')
 const eleventySass = require('eleventy-sass')
@@ -8,6 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventySass, {
     postcss: postcss([autoprefixer]),
   })
+  eleventyConfig.addPlugin(pluginRss)
   eleventyConfig.addPlugin(syntaxHighlight)
 
   eleventyConfig.addPassthroughCopy({'./public/*.*': '/'})
