@@ -1,0 +1,14 @@
+@use '../../shared/property';
+
+@function _define($identifier, $default-value) {
+  @return property.define(jn-base-fontFamily-#{$identifier}, $default-value);
+}
+
+$properties: (
+  'root': _define(root, ('Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif)),
+  'secondary': _define(secondary, (system-ui, sans-serif)),
+);
+
+@function get-value($keys...) {
+  @return property.get-value($properties, $keys...);
+}

@@ -1,0 +1,46 @@
+@use '../properties';
+
+.Home {
+  --avatar-size: 186px;
+  --region-column-gap: #{properties.get-value('base', 'spacing', 'xxxl', 'px')};
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: properties.get-value('base', 'spacing', 'xl', 'px') var(--region-column-gap);
+
+  @media (min-width: 42em) {
+    grid-template-columns: auto auto;
+    padding-inline: properties.get-value('base', 'spacing', 'xxl', 'px');
+
+    max-width: calc(
+      var(--avatar-size) + var(--region-column-gap) +
+        properties.get-value('element', 'text', 'maxInlineSize')
+    );
+  }
+
+  .Identity {
+    text-align: center;
+  }
+
+  .SocialLinkList {
+    font-size: properties.get-value('base', 'fontSize', 'small');
+    display: inline-flex;
+    gap: properties.get-value('base', 'spacing', 's', 'em');
+  }
+
+  .Avatar {
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    width: var(--avatar-size);
+    aspect-ratio: 1 / 1;
+  }
+
+  h1 {
+    font-size: properties.get-value('element', 'h3', 'fontSize');
+    margin-inline: auto;
+    font-weight: properties.get-value('base', 'fontWeight', 'normal');
+    text-transform: uppercase;
+  }
+}

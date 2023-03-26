@@ -19,6 +19,10 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, {zone: 'UTC'}).toLocaleString(DateTime.DATE_MED)
   })
 
+  eleventyConfig.addFilter('asIsoDate', dateObj => {
+    return DateTime.fromJSDate(dateObj, {zone: 'UTC'}).toISODate()
+  })
+
   return {
     dir: {
       input: 'eleventy',
