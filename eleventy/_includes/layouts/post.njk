@@ -1,0 +1,14 @@
+---
+layout: 'layouts/base'
+css: ['/styles/pages/writing.css']
+---
+
+<main class="Post wrapper flow">
+  <header class="flow">
+    <h1>{{ title }}</h1>
+
+    <time class="PublishDate" datetime="{{ date | asIsoDate }}">{{ date | asPostDate }}</time>
+  </header>
+
+  {{ content | safe }}
+</main>

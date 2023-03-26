@@ -1,7 +1,8 @@
 @use 'foundation';
+
+@use 'headings';
 @use 'layouts';
-@use 'utils';
-@use 'home';
-@use 'resume';
-@use 'writing-index';
-@use 'writing';
+@use 'links';
+@use 'utilities';
+
+@use 'regions/code';

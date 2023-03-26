@@ -1,25 +1,26 @@
 ---
 title: Jeremy Neander
 layout: 'layouts/base'
+css: ['/styles/pages/home.css']
 ---
 
-<main class="Main">
-  <div class="Identity">
-    <h1 class="Name">Jeremy Neander</h1>
-
+<main class="Home wrapper">
+  <div class="Identity flow">
     <img
       alt="Cartoon portrait of Jeremy Neander, commissioned from artist Brad Yoo"
       class="Avatar"
-      src="/images/profile.jpg"
+      src="/images/avatar.png"
     />
 
+    <h1>Jeremy Neander</h1>
+
     <div class="SocialLinkList">
-      <a href="https://github.com/jneander" class="SocialLink">
+      <a class="icon" href="https://github.com/jneander">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          class="SocialLinkIcon"
+          class="icon SocialLinkIcon"
         >
           <path
             fill="currentColor"
@@ -29,15 +30,15 @@ layout: 'layouts/base'
           ></path>
         </svg>
 
-        <span class="VisuallyHidden">GitHub</span>
+        <span class="visually-hidden">GitHub</span>
       </a>
 
-      <a href="https://masto.jln.io/@jeremy" rel="me" class="SocialLink">
+      <a class="icon" href="https://masto.jln.io/@jeremy" rel="me">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 23 24"
-          class="SocialLinkIcon"
+          class="icon SocialLinkIcon"
         >
           <path
             fill="currentColor"
@@ -47,15 +48,15 @@ layout: 'layouts/base'
           ></path>
         </svg>
 
-        <span class="VisuallyHidden">Mastodon</span>
+        <span class="visually-hidden">Mastodon</span>
       </a>
 
-      <a href="https://www.linkedin.com/in/jeremyneander" class="SocialLink">
+      <a class="icon" href="https://www.linkedin.com/in/jeremyneander">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          class="SocialLinkIcon"
+          class="icon SocialLinkIcon"
         >
           <path
             fill="currentColor"
@@ -65,12 +66,12 @@ layout: 'layouts/base'
           ></path>
         </svg>
 
-        <span class="VisuallyHidden">Linkedin</span>
+        <span class="visually-hidden">Linkedin</span>
       </a>
     </div>
   </div>
 
-  <div>
+  <div class="flow">
     <p>
       As a software craftsperson, I am continually developing my skills and practices to be of the
       highest quality and greatest effect. Creative problem-solving, logic, pragmatism, and a

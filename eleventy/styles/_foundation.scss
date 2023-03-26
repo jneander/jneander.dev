@@ -1,51 +1,10 @@
-/* Foundation */
+@charset 'utf-8';
 
-@use 'mixins';
-@use 'settings';
+@use 'properties';
+@use 'shared/media';
 
-:root {
-  --spacing-xxs-px: 4px;
-  --spacing-xxs-em: 0.25em;
-  --spacing-xxs-rem: 0.25rem;
-
-  --spacing-xs-px: 8px;
-  --spacing-xs-em: 0.5em;
-  --spacing-xs-rem: 0.5rem;
-
-  --spacing-s-px: 12px;
-  --spacing-s-em: 0.75em;
-  --spacing-s-rem: 0.75rem;
-
-  --spacing-m-px: 16px;
-  --spacing-m-em: 1em;
-  --spacing-m-rem: 1rem;
-
-  --spacing-l-px: 24px;
-  --spacing-l-em: 1.5em;
-  --spacing-l-rem: 1.5rem;
-
-  --spacing-xl-px: 32px;
-  --spacing-xl-em: 2em;
-  --spacing-xl-rem: 2rem;
-
-  --spacing-xxl-px: 48px;
-  --spacing-xxl-em: 3em;
-  --spacing-xxl-rem: 3rem;
-
-  --spacing-xxxl-px: 64px;
-  --spacing-xxxl-em: 4em;
-  --spacing-xxxl-rem: 4rem;
-
-  --text-max-inline-size: 72ch;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 1rem;
-
-  @media #{settings.$medium} {
-    font-size: 1.12rem;
-  }
+:target {
+  scroll-margin-block-start: 2ex;
 }
 
 *,
@@ -54,61 +13,78 @@ html {
   box-sizing: inherit;
 }
 
+html {
+  // Use the more intuitive box-sizing model.
+  box-sizing: border-box;
+  font-size: 1.12rem;
+  height: 100%;
+
+  @include media.motion-allowed {
+    &:focus-within {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
 body {
   margin: 0;
-  background: settings.$white;
-  font: settings.$body-font;
+
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+
+  background-color: properties.get-value('element', 'body', 'backgroundColor');
+  color: properties.get-value('element', 'body', 'color');
+
+  font-family: properties.get-value('element', 'body', 'fontFamily');
+  font-size: properties.get-value('element', 'body', 'fontSize');
   font-style: normal;
-  color: settings.$black;
-  line-height: 1.5em;
+  font-weight: properties.get-value('element', 'body', 'fontWeight');
+  line-height: properties.get-value('element', 'body', 'lineHeight');
+
+  // Improve text rendering on macOS browsers.
+  -webkit-font-smoothing: antialiased;
 }
 
-$modular-scale: 1.3;
-
-h1 {
-  font-size: 1rem * $modular-scale * $modular-scale * $modular-scale;
+/*
+ * Improve media defaults.
+ */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
-h2 {
-  font-size: 1rem * $modular-scale * $modular-scale;
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-h3 {
-  font-size: 1rem * $modular-scale;
+em {
+  font-style: italic;
 }
 
-h4 {
-  font-size: 1rem;
+small {
+  font-size: properties.get-value('base', 'fontSize', 'small');
 }
 
-h5 {
-  font-size: 1rem / $modular-scale;
+strong {
+  font-weight: properties.get-value('base', 'fontWeight', 'bold');
 }
 
-h6 {
-  font-size: 1rem / $modular-scale / $modular-scale;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: settings.$header-font-family;
-}
-
-a {
-  color: settings.$secondary-color;
-
-  @include mixins.focusVisible {
-    outline-color: settings.$secondary-color;
-    outline-offset: 0.25rem;
-    outline-style: solid;
-    outline-width: 0.125rem;
-  }
-
-  &:hover {
-    color: settings.$secondary-accent;
-  }
+blockquote,
+em,
+figure,
+p,
+small,
+strong,
+dl,
+dd {
+  max-inline-size: properties.get-value('element', 'text', 'maxInlineSize');
 }
