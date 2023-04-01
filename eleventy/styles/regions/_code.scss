@@ -36,7 +36,8 @@ pre[class*='language-'] {
 }
 
 :not(pre) > code[class*='language-'],
-pre[class*='language-'] {
+pre[class*='language-'],
+pre:has(code[class*='language-']) {
   background-color: code.get-value('backgroundColor');
 }
 

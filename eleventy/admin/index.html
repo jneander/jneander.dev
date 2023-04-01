@@ -13,5 +13,45 @@
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
+    <script>
+      CMS.registerPreviewStyle('/styles/main.css')
+      CMS.registerPreviewStyle('/styles/pages/writing.css')
+
+      var PostPreview = createClass({
+        render: function () {
+          const {entry} = this.props
+
+          const date = new Date(entry.getIn(['data', 'date']))
+
+          const postDateFormat = {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          }
+
+          return h(
+            'main',
+            {className: 'Post wrapper flow'},
+
+            h(
+              'header',
+              {className: 'flow'},
+              h('h1', {}, entry.getIn(['data', 'title'])),
+
+              h(
+                'time',
+                {className: 'PublishDate', datetime: date.toISOString()},
+                date.toLocaleString('en-US', postDateFormat),
+              ),
+            ),
+
+            h('div', {className: 'text'}, this.props.widgetFor('body')),
+          )
+        },
+      })
+
+      CMS.registerPreviewTemplate('writing', PostPreview)
+    </script>
   </body>
 </html>

@@ -1,15 +1,24 @@
 backend:
   name: git-gateway
   branch: cms
+
+local_backend: true
+
 media_folder: 'public/assets/uploads'
 public_folder: '/assets/uploads'
+
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+  sanitize_replacement: '-'
+
 collections:
   - name: 'writing'
     label: 'Blog'
     folder: 'eleventy/writing'
     create: true
     slug: '{{slug}}'
-    fields: # The fields for each document, usually in front matter
+    fields:
       - {label: 'Title', name: 'title', widget: 'string'}
       - {label: 'Publish Date', name: 'date', widget: 'datetime'}
       - {label: 'Description', name: 'description', widget: 'string'}
