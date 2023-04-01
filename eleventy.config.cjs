@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss)
   eleventyConfig.addPlugin(syntaxHighlight)
 
+  eleventyConfig.addPassthroughCopy('./eleventy/admin/config.yml')
   eleventyConfig.addPassthroughCopy({'./public/*.*': '/'})
   eleventyConfig.addPassthroughCopy({'./public/images': '/images'})
 
