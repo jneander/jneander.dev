@@ -30,11 +30,14 @@
   }
 
   .Avatar {
-    background-size: cover;
-    border-radius: 50%;
+    display: inline-block;
     margin: 0 auto;
-    width: var(--avatar-size);
-    aspect-ratio: 1 / 1;
+
+    img {
+      border-radius: 50%;
+      width: var(--avatar-size);
+      aspect-ratio: 1 / 1;
+    }
   }
 
   h1 {

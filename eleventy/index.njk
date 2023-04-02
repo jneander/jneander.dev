@@ -6,11 +6,11 @@ css: ['/styles/pages/home.css']
 
 <main class="Home wrapper">
   <div class="Identity flow">
-    <img
-      alt="Cartoon portrait of Jeremy Neander, commissioned from artist Brad Yoo"
-      class="Avatar"
-      src="/images/avatar.png"
-    />
+    <picture class="Avatar">
+      <source srcset="/images/avatar.avif" type="image/avif" />
+      <source srcset="/images/avatar.webp" type="image/webp" />
+      <img src="/images/avatar.png" alt="Cartoon portrait of Jeremy Neander, commissioned from artist Brad Yoo" />
+    </picture>
 
     <h1>Jeremy Neander</h1>
 
