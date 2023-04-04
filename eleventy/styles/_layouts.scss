@@ -6,6 +6,8 @@ body {
 }
 
 body > header {
+  --wrapper-max-inline-size: 48rem;
+
   background-color: base.get-value('color', 'primary');
 
   font-family: base.get-value('fontFamily', 'secondary');
