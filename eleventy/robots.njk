@@ -1,0 +1,9 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+User-agent: *
+Disallow: /admin
+Disallow: /images
+
+Sitemap: {{ '/sitemap.xml' | absoluteUrl(global.url) }}
