@@ -1,5 +1,6 @@
 ---
 layout: 'layouts/resume'
+description: My experience in software development
 title: Resume
 ---
 
