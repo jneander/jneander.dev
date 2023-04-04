@@ -1,3 +1,8 @@
+---
+title: Jeremy Neander
+openGraphType: website
+---
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
   <head>
@@ -5,12 +10,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1">
 
-    <title>{{ title }}{% if title != "Jeremy Neander" %} | Jeremy Neander {% endif %}</title>
+    {% set pageTitle = title %}
+    {% if title != 'Jeremy Neander' %}
+      {% set pageTitle = title + ' | Jeremy Neander' %}
+    {% endif %}
 
-    <meta
-      name="description"
-      content="Jeremy Neander is a software engineer working to build a better, more accessible web."
-    >
+    {% if description %}
+      {% set pageDescription = description %}
+    {% else %}
+      {% set pageDescription = global.description %}
+    {% endif %}
+
+    <title>{{ pageTitle }}</title>
+
+    <meta name="author" content="Jeremy Neander">
+    <meta name="description" content="{{ pageDescription }}">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ pageDescription }}">
+    <meta property="og:type" content="{{ openGraphType }}">
+    <meta property="og:url" content="{{ page.url | absoluteUrl(global.url) }}">
+    <meta property="og:image" content="{{ global.openGraph.image.url }}">
+    <meta property="og:image:alt" content="{{ global.openGraph.image.alt }}">
+    <meta property="og:image:width" content="{{ global.openGraph.image.width }}">
+    <meta property="og:image:height" content="{{ global.openGraph.image.height }}">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:site" content="@jeremyneander">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ pageTitle }}">
+    <meta name="twitter:description" content="{{ pageDescription }}">
+    <meta name="twitter:image" content="{{ global.openGraph.image.url }}">
 
     <link rel=alternate title="Jeremy Neander" type=application/atom+xml href="/feed.xml">
 
