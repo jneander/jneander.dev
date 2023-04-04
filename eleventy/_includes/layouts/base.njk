@@ -58,11 +58,15 @@ openGraphType: website
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   </head>
 
-  <body>
+  <body class="no-transition">
     {% include 'header.njk' %}
 
     {{ content | safe }}
 
     {% include 'footer.njk' %}
+
+    <script>
+      document.body.classList.remove("no-transition");
+    </script>
   </body>
 </html>
