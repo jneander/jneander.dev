@@ -8,16 +8,6 @@ css:
 <main class="wrapper flow">
   <h1>Writing</h1>
 
-  <article class="WritingListItem">
-    <h2 class="Title">
-      <a href="https://8thlight.com/insights/an-apprentices-community">An Apprentice's Community</a>
-    </h2>
-
-    <time class="PublishDate" datetime="2013-01-21T00:00:00.000Z">January 21, 2013</time>
-
-    <p class="Description">Musings on the path of an aspiring software developer</p>
-  </article>
-
   {% for post in collections.posts | reverse %}
     <article class="WritingListItem">
       <h2 class="Title">
