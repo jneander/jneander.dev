@@ -5,10 +5,12 @@
     {% endif %}
 
     <nav>
+      {% set regExp = r/^\/principles\/?$/ %}
+      <a {% if regExp.test(page.url) %} aria-current="page"{% endif %} href="/principles">Principles</a>
       {% set regExp = r/^\/writing\/?$/ %}
-      <a {% if regExp.test(page.url) %} aria-current="page"{% endif %} class="section" href="/writing">Writing</a>
+      <a {% if regExp.test(page.url) %} aria-current="page"{% endif %} href="/writing">Writing</a>
       {% set regExp = r/^\/resume\/?$/ %}
-      <a {% if regExp.test(page.url) %} aria-current="page"{% endif %} class="section" href="/resume">Resume</a>
+      <a {% if regExp.test(page.url) %} aria-current="page"{% endif %} href="/resume">Resume</a>
     </nav>
   </div>
 </header>

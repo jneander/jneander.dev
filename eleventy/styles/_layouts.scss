@@ -34,6 +34,7 @@ body > header {
   nav {
     // Eliminate space characters in HTML.
     display: inline-flex;
+    flex-wrap: wrap;
 
     margin-inline-start: auto;
 
