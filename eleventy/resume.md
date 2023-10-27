@@ -6,6 +6,23 @@ title: Resume
 
 ## Experience
 
+### [Avela](https://www.avela.org) ~ Equitable School Enrollments
+
+#### Feature Team Engineer
+
+Partnered with Design and a Backend Engineer to deliver a workflow for importing student application
+data in bulk. The feature was admin-only, multi-step, and asynchronous, starting a background
+process which concluded with final user review. Front end implementations were matched to detailed
+prototypes in Figma. Through team discovery, shared feedback guided design and engineering
+refinements through to feature completion.
+
+Led development on an overhaul of the parent portion of the main application. Features from the
+primary page were gradually restructured and redistributed across a more manageable set of pages.
+This enhanced the user experience for parents and also provided a stronger foundation for upcoming
+features.
+
+Encouraged a culture of openness and feedback. Introduced retrospectives into team cycles.
+
 ### [Glassdoor](https://www.glassdoor.com) ~ Company Reviews and Conversations
 
 #### Design System Lead Engineer : Design System & UI Library
@@ -238,10 +255,36 @@ Contributed to a widely-distributed Android SDK and associated apps with an emph
 extensibility. Collaborated with development team while also teaching best practices and design
 patterns.
 
+### Miscellaneous Projects
+
+Performed customer research and development for a conceptual personal finance application, currently
+in development. Interviewed individuals to identify and validate problems with the personal finance
+domain. Prototyped physical solutions for continued interviews to identify the path for the product.
+Refined designs using Balsamiq and Sketch, then later Figma. Used GitHub Projects to plan and curate
+a development roadmap. Implementation uses Express.js, React as a SSR template layer, and will use
+web components for client-side enhancements.
+
+Designing and engineering a personal writing web application. Event sourcing is used to
+fully-preserve revision history, honoring a commitment to zero data loss. Using ProseMirror for the
+front end WYSIWYG editor. Fully test-driven. Delivered through CI/CD with manual stages.
+
+Built a pair of macOS apps for a KIND commercial project. One interface showed a live donation
+counter updated manually through simple controls by the client. Opposing interface was
+non-interactive. Both adhered to specific requirements, including exact PANTONE color palettes.
+
+Exploring creative coding for fun. Creating generative art through Processing, p5.js, and custom
+code. Tinkering with genetic algorithms for fun with an eye towards more practical applications.
+Playing with evolution simulations for even more fun!
+
+Currently exploring content and structure for a book or course on web development, grounded on
+collaborative decision-making, with an emphasis on short, mid, and long term priorities.
+
 ## Overview
 
 ### Companies
 
+- [Avela](https://www.avela.org) ~ Equitable School Enrollments
+  - Software Engineer, May 2023–October 2023
 - [Glassdoor](https://www.glassdoor.com) ~ Employer Reviews and Conversations
   - Lead Software Engineer, November 2022–March 2023
   - Senior Front End Engineer, July 2020–November 2022
@@ -254,11 +297,21 @@ patterns.
 
 ### Languages & Environments
 
+I am well-acquainted with:
+
 - JavaScript
 - TypeScript
+- Semantic HTML
+- CSS
 - Node.js
+- Sass (SCSS)
 - Ruby
+
+I am out of practice with:
+
 - Clojure
+- CoffeeScript
+- ClojureScript
 - Java
 - Python
 - C
@@ -266,22 +319,58 @@ patterns.
 
 ### Libraries, Frameworks, and SDKs
 
+I regularly use:
+
 - React
-- Next.js
+- Express.js
+- Mocha
+- Karma
+- Chai
+- Knex
+
+I have experience with:
+
+- Rails (used since 2012, but not regularly in use at the moment)
 - Webpack
+- Jest
 - Storybook
-- Express
-- Rails
+- Next.js
 - Sinatra
+- Eleventy
+- Vanilla Extract
+- Emotion
+- Chakra UI
 - InstUI
+
+### Tools
+
+- git
+- GitHub
+- GitLab
+- Vim
+- VS Code
+- Figma
+- Sketch
+- Codepen
+- Codesandbox
+- Netlify
+- PostgreSQL
+- MongoDB
+- Notion
+- Jira
+- Asana
 
 ### Practices
 
 - Accessibility
 - BDD/TDD Testing
 - Design Systems
+- Short, Medium, and Long Term Planning
+- Defining Acceptance Criteria
 - Large-scale Refactoring
+- Data Modeling
 - API Design
-- Mentoring
 - Documentation
+- Personal Growth & Development
+- Building a Supportive Feedback Culture
 - Estimations
