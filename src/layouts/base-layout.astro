@@ -1,0 +1,134 @@
+---
+import {description, openGraph, title} from '../constants'
+
+interface Props {
+  description?: string
+  openGraphType?: string
+  styleFiles?: string[]
+  title?: string
+}
+
+let pageTitle = Astro.props.title || 'Jeremy Neander'
+if (pageTitle !== 'Jeremy Neander') {
+  pageTitle += ' | Jeremy Neander'
+}
+
+const openGraphType = Astro.props.openGraphType || 'website'
+const pageDescription = Astro.props.description || description
+const styleFiles = Astro.props.styleFiles ?? []
+
+const currentPath = Astro.url.pathname
+const currentUrl = Astro.url.href
+
+const navItems: {'aria-current'?: 'page'; href: string; title: string}[] = [
+  {href: '/principles', title: 'Principles'},
+  {href: '/writing', title: 'Writing'},
+  {href: '/resume', title: 'Resume'},
+]
+
+navItems.forEach((navItem) => {
+  const regExp = new RegExp(`^\\${navItem.href}\/?$`)
+  if (regExp.test(currentPath)) {
+    navItem['aria-current'] = 'page'
+  }
+})
+---
+
+<!doctype html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+
+    <title>{pageTitle}</title>
+
+    <meta name="author" content="Jeremy Neander" />
+    <meta name="description" content={pageDescription} />
+
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content={openGraphType} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:image" content={openGraph.image.url} />
+    <meta property="og:image:alt" content={openGraph.image.alt} />
+    <meta property="og:image:width" content={openGraph.image.width.toString()} />
+    <meta property="og:image:height" content={openGraph.image.height.toString()} />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:site" content="@jeremyneander" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={openGraph.image.url} />
+
+    <link rel="alternate" title={title} type="application/atom+xml" href="/feed.xml" />
+
+    {
+      styleFiles.map((file) => {
+        return <link href={file} rel="stylesheet" />
+      })
+    }
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  </head>
+
+  <body class="no-transition">
+    <header>
+      <div class="wrapper">
+        {
+          currentPath !== '/' && (
+            <a class="SiteTitle" href="/">
+              Jeremy Neander
+            </a>
+          )
+        }
+
+        <nav>
+          {
+            navItems.map((navItem) => {
+              const {title, ...props} = navItem
+              return <a {...props}>{title}</a>
+            })
+          }
+        </nav>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer>
+      <div class="wrapper">
+        <small>© 2012–Present Jeremy Neander. All Rights Reserved.</small>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        requestAnimationFrame(() => {
+          document.body.classList.remove('no-transition')
+        })
+      })
+    </script>
+  </body>
+</html>
+
+<style is:global lang="scss">
+  @use '../styles/foundation';
+
+  @use '../styles/headings';
+  @use '../styles/layouts';
+  @use '../styles/links';
+  @use '../styles/utilities';
+
+  @use '../styles/regions/code';
+
+  .no-transition * {
+    transition: none !important;
+  }
+</style>

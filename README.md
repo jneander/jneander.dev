@@ -1,11 +1,29 @@
-# jneander.dev
+# www.jneander.dev
 
-## Getting Started
+## Project Structure
 
-First, run the development server:
+This project shares the structure of a typical Astro project:
 
-```bash
-npm run dev
+```text
+/
+├── public/
+│   └── *.*
+├── src/
+│   ├── components/
+│   │   └── *.astro
+│   ├── layouts/
+│   │   └── *.astro
+│   └── pages/
+│       └── *.astro
+└── package.json
 ```
 
-Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
+## Commands
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build the production site to `./dist/`           |
+| `npm run preview`         | Preview the build locally, before deploying      |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |

@@ -1,0 +1,54 @@
+---
+import {getCollection} from 'astro:content'
+
+import {asIsoDate, asPostDate, writingUrl} from '../helpers'
+import BaseLayout from '../layouts/base-layout.astro'
+
+const posts = await getCollection('writing')
+posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+---
+
+<BaseLayout title="Writing">
+  <main class="wrapper flow">
+    <h1>Writing</h1>
+
+    {
+      posts.map((post) => {
+        return (
+          <article class="WritingListItem">
+            <h2 class="Title">
+              <a href={writingUrl(post.slug)}>{post.data.title}</a>
+            </h2>
+
+            <time class="PublishDate" datetime={asIsoDate(post.data.date)}>
+              {asPostDate(post.data.date)}
+            </time>
+
+            <p class="Description">{post.data.description}</p>
+          </article>
+        )
+      })
+    }
+  </main>
+</BaseLayout>
+
+<style lang="scss">
+  @use '../styles/properties';
+
+  .WritingListItem {
+    .Title {
+      color: properties.get-value('element', 'a', 'color');
+      font-size: properties.get-value('element', 'h3', 'fontSize');
+      margin: 0;
+    }
+
+    .Description {
+      margin-block: properties.get-value('base', 'spacing', 'xs', 'em');
+    }
+
+    .PublishDate {
+      font-size: properties.get-value('base', 'fontSize', 'small');
+      font-style: italic;
+    }
+  }
+</style>

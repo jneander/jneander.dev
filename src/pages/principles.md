@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/prose'
+layout: '../layouts/prose-layout.astro'
 description: An incomplete list of my principles
 title: Principles
 ---
