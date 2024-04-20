@@ -1,0 +1,26 @@
+---
+import BaseLayout from './base-layout.astro'
+
+interface Props {
+  /* From Markdown page */
+  content?: {
+    description?: string
+    title?: string
+  }
+
+  description?: string
+  title: string
+}
+
+const {content, description = content?.description, title = content?.title} = Astro.props
+---
+
+<BaseLayout description={description} openGraphType="article" title={title}>
+  <main class="wrapper flow">
+    <header class="flow">
+      <h1>{title}</h1>
+    </header>
+
+    <slot />
+  </main>
+</BaseLayout>

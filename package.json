@@ -1,32 +1,35 @@
 {
   "name": "jneander.dev",
   "description": "The \"professional\" site of Jeremy Neander, software engineer",
-  "private": true,
+  "type": "module",
   "author": "Jeremy Neander <jeremy.neander@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "eleventy",
-    "dev": "ELEVENTY_ENV=development eleventy --serve --quiet",
-    "lint:eslint": "eslint .",
-    "lint:eslint:fix": "eslint --fix .",
+    "astro": "astro",
+    "build": "astro check && astro build",
+    "dev": "astro dev",
     "lint:prettier": "prettier --check .",
-    "lint:prettier:fix": "prettier --write ."
+    "lint:prettier:fix": "prettier --write .",
+    "preview": "astro preview",
+    "start": "astro dev"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "astro": "^4.6.3",
+    "html-entities": "^2.4.0",
+    "luxon": "^3.4.3",
+    "markdown-it": "^13.0.2",
+    "sanitize-html": "^2.11.0",
+    "sass": "^1.69.5",
+    "ts-dedent": "^2.2.0",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "@jneander/browserslist-config": "^1.0.0",
     "@jneander/prettier-config": "^1.0.0",
-    "autoprefixer": "^10.4.14",
-    "eleventy-sass": "^2.2.1",
-    "eslint": "^8.36.0",
-    "postcss": "^8.4.21",
-    "prettier": "^2.8.7",
-    "sass": "^1.60.0"
+    "@types/luxon": "^3.3.3",
+    "@types/markdown-it": "^13.0.6",
+    "@types/sanitize-html": "^2.9.3",
+    "prettier": "^3.0.0"
   },
-  "browserslist": [
-    "extends @jneander/browserslist-config"
-  ],
   "prettier": "@jneander/prettier-config"
 }

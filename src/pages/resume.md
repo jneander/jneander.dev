@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/resume'
+layout: '../layouts/resume-layout.astro'
 description: My experience in software development
 title: Resume
 ---
