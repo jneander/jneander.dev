@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../../layouts/base-layout.astro'
+---
+
+<BaseLayout title="Work History">
+  <main class="wrapper flow">
+    <h1>Experience</h1>
+
+    <h2>Work History</h2>
+
+    <article class="flow">
+      <h3>
+        <a href="/experience/avela">Software Engineer</a>
+      </h3>
+
+      <p class="company-name">Avela</p>
+
+      <p class="date-range">2023 – 2023</p>
+
+      <p>
+        Avela is an education software company and consulting practice focused on equity in school
+        enrollment and admissions.
+      </p>
+
+      <p>
+        Working as a full-stack web engineer, I was responsible for development on the company's
+        React-based, single-page applications. The front end utilized Chakra UI and communicated via
+        GraphQL with a back end built on top of the AWS CDK.
+      </p>
+    </article>
+
+    <article class="flow">
+      <h3>
+        <a href="/experience/glassdoor">Lead Software Engineer</a>
+      </h3>
+
+      <p class="company-name">Glassdoor</p>
+
+      <p class="date-range">2020 – 2023</p>
+
+      <p>
+        Glassdoor is the go-to platform for job seekers and employers, dedicated to promoting
+        workplace transparency and empowering individuals to find fulfilling careers in inclusive
+        and supportive environments.
+      </p>
+
+      <p>
+        As my role evolved from feature team engineer to front end platform engineer, I was tasked
+        with developing shared tooling and eventually with leading an overhaul of the Glassdoor
+        design system. Our tech was transitioning from legacy solutions towards Node.js, TypeScript,
+        and React.
+      </p>
+    </article>
+
+    <article class="flow">
+      <h3>
+        <a href="/experience/instructure">Senior Software Engineer</a>
+      </h3>
+
+      <p class="company-name">Instructure</p>
+
+      <p class="date-range">2016 – 2020</p>
+
+      <p>
+        Instructure are pioneers in educational software, leading the industry with Canvas LMS, the
+        world's top teaching and learning platform used by millions globally.
+      </p>
+
+      <p>
+        As a full-stack engineer, I was responsible for feature development using React, Ruby on
+        Rails, and a mix of other technologies. I was also a member of the design system team,
+        developing our own UI library.
+      </p>
+    </article>
+
+    <article class="flow">
+      <h3>
+        <a href="/experience/8th-light">Software Craftsperson</a>
+      </h3>
+
+      <p class="company-name">8th Light</p>
+
+      <p class="date-range">2012 – 2016</p>
+
+      <p>
+        8th Light are a global team of software, design, and technology professionals, helping
+        clients to imagine and create elegant, robust, and groundbreaking digital solutions to
+        complex problems.
+      </p>
+
+      <p>
+        Starting as an apprentice, then graduating to crafter, I primarily used Ruby on Rails and
+        Clojure. I also worked on a variety of other projects outside of the web.
+      </p>
+    </article>
+
+    <h2>Things I Know and Do</h2>
+
+    <section class="flow">
+      <h3>Languages & Environments</h3>
+
+      <p>I am well-acquainted with:</p>
+
+      <ul>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>Semantic HTML</li>
+        <li>Node.js</li>
+        <li>CSS</li>
+        <li>Sass (SCSS)</li>
+        <li>Ruby</li>
+      </ul>
+
+      <p>I have experience with:</p>
+
+      <ul>
+        <li>Clojure</li>
+        <li>CoffeeScript</li>
+        <li>ClojureScript</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>Go</li>
+        <li>C</li>
+      </ul>
+
+      <h3>Libraries, Frameworks, and SDKs</h3>
+
+      <p>I regularly use:</p>
+
+      <ul>
+        <li>React</li>
+        <li>Express.js</li>
+        <li>Mocha</li>
+        <li>Karma</li>
+        <li>Chai</li>
+        <li>Sinon</li>
+        <li>Knex</li>
+      </ul>
+
+      <p>I have experience with:</p>
+
+      <ul>
+        <li>Ruby on Rails</li>
+        <li>Webpack</li>
+        <li>Vite</li>
+        <li>Storybook</li>
+        <li>Jest</li>
+        <li>Next.js</li>
+        <li>Sinatra</li>
+        <li>Eleventy</li>
+        <li>Vanilla Extract</li>
+        <li>Emotion</li>
+        <li>Chakra UI</li>
+        <li>InstUI</li>
+      </ul>
+
+      <h3>Tools</h3>
+
+      <ul>
+        <li>git</li>
+        <li>GitHub</li>
+        <li>GitLab</li>
+        <li>Vim</li>
+        <li>VS Code</li>
+        <li>Figma</li>
+        <li>Sketch</li>
+        <li>Codepen</li>
+        <li>Codesandbox</li>
+        <li>Netlify</li>
+        <li>PostgreSQL</li>
+        <li>MongoDB</li>
+        <li>Notion</li>
+        <li>Jira</li>
+        <li>Asana</li>
+      </ul>
+
+      <h3>Practices</h3>
+
+      <ul>
+        <li>Accessibility</li>
+        <li>BDD/TDD Testing</li>
+        <li>Design Systems</li>
+        <li>Short, Medium, and Long Term Planning</li>
+        <li>Defining Acceptance Criteria</li>
+        <li>Large-scale Refactoring</li>
+        <li>Data Modeling</li>
+        <li>API Design</li>
+        <li>Dcumentation</li>
+        <li>Personal Growth & Development</li>
+        <li>Building a Support Feedback Culture</li>
+        <li>Estimations</li>
+      </ul>
+    </section>
+  </main>
+</BaseLayout>
+
+<style lang="scss">
+  @use '../../styles/properties';
+
+  .company-name {
+    font-family: properties.get-value('element', 'h4', 'fontFamily');
+    font-size: properties.get-value('element', 'h4', 'fontSize');
+    margin-block-start: properties.get-value('base', 'spacing', 'xs', 'em');
+  }
+
+  .date-range {
+    font-style: italic;
+    margin-block-start: properties.get-value('base', 'spacing', 'xxs', 'em');
+  }
+</style>
