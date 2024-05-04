@@ -1,0 +1,38 @@
+---
+import {getCollection} from 'astro:content'
+
+import {getLastPath} from '../../../helpers'
+import BaseLayout from '../../../layouts/base-layout.astro'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('work-experience')
+
+  return posts.map(post => {
+    const lastSlug = getLastPath(post.slug)
+
+    return {
+      params: {
+        employer: post.data.employer.slug,
+        project: lastSlug,
+        slug: lastSlug,
+      },
+
+      props: {post},
+    }
+  })
+}
+
+const {post} = Astro.props
+const {Content} = await post.render()
+const {title} = post.data
+---
+
+<BaseLayout openGraphType="article" title={title}>
+  <main class="wrapper flow">
+    <h1>{title}</h1>
+
+    <p>{post.data.description}</p>
+
+    <Content />
+  </main>
+</BaseLayout>
