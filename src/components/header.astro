@@ -1,0 +1,81 @@
+---
+const currentPath = Astro.url.pathname
+
+const navItems: {'aria-current'?: 'page'; href: string; title: string}[] = [
+  {href: '/principles', title: 'Principles'},
+  {href: '/writing', title: 'Writing'},
+  {href: '/experience', title: 'Experience'},
+  {href: '/resume', title: 'Resume'},
+]
+
+navItems.forEach(navItem => {
+  const regExp = new RegExp(`^\\${navItem.href}\/?$`)
+  if (regExp.test(currentPath)) {
+    navItem['aria-current'] = 'page'
+  }
+})
+---
+
+<header class="header">
+  <div class="wrapper">
+    {
+      currentPath !== '/' && (
+        <a class="SiteTitle" href="/">
+          Jeremy Neander
+        </a>
+      )
+    }
+
+    <nav>
+      {
+        navItems.map(navItem => {
+          const {title, ...props} = navItem
+          return <a {...props}>{title}</a>
+        })
+      }
+    </nav>
+  </div>
+</header>
+
+<style lang="scss">
+  @use '../styles/properties';
+
+  .header {
+    --wrapper-max-inline-size: 48rem;
+
+    background-color: properties.get-value('base', 'color', 'primary');
+
+    font-family: properties.get-value('base', 'fontFamily', 'secondary');
+
+    padding-block: properties.get-value('base', 'spacing', 'm', 'px');
+    margin-block-end: properties.get-value('base', 'spacing', 'xxxl', 'px');
+
+    & > .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: properties.get-value('base', 'spacing', 'm', 'px');
+    }
+
+    a {
+      color: properties.get-value('base', 'color', 'secondary');
+    }
+
+    a[aria-current='page'] {
+      text-decoration-style: dashed;
+    }
+
+    nav {
+      // Eliminate space characters in HTML.
+      display: inline-flex;
+      flex-wrap: wrap;
+
+      margin-inline-start: auto;
+
+      a:not(:last-child) {
+        margin-inline-end: properties.get-value('base', 'spacing', 'xl', 'px');
+      }
+    }
+  }
+</style>

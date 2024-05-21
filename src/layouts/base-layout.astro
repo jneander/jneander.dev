@@ -1,5 +1,6 @@
 ---
 import Footer from '../components/footer.astro'
+import Header from '../components/header.astro'
 import {description, openGraph, title} from '../constants'
 
 interface Props {
@@ -18,22 +19,7 @@ const openGraphType = Astro.props.openGraphType || 'website'
 const pageDescription = Astro.props.description || description
 const styleFiles = Astro.props.styleFiles ?? []
 
-const currentPath = Astro.url.pathname
 const currentUrl = Astro.url.href
-
-const navItems: {'aria-current'?: 'page'; href: string; title: string}[] = [
-  {href: '/principles', title: 'Principles'},
-  {href: '/writing', title: 'Writing'},
-  {href: '/experience', title: 'Experience'},
-  {href: '/resume', title: 'Resume'},
-]
-
-navItems.forEach(navItem => {
-  const regExp = new RegExp(`^\\${navItem.href}\/?$`)
-  if (regExp.test(currentPath)) {
-    navItem['aria-current'] = 'page'
-  }
-})
 ---
 
 <!doctype html>
@@ -81,26 +67,7 @@ navItems.forEach(navItem => {
   </head>
 
   <body class="no-transition">
-    <header>
-      <div class="wrapper">
-        {
-          currentPath !== '/' && (
-            <a class="SiteTitle" href="/">
-              Jeremy Neander
-            </a>
-          )
-        }
-
-        <nav>
-          {
-            navItems.map(navItem => {
-              const {title, ...props} = navItem
-              return <a {...props}>{title}</a>
-            })
-          }
-        </nav>
-      </div>
-    </header>
+    <Header />
 
     <slot />
 
