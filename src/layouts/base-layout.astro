@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/footer.astro'
 import {description, openGraph, title} from '../constants'
 
 interface Props {
@@ -103,11 +104,7 @@ navItems.forEach(navItem => {
 
     <slot />
 
-    <footer>
-      <div class="wrapper">
-        <small>© 2012–Present Jeremy Neander. All Rights Reserved.</small>
-      </div>
-    </footer>
+    <Footer />
 
     <script>
       window.addEventListener('DOMContentLoaded', function () {
