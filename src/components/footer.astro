@@ -1,0 +1,19 @@
+<footer class="footer">
+  <div class="wrapper">
+    <small>© 2012–Present Jeremy Neander. All Rights Reserved.</small>
+  </div>
+</footer>
+
+<style lang="scss">
+  @use '../styles/properties';
+
+  .footer {
+    background-color: properties.get-value('base', 'color', 'grey', 100);
+
+    font-size: properties.get-value('base', 'fontSize', 'small');
+    text-align: center;
+
+    margin-block-start: properties.get-value('base', 'spacing', 'xxxl', 'px');
+    padding: properties.get-value('base', 'spacing', 'm', 'px');
+  }
+</style>
