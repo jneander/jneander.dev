@@ -2,10 +2,8 @@
 const currentPath = Astro.url.pathname
 
 const navItems: {'aria-current'?: 'page'; href: string; title: string}[] = [
-  {href: '/principles', title: 'Principles'},
   {href: '/writing', title: 'Writing'},
   {href: '/experience', title: 'Experience'},
-  {href: '/resume', title: 'Resume'},
 ]
 
 navItems.forEach(navItem => {
