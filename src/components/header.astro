@@ -1,4 +1,8 @@
 ---
+import personalLogo from '../assets/logos/personal-logo.svg?raw'
+import Link from './link.astro'
+import Svg from './svg.astro'
+
 const currentPath = Astro.url.pathname
 
 const navItems: {'aria-current'?: 'page'; href: string; title: string}[] = [
@@ -16,13 +20,11 @@ navItems.forEach(navItem => {
 
 <header class="header">
   <div class="wrapper">
-    {
-      currentPath !== '/' && (
-        <a class="SiteTitle" href="/">
-          Jeremy Neander
-        </a>
-      )
-    }
+    <Link href="/">
+      <Svg class="SiteLogo" aria-hidden svg={personalLogo} />
+
+      <span>Jeremy Neander</span>
+    </Link>
 
     <nav>
       {
@@ -37,6 +39,7 @@ navItems.forEach(navItem => {
 
 <style lang="scss">
   @use '../styles/properties';
+  @use '../styles/shared/theme';
 
   .header {
     --wrapper-max-inline-size: 48rem;
@@ -51,9 +54,38 @@ navItems.forEach(navItem => {
     & > .wrapper {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: center;
       flex-wrap: wrap;
       gap: properties.get-value('base', 'spacing', 'm', 'px');
+    }
+
+    .SiteLogo {
+      color: properties.get-value('base', 'color', 'secondary');
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+
+    a:has(.SiteLogo) {
+      display: flex;
+      align-items: center;
+      gap: properties.get-value('base', 'spacing', 'm', 'em');
+
+      &:focus-visible {
+        outline-color: transparent;
+
+        span {
+          outline-color: properties.get-value('element', 'focusIndicator', 'outline-color');
+          outline-offset: properties.get-value('element', 'focusIndicator', 'outline-offset');
+          outline-style: properties.get-value('element', 'focusIndicator', 'outline-style');
+          outline-width: properties.get-value('element', 'focusIndicator', 'outline-width');
+        }
+      }
+
+      span {
+        outline-color: transparent;
+
+        @include theme.transition((color, outline-color, text-decoration-color));
+      }
     }
 
     a {

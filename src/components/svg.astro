@@ -1,0 +1,22 @@
+---
+import type {HTMLAttributes} from 'astro/types'
+import {parse} from 'node-html-parser'
+
+interface Props extends HTMLAttributes<'svg'> {
+  svg: string
+}
+
+const {svg, ...props} = Astro.props
+
+const element = parse(svg).querySelector('svg')
+
+if (element == null) {
+  throw new Error('Invalid SVG')
+}
+
+Object.entries(props).forEach(([key, value]) => {
+  element.setAttribute(key, value)
+})
+---
+
+<Fragment set:html={element.outerHTML} />
