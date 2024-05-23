@@ -5,8 +5,8 @@
 }
 
 $properties: (
-  'root': _define(root, ('Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif)),
-  'secondary': _define(secondary, (system-ui, sans-serif)),
+  'root': _define(root, (system-ui, sans-serif)),
+  'secondary': _define(secondary, ('Outfit', system-ui, sans-serif)),
 );
 
 @function get-value($keys...) {
