@@ -1,5 +1,6 @@
 ---
 import personalLogo from '../assets/logos/personal-logo.svg?raw'
+import {author} from '../constants'
 import Link from './link.astro'
 import Svg from './svg.astro'
 
@@ -33,6 +34,8 @@ navItems.forEach(navItem => {
           return <a {...props}>{title}</a>
         })
       }
+
+      <Link href={`mailto:${author.email}`}>Get in touch</Link>
     </nav>
   </div>
 </header>
@@ -43,8 +46,6 @@ navItems.forEach(navItem => {
 
   .header {
     --wrapper-max-inline-size: 48rem;
-
-    background-color: properties.get-value('base', 'color', 'primary');
 
     font-family: properties.get-value('base', 'fontFamily', 'secondary');
 
@@ -59,8 +60,10 @@ navItems.forEach(navItem => {
       gap: properties.get-value('base', 'spacing', 'm', 'px');
     }
 
+    color: properties.get-value('base', 'color', 'black');
+
     .SiteLogo {
-      color: properties.get-value('base', 'color', 'secondary');
+      color: properties.get-value('base', 'color', 'brand-orange');
       height: 2.5rem;
       width: 2.5rem;
     }
@@ -86,10 +89,6 @@ navItems.forEach(navItem => {
 
         @include theme.transition((color, outline-color, text-decoration-color));
       }
-    }
-
-    a {
-      color: properties.get-value('base', 'color', 'secondary');
     }
 
     a[aria-current='page'] {
