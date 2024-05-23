@@ -33,20 +33,21 @@ import Link from './link.astro'
   @use '../styles/properties';
 
   .footer {
-    background-color: properties.get-value('base', 'color', 'grey', 100);
+    background-color: properties.get-value('base', 'color', 'brand-orange');
 
     font-size: properties.get-value('base', 'fontSize', 'small');
     text-align: center;
 
     margin-block-start: properties.get-value('base', 'spacing', 'xxxl', 'px');
-    padding: properties.get-value('base', 'spacing', 'm', 'px');
+    padding-inline: properties.get-value('base', 'spacing', 'm', 'px');
+    padding-block: properties.get-value('base', 'spacing', 'l', 'px');
   }
 
   .links {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1rem;
+    gap: properties.get-value('base', 'spacing', 'm', 'rem');
 
     @media screen and (max-width: 320px) {
       justify-content: center;
@@ -97,6 +98,6 @@ import Link from './link.astro'
   }
 
   p {
-    margin-block-start: 1rem;
+    margin-block-start: properties.get-value('base', 'spacing', 'xxl', 'px');
   }
 </style>
