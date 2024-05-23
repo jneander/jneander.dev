@@ -11,7 +11,7 @@
 }
 
 $properties: (
-  'color': _define('color', color.get-value('grey', 850)),
+  'color': _define('color', color.get-value('grey-light', 900)),
   'fontFamily': _define('fontFamily', fontFamily.get-value('secondary')),
   'fontStyle': _define('fontStyle', normal),
   'fontWeight': _define('fontWeight', fontWeight.get-value('bold')),
