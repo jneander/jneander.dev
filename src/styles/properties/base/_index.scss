@@ -1,5 +1,6 @@
 @use '../../shared/property';
 
+@use './box-shadow' as boxShadow;
 @use './color';
 @use './font-family' as fontFamily;
 @use './font-size' as fontSize;
@@ -8,6 +9,7 @@
 @use './spacing';
 
 $properties: (
+  'boxShadow': boxShadow.$properties,
   'color': color.$properties,
   'fontFamily': fontFamily.$properties,
   'fontSize': fontSize.$properties,

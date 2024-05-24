@@ -16,7 +16,6 @@
 html {
   // Use the more intuitive box-sizing model.
   box-sizing: border-box;
-  font-size: 1.12rem;
   height: 100%;
 
   @include media.motion-allowed {

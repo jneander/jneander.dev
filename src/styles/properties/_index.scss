@@ -15,3 +15,7 @@ $properties: (
 @function get-value($keys...) {
   @return property.get-value($properties, $keys...);
 }
+
+@mixin assign($target, $value) {
+  @include property.assign(property.get($properties, $target...), $value);
+}

@@ -7,7 +7,8 @@
 
 $properties: (
   'color': _define('color', body.get-value('color')),
-  'textUnderlineOffset': _define('textUnderlineOffset', 0.25em),
+  'textDecorationColor': _define('textDecorationColor', currentColor),
+  'textUnderlineOffset': _define('textUnderlineOffset', 0.125em),
 );
 
 @function get-value($keys...) {
