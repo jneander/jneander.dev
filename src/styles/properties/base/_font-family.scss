@@ -5,8 +5,8 @@
 }
 
 $properties: (
-  'root': _define(root, ('Open Sans', system-ui, sans-serif)),
-  'secondary': _define(secondary, ('Outfit', system-ui, sans-serif)),
+  'root': _define(root, ('Open Sans Variable', system-ui, sans-serif)),
+  'secondary': _define(secondary, ('Outfit Variable', system-ui, sans-serif)),
 );
 
 @function get-value($keys...) {
