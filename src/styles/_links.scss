@@ -10,6 +10,7 @@ a {
   outline-style: properties.get-value('element', 'focusIndicator', 'outline-style');
   outline-width: properties.get-value('element', 'focusIndicator', 'outline-width');
 
+  text-decoration-color: properties.get-value('element', 'a', 'textDecorationColor');
   text-underline-offset: properties.get-value('element', 'a', 'textUnderlineOffset');
 
   @include a11y.focus-visible {

@@ -35,7 +35,7 @@ navItems.forEach(navItem => {
         })
       }
 
-      <Link href={`mailto:${author.email}`}>Get in touch</Link>
+      <Link class="button" href={`mailto:${author.email}`}>Get in touch</Link>
     </nav>
   </div>
 </header>
@@ -67,16 +67,26 @@ navItems.forEach(navItem => {
       width: 2.5rem;
     }
 
+    a {
+      text-decoration-thickness: 0.125em;
+    }
+
     a:has(.SiteLogo) {
       display: flex;
       align-items: center;
       gap: properties.get-value('base', 'spacing', 'm', 'em');
 
+      @include properties.assign(
+        ('element', 'a', 'textDecorationColor'),
+        properties.get-value('base', 'color', 'brand-orange')
+      );
+      @include properties.assign(('element', 'a', 'textUnderlineOffset'), 0.125em);
+
       &:focus-visible {
         outline-color: transparent;
 
         span {
-          outline-color: properties.get-value('element', 'focusIndicator', 'outline-color');
+          outline-color: properties.get-value('base', 'color', 'brand-orange');
           outline-offset: properties.get-value('element', 'focusIndicator', 'outline-offset');
           outline-style: properties.get-value('element', 'focusIndicator', 'outline-style');
           outline-width: properties.get-value('element', 'focusIndicator', 'outline-width');
@@ -90,7 +100,7 @@ navItems.forEach(navItem => {
       }
     }
 
-    a[aria-current='page'] {
+    nav a[aria-current='page'] {
       text-decoration-style: dashed;
     }
 
@@ -98,11 +108,32 @@ navItems.forEach(navItem => {
       // Eliminate space characters in HTML.
       display: inline-flex;
       flex-wrap: wrap;
+      align-items: baseline;
 
-      margin-inline-start: auto;
+      gap: properties.get-value('base', 'spacing', 'xxs', 'px')
+        properties.get-value('base', 'spacing', 'l', 'px');
+    }
 
-      a:not(:last-child) {
-        margin-inline-end: properties.get-value('base', 'spacing', 'xl', 'px');
+    .button {
+      --bg-color: #{properties.get-value('base', 'color', 'brand-orange')};
+
+      @include properties.assign(('element', 'focusIndicator', 'outline-color'), var(--bg-color));
+      @include theme.transition((box-shadow, outline-color));
+
+      background-color: var(--bg-color);
+      color: properties.get-value('base', 'color', 'white');
+
+      padding-inline: properties.get-value('base', 'spacing', 'm', 'rem');
+      padding-block: properties.get-value('base', 'spacing', 'xs', 'rem');
+
+      font-weight: properties.get-value('base', 'fontWeight', 'bold');
+      text-decoration: none;
+      text-align: center;
+
+      box-shadow: properties.get-value('base', 'boxShadow', 1);
+
+      &:hover {
+        box-shadow: properties.get-value('base', 'boxShadow', 2);
       }
     }
   }
