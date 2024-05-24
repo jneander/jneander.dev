@@ -2,8 +2,8 @@
 import Link from './link.astro'
 ---
 
-<footer class="footer">
-  <div class="wrapper">
+<footer class="footer content-grid">
+  <div class="breakout">
     <div class="links">
       <div class="SocialLinkList">
         <a href="https://github.com/jneander" data-icon="github">
@@ -24,7 +24,9 @@ import Link from './link.astro'
         <Link href="/resume">Resume</Link>
       </div>
     </div>
+  </div>
 
+  <div class="breakout">
     <p>© 2012–Present Jeremy Neander. All Rights Reserved.</p>
   </div>
 </footer>
@@ -35,11 +37,8 @@ import Link from './link.astro'
   .footer {
     background-color: properties.get-value('base', 'color', 'brand-orange');
 
-    font-size: properties.get-value('base', 'fontSize', 'small');
     text-align: center;
 
-    margin-block-start: properties.get-value('base', 'spacing', 'xxxl', 'px');
-    padding-inline: properties.get-value('base', 'spacing', 'm', 'px');
     padding-block: properties.get-value('base', 'spacing', 'l', 'px');
   }
 
@@ -49,7 +48,7 @@ import Link from './link.astro'
     justify-content: space-between;
     gap: properties.get-value('base', 'spacing', 'm', 'rem');
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 25em) {
       justify-content: center;
     }
   }
@@ -97,7 +96,10 @@ import Link from './link.astro'
       properties.get-value('base', 'spacing', 's', 'em');
   }
 
-  p {
+  .footer > :last-child p {
+    font-size: properties.get-value('base', 'fontSize', 'small');
+
+    margin-inline: auto;
     margin-block-start: properties.get-value('base', 'spacing', 'xxl', 'px');
   }
 </style>

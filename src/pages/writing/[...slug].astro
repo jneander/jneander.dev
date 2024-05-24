@@ -7,7 +7,7 @@ import BaseLayout from '../../layouts/base-layout.astro'
 export async function getStaticPaths() {
   const posts = await getCollection('writing')
 
-  return posts.map((post) => {
+  return posts.map(post => {
     return {
       params: {
         slug: post.slug,
@@ -24,7 +24,7 @@ const {date, description, title} = post.data
 ---
 
 <BaseLayout description={description} openGraphType="article" title={title}>
-  <main class="wrapper flow">
+  <main class="content-grid flow">
     <header class="flow">
       <h1>{title}</h1>
 

@@ -90,18 +90,29 @@ const currentUrl = Astro.url.href
   @use '../styles/foundation';
 
   @use '../styles/headings';
+  @use '../styles/layouts';
   @use '../styles/links';
   @use '../styles/utilities';
 
   @use '../styles/regions/code';
 
-  body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-  }
+  @use '../styles/properties';
 
-  body > main {
-    align-self: self-start;
+  body {
+    display: flex;
+    flex-direction: column;
+
+    & > header {
+      margin-block-end: properties.get-value('base', 'spacing', 'xxxl', 'px');
+    }
+
+    & > :has(+ footer) {
+      margin-block-end: properties.get-value('base', 'spacing', 'xxxl', 'px');
+    }
+
+    & > footer {
+      margin-block-start: auto;
+    }
   }
 
   .no-transition * {

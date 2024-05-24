@@ -19,8 +19,8 @@ navItems.forEach(navItem => {
 })
 ---
 
-<header class="header">
-  <div class="wrapper">
+<header class="header content-grid">
+  <div class="breakout">
     <Link href="/">
       <Svg class="SiteLogo" aria-hidden svg={personalLogo} />
 
@@ -50,9 +50,8 @@ navItems.forEach(navItem => {
     font-family: properties.get-value('base', 'fontFamily', 'secondary');
 
     padding-block: properties.get-value('base', 'spacing', 'm', 'px');
-    margin-block-end: properties.get-value('base', 'spacing', 'xxxl', 'px');
 
-    & > .wrapper {
+    & > .breakout {
       display: flex;
       justify-content: space-between;
       align-items: center;

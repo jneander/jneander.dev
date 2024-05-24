@@ -1,5 +1,6 @@
 @use 'properties/base/spacing';
 @use 'properties/element/text';
+@use 'properties';
 
 /*
  * ======
@@ -12,7 +13,7 @@
 }
 
 .wrapper {
-  --wrapper-padding-inline: #{spacing.get-value('l', 'px')};
+  --wrapper-padding-inline: #{properties.get-value('layout', 'viewport', 'padding-inline')};
 
   max-inline-size: var(
     --wrapper-max-inline-size,
