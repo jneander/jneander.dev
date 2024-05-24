@@ -31,8 +31,8 @@ $properties: (
   // Inline Code
   'Inline':
     (
-      'borderRadius': _define('Inline-padding', 0.3em),
-      'padding': _define('Inline-padding', 0.1em),
+      'borderRadius': _define('padding-inline', 0.3em),
+      'padding': _define('padding-inline', 0.1em),
     ),
   'Palette': (
     0: _define('0', #999),

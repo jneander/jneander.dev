@@ -88,3 +88,7 @@ dl,
 dd {
   max-inline-size: properties.get-value('element', 'text', 'maxInlineSize');
 }
+
+hr {
+  width: 100%;
+}

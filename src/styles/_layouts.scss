@@ -1,0 +1,48 @@
+@use './properties';
+
+.content-grid {
+  --_viewport-padding: #{properties.get-value('layout', 'viewport', 'padding-inline')};
+
+  --_breakout-max-width: #{properties.get-value('layout', 'content', 'max-inline-size')};
+  --_article-max-width: #{properties.get-value('layout', 'article', 'max-inline-size')};
+
+  --_full-padding: minmax(var(--_viewport-padding), 1fr);
+  --_breakout-padding: minmax(
+    0,
+    calc((var(--_breakout-max-width) - var(--_article-max-width)) / 2)
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full]
+    var(--_full-padding)
+    //
+    [breakout-start]
+    var(--_breakout-padding)
+    //
+    [article-start]
+    min(var(--_article-max-width), 100% - var(--_viewport-padding) * 2)
+    [article-end]
+    //
+    var(--_breakout-padding)
+    [breakout-end]
+    //
+    var(--_full-padding)
+    [full-end];
+
+  :where(& > *) {
+    grid-column: article;
+  }
+
+  & > .full {
+    grid-column: full;
+  }
+
+  & > .breakout {
+    grid-column: breakout;
+  }
+
+  & > .article {
+    grid-column: article;
+  }
+}

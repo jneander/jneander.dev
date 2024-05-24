@@ -1,0 +1,14 @@
+@use '../../shared/property';
+@use '../element';
+
+@function _define($identifier, $default-value) {
+  @return property.define(jn-layout-article-#{$identifier}, $default-value);
+}
+
+$properties: (
+  'max-inline-size': _define(max-inline-size, element.get-value('text', 'maxInlineSize')),
+);
+
+@function get-value($keys...) {
+  @return property.get-value($properties, $keys...);
+}

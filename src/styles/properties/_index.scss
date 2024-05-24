@@ -2,11 +2,13 @@
 
 @use './base';
 @use './element';
+@use './layout';
 @use './region';
 
 $properties: (
   'base': base.$properties,
   'element': element.$properties,
+  'layout': layout.$properties,
   'region': region.$properties,
 );
 

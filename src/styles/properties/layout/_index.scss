@@ -1,0 +1,15 @@
+@use '../../shared/property';
+
+@use './article' as article;
+@use './content' as content;
+@use './viewport' as viewport;
+
+$properties: (
+  'article': article.$properties,
+  'content': content.$properties,
+  'viewport': viewport.$properties,
+);
+
+@function get-value($keys...) {
+  @return property.get-value($properties, $keys...);
+}

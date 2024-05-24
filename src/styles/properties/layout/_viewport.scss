@@ -1,0 +1,14 @@
+@use '../../shared/property';
+@use '../base';
+
+@function _define($identifier, $default-value) {
+  @return property.define(jn-layout-viewport-#{$identifier}, $default-value);
+}
+
+$properties: (
+  'padding-inline': _define(padding-inline, base.get-value('spacing', 'l', 'px')),
+);
+
+@function get-value($keys...) {
+  @return property.get-value($properties, $keys...);
+}
