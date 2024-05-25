@@ -1,29 +1,76 @@
 ---
+import {Picture} from 'astro:assets'
+
+import avatar from '../assets/images/avatar-large.png'
+import Link from '../components/link.astro'
+import {author} from '../constants'
 import BaseLayout from '../layouts/base-layout.astro'
 ---
 
 <BaseLayout title="Jeremy Neander">
-  <main class="wrapper">
-    <picture class="Avatar">
-      <source srcset="/images/avatar.avif" type="image/avif" />
-      <source srcset="/images/avatar.webp" type="image/webp" />
-      <img
-        src="/images/avatar.png"
-        alt="Cartoon portrait of Jeremy Neander, commissioned from artist Brad Yoo"
-      />
-    </picture>
+  <main class="content-grid full">
+    <div class="breakout">
+      <div class="AvatarContainer">
+        <Picture
+          alt="Cartoon portrait of Jeremy Neander, commissioned from artist Brad Yoo"
+          formats={['avif', 'webp']}
+          height={280}
+          src={avatar}
+          width={280}
+        />
 
-    <div class="flow">
+        <!-- Zero size SVG to take up zero space when CSS is unavailable -->
+        <svg
+          aria-hidden
+          fill="none"
+          height="0"
+          viewBox="0 0 280 280"
+          width="0"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <clipPath id="avatar-clip-path" clipPathUnits="objectBoundingBox">
+            <path
+              d="M0.0857143 0.585714H0V0H1V0.585714H0.914286C0.914286 0.814518 0.728804 1 0.5 1C0.271196 1 0.0857143 0.814518 0.0857143 0.585714Z"
+            ></path>
+          </clipPath>
+          <circle cx="140" cy="164" r="116" fill="currentColor"></circle>
+        </svg>
+      </div>
+
+      <p class="Greeting">
+        <span>Hello there! I'm Jeremy,</span>
+
+        <span>
+          <strong>Full-stack developer</strong> and enthusiastic <em>collaborator</em> with a passion
+          for accessibility.
+        </span>
+      </p>
+    </div>
+
+    <div class="Intro flow full breakout-max content-grid">
       <p>
-        As a software craftsperson, I am continually developing my skills and practices to be of the
-        highest quality and greatest effect. Creative problem-solving, logic, pragmatism, and a
-        craving for knowledge drive me towards achieving both my personal and professional goals.
+        I've been a software engineer for over 12 years, and in that time, I've worked on some
+        exciting and challenging projects, on and off the web. I've been privileged to work with
+        countless wonderful people, teaming up to achieve amazing things together.
       </p>
 
       <p>
-        I am a life-long learner, constantly seeking new challenges and reaching outside my comfort
-        zone. When surrounded by passionate minds, the opportunities for growth are boundless.
-        Everyone has something to teach.
+        I'm a life-long student, continuously seeking to learn and improve myself. My main focus
+        these days is on expanding my abilities, creating career opportunities, and connecting with
+        people with shared interests.
+      </p>
+
+      <p>
+        When I'm not writing code, I'm usually reading, writing, gardening, or spending time with my
+        family. I'm also always on the lookout for new rubber duckies to add to my collection.
+      </p>
+    </div>
+
+    <div class="Cta breakout">
+      <p>
+        Interested in working together? <Link href={`mailto:${author.email}`}
+          >Send me a message!</Link
+        >
       </p>
     </div>
   </main>
@@ -31,42 +78,135 @@ import BaseLayout from '../layouts/base-layout.astro'
 
 <style lang="scss">
   @use '../styles/properties';
+  @use '../styles/utilities';
 
   main {
-    --avatar-size: 186px;
-    --region-column-gap: #{properties.get-value('base', 'spacing', 'xxxl', 'px')};
+    & > div:first-of-type {
+      display: flex;
+      flex-wrap: wrap;
+      gap: properties.get-value('base', 'spacing', 'xxxl', 'px')
+        properties.get-value('base', 'spacing', 'xxl', 'px');
+      justify-content: center;
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: properties.get-value('base', 'spacing', 'xl', 'px') var(--region-column-gap);
+      padding-block: #{utilities.clampRemap(
+          (
+            'minWidth': 480,
+            'maxWidth': 800,
+            'minSize': 0,
+            'maxSize': 64,
+            'usePx': true,
+          )
+        )};
 
-    @media (min-width: 42em) {
-      grid-template-columns: auto auto;
-      padding-inline: properties.get-value('base', 'spacing', 'xxl', 'px');
-
-      max-width: calc(
-        var(--avatar-size) + var(--region-column-gap) +
-          properties.get-value('element', 'text', 'maxInlineSize')
-      );
+      margin-block-end: properties.get-value('base', 'spacing', 'xxxl', 'px');
     }
   }
 
-  .Avatar {
-    display: inline-block;
-    margin: 0 auto;
+  .AvatarContainer {
+    --avatar-size: #{utilities.clampRemap(
+        (
+          'minWidth': 320,
+          'maxWidth': 480,
+          'minSize': 180,
+          'maxSize': 280,
+        )
+      )};
 
-    img {
-      border-radius: 50%;
+    aspect-ratio: 1;
+    height: var(--avatar-size);
+
+    position: relative;
+
+    clip-path: url('#avatar-clip-path');
+
+    :global(picture, img) {
+      aspect-ratio: 1;
+      height: 100%;
+    }
+
+    svg {
       width: var(--avatar-size);
-      aspect-ratio: 1 / 1;
+      height: var(--avatar-size);
+      position: absolute;
+      inset: 0;
+      color: properties.get-value('base', 'color', 'secondary-2');
+      z-index: -1; // Layer behind avatar
     }
   }
 
-  h1 {
-    font-size: properties.get-value('element', 'h3', 'fontSize');
-    margin-inline: auto;
-    font-weight: properties.get-value('base', 'fontWeight', 'normal');
-    text-transform: uppercase;
+  .Greeting {
+    font-family: properties.get-value('base', 'fontFamily', 'secondary');
+    line-height: 1.2;
+    text-align: start;
+    word-break: break-word;
+
+    flex-basis: 40ch;
+    flex-grow: 1;
+    max-width: 62ch;
+
+    span:nth-of-type(1) {
+      font-size: 1.5rem;
+    }
+
+    span:nth-of-type(2) {
+      display: block;
+
+      font-size: #{utilities.clampRemap(
+          (
+            'minWidth': 320,
+            'maxWidth': 640,
+            'minSize': 32,
+            'maxSize': 48,
+          )
+        )};
+
+      margin-block-start: 1rem;
+    }
+
+    em {
+      font-style: normal;
+      text-decoration: underline;
+      text-decoration-color: properties.get-value('base', 'color', 'brand-orange');
+      text-decoration-thickness: 0.125em;
+    }
+  }
+
+  .Intro {
+    background-color: properties.get-value('base', 'color', 'secondary-2');
+
+    font-size: #{utilities.clampRemap(
+        (
+          'minWidth': 320,
+          'maxWidth': 640,
+          'minSize': 16,
+          'maxSize': 18.4,
+        )
+      )};
+
+    padding-block: properties.get-value('base', 'spacing', 'xxxl', 'px');
+  }
+
+  .Cta {
+    margin-block: calc(2 * properties.get-value('base', 'spacing', 'xxxl', 'px'));
+    font-size: 1.5rem;
+
+    p {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    a {
+      @include properties.assign(
+        ('element', 'a', 'textDecorationColor'),
+        properties.get-value('base', 'color', 'brand-orange')
+      );
+
+      text-decoration-thickness: 0.125em;
+    }
+  }
+
+  main {
+    // Remove the default margin for the base layout.
+    margin-block-end: 0;
   }
 </style>
