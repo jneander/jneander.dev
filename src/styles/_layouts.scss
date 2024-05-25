@@ -42,6 +42,12 @@
     grid-column: breakout;
   }
 
+  & > .breakout-max {
+    grid-column: full;
+    max-width: var(--_breakout-max-width);
+    margin-inline: auto;
+  }
+
   & > .article {
     grid-column: article;
   }

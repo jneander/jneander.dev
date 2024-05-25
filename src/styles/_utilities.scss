@@ -1,3 +1,5 @@
+@use 'utopia-core-scss' as utopia;
+
 @use 'properties/base/spacing';
 @use 'properties/element/text';
 @use 'properties';
@@ -54,4 +56,8 @@ svg.icon {
   display: inline-block;
   height: 1.5em;
   width: 1.5em;
+}
+
+@function clampRemap($params) {
+  @return utopia.calculateClamp($params);
 }
