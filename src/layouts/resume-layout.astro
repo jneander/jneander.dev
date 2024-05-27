@@ -1,4 +1,5 @@
 ---
+import {resumeUrl} from '../constants'
 import BaseLayout from './base-layout.astro'
 
 interface Props {
@@ -20,10 +21,7 @@ const {content, description = content?.description, title = content?.title} = As
     <header>
       <h1>Resume</h1>
 
-      <a
-        class="icon"
-        href="https://docs.google.com/document/d/1fVgM-AMwPo43ysZxP-7YGxJknLFcfNsoST_h_g9nYSs/export?format=pdf"
-      >
+      <a class="icon" href={resumeUrl}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"

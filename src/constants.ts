@@ -10,6 +10,9 @@ export const author = {
   email: 'jeremy.neander@gmail.com',
 }
 
+export const resumeUrl =
+  'https://docs.google.com/document/d/1fVgM-AMwPo43ysZxP-7YGxJknLFcfNsoST_h_g9nYSs/export?format=pdf'
+
 export const openGraph = {
   image: {
     url: '/images/og-image.jpg',
