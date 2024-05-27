@@ -1,210 +1,362 @@
 ---
+import Link from '../../components/link.astro'
+import {resumeUrl} from '../../constants'
 import BaseLayout from '../../layouts/base-layout.astro'
+
+import avelaGlyphBrand from '../../assets/logos/employers/avela-glyph-brand.svg'
+import avelaWordmarkBrand from '../../assets/logos/employers/avela-wordmark-brand.svg'
+import eighthLightGlyphDark from '../../assets/logos/employers/8th-light-glyph-dark.svg'
+import eighthLightWordmarkDark from '../../assets/logos/employers/8th-light-wordmark-dark.svg'
+import glassdoorGlyphBrand from '../../assets/logos/employers/glassdoor-glyph-brand.svg'
+import glassdoorWordmarkBrand from '../../assets/logos/employers/glassdoor-wordmark-brand.svg'
+import instructureGlyphBrand from '../../assets/logos/employers/instructure-glyph-brand.svg'
+import instructureWordmarkBrand from '../../assets/logos/employers/instructure-wordmark-brand.svg'
 ---
 
-<BaseLayout title="Work History">
+<BaseLayout title="Experience">
   <main class="content-grid flow">
     <h1>Experience</h1>
 
-    <h2>Work History</h2>
+    <p>
+      For the short version, <Link href={resumeUrl}>download my résumé</Link>.
+    </p>
 
-    <article class="flow">
-      <h3>
-        <a href="/experience/avela">Software Engineer</a>
-      </h3>
+    <section class="work-history full content-grid flow">
+      <h2>Work History</h2>
 
-      <p class="company-name">Avela</p>
+      <article class="breakout">
+        <h3>
+          <a href="/experience/avela">Software Engineer at Avela</a>
+        </h3>
 
-      <p class="date-range">2023 – 2023</p>
+        <div class="info">
+          <img alt="" src={avelaGlyphBrand.src} />
+          <img alt="Avela" src={avelaWordmarkBrand.src} />
+          <p>2023 – 2023</p>
+        </div>
 
-      <p>
-        Avela is an education software company and consulting practice focused on equity in school
-        enrollment and admissions.
-      </p>
+        <div class="description flow">
+          <p>
+            Avela is an education software company and consulting practice focused on equity in
+            school enrollment and admissions.
+          </p>
 
-      <p>
-        Working as a full-stack web engineer, I was responsible for development on the company's
-        React-based, single-page applications. The front end utilized Chakra UI and communicated via
-        GraphQL with a back end built on top of the AWS CDK.
-      </p>
-    </article>
+          <p>
+            Working as a full-stack web engineer, I was responsible for development on the company's
+            React-based, single-page applications. The front end utilized Chakra UI and communicated
+            via GraphQL with a back end built on top of the AWS CDK.
+          </p>
+        </div>
+      </article>
 
-    <article class="flow">
-      <h3>
-        <a href="/experience/glassdoor">Lead Software Engineer</a>
-      </h3>
+      <article class="breakout">
+        <h3>
+          <a href="/experience/glassdoor">Lead Software Engineer at Glassdoor</a>
+        </h3>
 
-      <p class="company-name">Glassdoor</p>
+        <div class="info">
+          <img alt="" src={glassdoorGlyphBrand.src} />
+          <img alt="Glassdoor" src={glassdoorWordmarkBrand.src} />
+          <p>2020 – 2023</p>
+        </div>
 
-      <p class="date-range">2020 – 2023</p>
+        <div class="description flow">
+          <p>
+            Glassdoor is the go-to platform for job seekers and employers, dedicated to promoting
+            workplace transparency and empowering individuals to find fulfilling careers in
+            inclusive and supportive environments.
+          </p>
 
-      <p>
-        Glassdoor is the go-to platform for job seekers and employers, dedicated to promoting
-        workplace transparency and empowering individuals to find fulfilling careers in inclusive
-        and supportive environments.
-      </p>
+          <p>
+            As my role evolved from feature team engineer to front end platform engineer, I was
+            tasked with developing shared tooling and eventually with leading an overhaul of the
+            Glassdoor design system. Our tech was transitioning from legacy solutions towards
+            Node.js, TypeScript, and React.
+          </p>
+        </div>
+      </article>
 
-      <p>
-        As my role evolved from feature team engineer to front end platform engineer, I was tasked
-        with developing shared tooling and eventually with leading an overhaul of the Glassdoor
-        design system. Our tech was transitioning from legacy solutions towards Node.js, TypeScript,
-        and React.
-      </p>
-    </article>
+      <article class="breakout">
+        <h3>
+          <a href="/experience/instructure">Senior Software Engineer at Instructure</a>
+        </h3>
 
-    <article class="flow">
-      <h3>
-        <a href="/experience/instructure">Senior Software Engineer</a>
-      </h3>
+        <div class="info">
+          <img alt="" src={instructureGlyphBrand.src} />
+          <img alt="Instructure" src={instructureWordmarkBrand.src} />
+          <p>2016 – 2020</p>
+        </div>
 
-      <p class="company-name">Instructure</p>
+        <div class="description flow">
+          <p>
+            Instructure are pioneers in educational software, leading the industry with Canvas LMS,
+            the world's top teaching and learning platform used by millions globally.
+          </p>
 
-      <p class="date-range">2016 – 2020</p>
+          <p>
+            As a full-stack engineer, I was responsible for feature development using React, Ruby on
+            Rails, and a mix of other technologies. I was also a member of the design system team,
+            developing our own UI library.
+          </p>
+        </div>
+      </article>
 
-      <p>
-        Instructure are pioneers in educational software, leading the industry with Canvas LMS, the
-        world's top teaching and learning platform used by millions globally.
-      </p>
+      <article class="breakout">
+        <h3>
+          <a href="/experience/8th-light">Software Craftsperson at 8th Light</a>
+        </h3>
 
-      <p>
-        As a full-stack engineer, I was responsible for feature development using React, Ruby on
-        Rails, and a mix of other technologies. I was also a member of the design system team,
-        developing our own UI library.
-      </p>
-    </article>
+        <div class="info">
+          <img alt="" src={eighthLightGlyphDark.src} />
+          <img alt="8th Light" src={eighthLightWordmarkDark.src} />
+          <p>2012 – 2016</p>
+        </div>
 
-    <article class="flow">
-      <h3>
-        <a href="/experience/8th-light">Software Craftsperson</a>
-      </h3>
+        <div class="description flow">
+          <p>
+            8th Light are a global team of software, design, and technology professionals, helping
+            clients to imagine and create elegant, robust, and groundbreaking digital solutions to
+            complex problems.
+          </p>
 
-      <p class="company-name">8th Light</p>
+          <p>
+            Starting as an apprentice, then graduating to crafter, I primarily used Ruby on Rails
+            and Clojure. I also worked on a variety of other projects outside of the web.
+          </p>
+        </div>
+      </article>
+    </section>
 
-      <p class="date-range">2012 – 2016</p>
+    <section class="knowledge flow">
+      <h2>Things I Know and Do</h2>
 
-      <p>
-        8th Light are a global team of software, design, and technology professionals, helping
-        clients to imagine and create elegant, robust, and groundbreaking digital solutions to
-        complex problems.
-      </p>
+      <article>
+        <h3>Languages & Environments</h3>
 
-      <p>
-        Starting as an apprentice, then graduating to crafter, I primarily used Ruby on Rails and
-        Clojure. I also worked on a variety of other projects outside of the web.
-      </p>
-    </article>
+        <p>I am well-acquainted with:</p>
 
-    <h2>Things I Know and Do</h2>
+        <ul class="tokens" role="list">
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Semantic HTML</li>
+          <li>Node.js</li>
+          <li>CSS</li>
+          <li>Sass (SCSS)</li>
+          <li>Ruby</li>
+        </ul>
 
-    <section class="flow">
-      <h3>Languages & Environments</h3>
+        <p>I also have some experience with:</p>
 
-      <p>I am well-acquainted with:</p>
+        <ul class="tokens" role="list">
+          <li>Clojure</li>
+          <li>CoffeeScript</li>
+          <li>ClojureScript</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>Go</li>
+          <li>C</li>
+        </ul>
+      </article>
 
-      <ul>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>Semantic HTML</li>
-        <li>Node.js</li>
-        <li>CSS</li>
-        <li>Sass (SCSS)</li>
-        <li>Ruby</li>
-      </ul>
+      <article>
+        <h3>Libraries, Frameworks, and SDKs</h3>
 
-      <p>I have experience with:</p>
+        <p>I regularly use:</p>
 
-      <ul>
-        <li>Clojure</li>
-        <li>CoffeeScript</li>
-        <li>ClojureScript</li>
-        <li>Python</li>
-        <li>Java</li>
-        <li>Go</li>
-        <li>C</li>
-      </ul>
+        <ul class="tokens" role="list">
+          <li>React</li>
+          <li>Express.js</li>
+          <li>Mocha</li>
+          <li>Karma</li>
+          <li>Chai</li>
+          <li>Sinon</li>
+          <li>Knex</li>
+        </ul>
 
-      <h3>Libraries, Frameworks, and SDKs</h3>
+        <p>I also have some experience with:</p>
 
-      <p>I regularly use:</p>
+        <ul class="tokens" role="list">
+          <li>Ruby on Rails</li>
+          <li>Webpack</li>
+          <li>Vite</li>
+          <li>Storybook</li>
+          <li>Jest</li>
+          <li>Next.js</li>
+          <li>Sinatra</li>
+          <li>Eleventy</li>
+          <li>Vanilla Extract</li>
+          <li>Emotion</li>
+          <li>Chakra UI</li>
+          <li>InstUI</li>
+        </ul>
+      </article>
 
-      <ul>
-        <li>React</li>
-        <li>Express.js</li>
-        <li>Mocha</li>
-        <li>Karma</li>
-        <li>Chai</li>
-        <li>Sinon</li>
-        <li>Knex</li>
-      </ul>
+      <div class="list-grid">
+        <article>
+          <h3>Tools</h3>
 
-      <p>I have experience with:</p>
+          <ul>
+            <li>git</li>
+            <li>GitHub</li>
+            <li>GitLab</li>
+            <li>Vim</li>
+            <li>VS Code</li>
+            <li>Figma</li>
+            <li>Sketch</li>
+            <li>Codepen</li>
+            <li>Codesandbox</li>
+            <li>Netlify</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+            <li>Notion</li>
+            <li>Jira</li>
+            <li>Asana</li>
+          </ul>
+        </article>
 
-      <ul>
-        <li>Ruby on Rails</li>
-        <li>Webpack</li>
-        <li>Vite</li>
-        <li>Storybook</li>
-        <li>Jest</li>
-        <li>Next.js</li>
-        <li>Sinatra</li>
-        <li>Eleventy</li>
-        <li>Vanilla Extract</li>
-        <li>Emotion</li>
-        <li>Chakra UI</li>
-        <li>InstUI</li>
-      </ul>
+        <article>
+          <h3>Practices</h3>
 
-      <h3>Tools</h3>
-
-      <ul>
-        <li>git</li>
-        <li>GitHub</li>
-        <li>GitLab</li>
-        <li>Vim</li>
-        <li>VS Code</li>
-        <li>Figma</li>
-        <li>Sketch</li>
-        <li>Codepen</li>
-        <li>Codesandbox</li>
-        <li>Netlify</li>
-        <li>PostgreSQL</li>
-        <li>MongoDB</li>
-        <li>Notion</li>
-        <li>Jira</li>
-        <li>Asana</li>
-      </ul>
-
-      <h3>Practices</h3>
-
-      <ul>
-        <li>Accessibility</li>
-        <li>BDD/TDD Testing</li>
-        <li>Design Systems</li>
-        <li>Short, Medium, and Long Term Planning</li>
-        <li>Defining Acceptance Criteria</li>
-        <li>Large-scale Refactoring</li>
-        <li>Data Modeling</li>
-        <li>API Design</li>
-        <li>Dcumentation</li>
-        <li>Personal Growth & Development</li>
-        <li>Building a Support Feedback Culture</li>
-        <li>Estimations</li>
-      </ul>
+          <ul>
+            <li>Accessibility</li>
+            <li>Test-driven Development (TDD)</li>
+            <li>Design Systems</li>
+            <li>Short, Medium, and Long Term Planning</li>
+            <li>Defining Acceptance Criteria</li>
+            <li>Large-scale Refactoring</li>
+            <li>Data Modeling</li>
+            <li>API Design</li>
+            <li>Documentation</li>
+            <li>Personal Growth & Development</li>
+            <li>Building a Supportive Feedback Culture</li>
+          </ul>
+        </article>
+      </div>
     </section>
   </main>
+
+  <style lang="scss">
+    @use '../../styles/properties';
+
+    h1,
+    h2 {
+      max-inline-size: unset;
+    }
+
+    .work-history {
+      container-type: inline-size;
+
+      article {
+        display: grid;
+        grid-template-areas: 'info heading' 'info description';
+        grid-template-rows: auto 1fr;
+        justify-items: center;
+        gap: properties.get-value('base', 'spacing', 'm', 'rem')
+          properties.get-value('base', 'spacing', 'xl', 'rem');
+
+        @container (max-inline-size: 40rem) {
+          grid-template-areas: 'info' 'heading' 'description';
+          grid-template-columns: 100%;
+
+          h3 {
+            text-align: center;
+          }
+        }
+
+        margin-block-start: properties.get-value('base', 'spacing', 'xxxl', 'rem');
+        margin-inline: auto;
+
+        &:last-of-type {
+          margin-block-end: properties.get-value('base', 'spacing', 'xxxl', 'rem');
+        }
+
+        h3 {
+          grid-area: heading;
+
+          inline-size: 100%;
+        }
+
+        h3,
+        .description {
+          max-inline-size: properties.get-value('element', 'text', 'maxInlineSize');
+        }
+
+        .info {
+          grid-area: info;
+
+          display: flex;
+          flex-direction: column;
+          gap: properties.get-value('base', 'spacing', 'm', 'rem');
+          align-items: center;
+
+          text-align: center;
+
+          max-inline-size: 100%;
+          inline-size: 10rem;
+
+          img:first-of-type {
+            inline-size: 100%;
+            max-inline-size: min(128px, 100%);
+          }
+
+          img:last-of-type {
+            inline-size: 100%;
+            max-block-size: 1rem;
+          }
+        }
+
+        .description {
+          grid-area: description;
+          justify-self: start;
+
+          inline-size: 100%;
+        }
+      }
+    }
+
+    .knowledge {
+      article {
+        padding-block-start: properties.get-value('base', 'spacing', 'xl', 'rem');
+      }
+    }
+
+    p:has(+ ul) {
+      margin-block-start: 1.5rem;
+    }
+
+    p + ul {
+      margin-block-start: properties.get-value('base', 'spacing', 'xs', 'rem');
+    }
+
+    .list-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 properties.get-value('base', 'spacing', 'm', 'rem');
+
+      & > * {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+
+        min-inline-size: 12.5rem;
+      }
+    }
+
+    ul.tokens {
+      display: flex;
+      flex-wrap: wrap;
+      gap: properties.get-value('base', 'spacing', 'xs', 'rem');
+
+      padding: 0;
+
+      & > li {
+        background-color: properties.get-value('base', 'color', 'secondary-2');
+
+        display: inline-block; // Remove markers (renders as ordinary element)
+
+        padding: properties.get-value('base', 'spacing', 'xxs', 'rem')
+          properties.get-value('base', 'spacing', 's', 'rem');
+      }
+    }
+  </style>
 </BaseLayout>
-
-<style lang="scss">
-  @use '../../styles/properties';
-
-  .company-name {
-    font-family: properties.get-value('element', 'h4', 'fontFamily');
-    font-size: properties.get-value('element', 'h4', 'fontSize');
-    margin-block-start: properties.get-value('base', 'spacing', 'xs', 'em');
-  }
-
-  .date-range {
-    font-style: italic;
-    margin-block-start: properties.get-value('base', 'spacing', 'xxs', 'em');
-  }
-</style>
