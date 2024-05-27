@@ -1,10 +1,11 @@
-import {defineConfig} from 'astro/config'
-
 import mdx from '@astrojs/mdx'
+import sitemap from '@astrojs/sitemap'
+
+import {defineConfig} from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx()],
+  integrations: [mdx(), sitemap()],
 
   markdown: {
     syntaxHighlight: 'prism',
@@ -17,4 +18,6 @@ export default defineConfig({
   redirects: {
     '/resume': '/experience',
   },
+
+  site: 'https://jneander.dev',
 })
