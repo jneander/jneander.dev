@@ -1,7 +1,8 @@
 ---
-import {getCollection} from 'astro:content'
+import {getCollection, getEntry} from 'astro:content'
 
-import {getLastPath} from '../../../helpers'
+import Link from '../../../components/link.astro'
+import {employerUrl, getLastPath} from '../../../helpers'
 import BaseLayout from '../../../layouts/base-layout.astro'
 
 export async function getStaticPaths() {
@@ -25,11 +26,15 @@ export async function getStaticPaths() {
 const {post} = Astro.props
 const {Content} = await post.render()
 const {title} = post.data
+
+const employer = await getEntry('employers', post.data.employer.slug)
 ---
 
 <BaseLayout openGraphType="article" title={title}>
   <main class="content-grid flow">
     <h1>{title}</h1>
+
+    <p>Employer: <Link href={employerUrl(employer.slug)}>{employer.data.name}</Link></p>
 
     <p>{post.data.description}</p>
 
