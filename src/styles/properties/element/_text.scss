@@ -5,7 +5,7 @@
 }
 
 $properties: (
-  'maxInlineSize': _define('maxInlineSize', 72ch),
+  'maxInlineSize': _define('maxInlineSize', 42rem),
 );
 
 @function get-value($keys...) {
