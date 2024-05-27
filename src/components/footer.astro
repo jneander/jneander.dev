@@ -1,4 +1,5 @@
 ---
+import {resumeUrl} from '../constants'
 import Link from './link.astro'
 ---
 
@@ -15,13 +16,13 @@ import Link from './link.astro'
         </a>
 
         <a href="https://www.linkedin.com/in/jeremyneander" data-icon="linkedin">
-          <span class="visually-hidden">Linkedin</span>
+          <span class="visually-hidden">LinkedIn</span>
         </a>
       </div>
 
       <div class="SiteLinks">
         <Link href="/principles">Principles</Link>
-        <Link href="/resume">Resume</Link>
+        <Link href={resumeUrl}>Résumé</Link>
       </div>
     </div>
   </div>

@@ -13,4 +13,8 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
+
+  redirects: {
+    '/resume': '/experience',
+  },
 })
