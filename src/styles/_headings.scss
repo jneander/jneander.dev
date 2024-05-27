@@ -9,7 +9,6 @@
     font-style: properties.get-value('element', 'h#{$i}', 'fontStyle');
     font-weight: properties.get-value('element', 'h#{$i}', 'fontWeight');
     line-height: properties.get-value('element', 'h#{$i}', 'lineHeight');
-    max-inline-size: properties.get-value('element', 'h#{$i}', 'maxInlineSize');
   }
 }
 
