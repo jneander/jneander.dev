@@ -8,19 +8,24 @@ import {dedent} from 'ts-dedent'
 import {author, description, language, title, url} from '../constants'
 import {absoluteUrl, writingUrl} from '../helpers'
 
+export const prerender = true
+
 const parser = new MarkdownIt()
 
-export async function get(context: APIContext) {
+export async function GET(context: APIContext) {
   const posts = await getCollection('writing')
   posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 
   const currentUrl = absoluteUrl(context.url.pathname)
   const updatedDate = posts[0].data.date
 
-  const postsContents = posts.map((post) => {
+  const postsContents = posts.map(post => {
     const absolutePostUrl = absoluteUrl(writingUrl(post.slug))
     const content = sanitizeHtml(
-      parser.render(post.body).replace('src="/', `src="${url}/`).replace('href="/', `href="${url}/`)
+      parser
+        .render(post.body)
+        .replace('src="/', `src="${url}/`)
+        .replace('href="/', `href="${url}/`),
     )
 
     return dedent`
