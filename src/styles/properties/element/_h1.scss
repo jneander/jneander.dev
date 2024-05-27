@@ -12,7 +12,6 @@ $properties: (
   'fontStyle': _define('fontStyle', heading.get-value('fontStyle')),
   'fontWeight': _define('fontWeight', heading.get-value('fontWeight')),
   'lineHeight': _define('lineHeight', heading.get-value('lineHeight')),
-  'maxInlineSize': _define('maxInlineSize', heading.modular-max-inline-size(3)),
 );
 
 @function get-value($keys...) {
