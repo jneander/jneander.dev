@@ -11,7 +11,7 @@ export const author = {
 }
 
 export const resumeUrl =
-  'https://docs.google.com/document/d/1fVgM-AMwPo43ysZxP-7YGxJknLFcfNsoST_h_g9nYSs/export?format=pdf'
+  'https://docs.google.com/document/d/1WXKAbeyggOTzEiYh8VdfK2AIJSFc47nNOQZWGd7zbS4/export?format=pdf'
 
 export const openGraph = {
   image: {
