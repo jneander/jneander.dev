@@ -13,9 +13,9 @@ interface Props {
   title?: string
 }
 
-let pageTitle = Astro.props.title || 'Jeremy Neander'
-if (pageTitle !== 'Jeremy Neander') {
-  pageTitle += ' | Jeremy Neander'
+let pageTitle = Astro.props.title || 'Jamie Neander'
+if (pageTitle !== 'Jamie Neander') {
+  pageTitle += ' | Jamie Neander'
 }
 
 const openGraphType = Astro.props.openGraphType || 'website'
@@ -34,7 +34,7 @@ const currentUrl = Astro.url.href
 
     <title>{pageTitle}</title>
 
-    <meta name="author" content="Jeremy Neander" />
+    <meta name="author" content="Jamie Neander" />
     <meta name="description" content={pageDescription} />
 
     <meta name="generator" content={Astro.generator} />
