@@ -1,13 +1,13 @@
 export const domain = 'jneander.dev'
 export const url = 'https://www.jneander.dev/'
-export const title = 'Jeremy Neander'
+export const title = 'Jamie Neander'
 export const description =
-  'Jeremy Neander is a software engineer working to build a better, more accessible web.'
+  'Jamie Neander is a software engineer working to build a better, more accessible web.'
 export const language = 'en-US'
 
 export const author = {
-  name: 'Jeremy Neander',
-  email: 'jeremy.neander@gmail.com',
+  name: 'Jamie Neander',
+  email: 'contact@jneander.dev',
 }
 
 export const resumeUrl =
@@ -16,7 +16,7 @@ export const resumeUrl =
 export const openGraph = {
   image: {
     url: '/images/og-image.jpg',
-    alt: 'Cartoon portrait of Jeremy Neander, commissioned from artist Brad Yoo',
+    alt: 'A silhouette of a cartoon portrait of Jamie Neander, with a pixelated, under-construction sign over the face',
     height: 512,
     width: 512,
   },
