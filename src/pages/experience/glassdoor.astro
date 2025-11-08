@@ -1,5 +1,5 @@
 ---
-import {getCollection, getEntry} from 'astro:content'
+import {getCollection, getEntry, render} from 'astro:content'
 
 import {employerProjectUrl} from '../../helpers'
 import BaseLayout from '../../layouts/base-layout.astro'
@@ -8,8 +8,12 @@ const EMPLOYER = 'glassdoor'
 
 const post = await getEntry('employers', EMPLOYER)
 
+if (post == null) {
+  throw new Error(`Employer with ID "${EMPLOYER}" not found.`)
+}
+
 const projects = (await getCollection('work-experience')).filter(
-  project => project.data.employer.slug === EMPLOYER,
+  project => project.data.employer.id === EMPLOYER,
 )
 
 projects.sort((a, b) => {
@@ -26,7 +30,7 @@ projects.sort((a, b) => {
   return a.data.title < b.data.title ? -1 : 1
 })
 
-const {Content} = await post.render()
+const {Content} = await render(post)
 
 const {name} = post.data
 ---
