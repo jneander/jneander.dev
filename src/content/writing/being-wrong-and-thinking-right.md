@@ -57,8 +57,8 @@ Their underling is supposed to take the lesson and leave.
 At the other end of the spectrum, there are those who see it as defending their work against those
 who seek to destroy it. Every bit of input or criticism is met with fierce resistance, defending
 both bad and good decisions alike. These engagements tend not to give the unreceptive employee much
-in the way of learning. The same can be said for the supervisor. However, he or she may very well
-end up learning more than they wanted to about the person whose work was being critiqued.
+in the way of learning. The same can be said for the supervisor. However, they may very well end up
+learning more than they wanted to about the person whose work was being critiqued.
 
 Feedback should be treated as a resource. A person can take advantage of it, or simply disregard it.
 It is up to the receiver to evaluate it and determine how to respond. That is, if a response is

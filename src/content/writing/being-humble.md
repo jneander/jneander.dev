@@ -25,9 +25,9 @@ another. Everyone wins!
 
 Never be afraid to make mistakes. Being afraid to make mistakes keeps you afraid to risk success.
 Everyone messes up at one time or another. Mistakes build experience, which helps to diminish the
-effects of future mistakes. The humble developer will recognize that he or she is not perfect.
-Mistakes will happen. Own them as they occur; they are invaluable opportunities to grow. Don't hide
-from them; and certainly don't hide them from others.
+effects of future mistakes. The humble developer will recognize that they are not perfect. Mistakes
+will happen. Own them as they occur; they are invaluable opportunities to grow. Don't hide from
+them; and certainly don't hide them from others.
 
 ## Team Effort
 
