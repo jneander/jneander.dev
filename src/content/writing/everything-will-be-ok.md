@@ -61,11 +61,12 @@ request, which the app interpreted as a successful upload.
 
 So, what _really_ went wrong here?
 
-It'd be convenient to assign blame to the hotel network for using questionable HTTP practices. I
-would argue that redirection might have been most appropriate. But even if they did, there are
-plenty of other ways for a network request to be mishandled or distorted. There is no strict
-requirement for servers and network nodes to all honor the same standards. The network is not to be
-trusted outright.
+It'd be convenient to assign blame to the hotel network for using questionable HTTP practices. One
+could argue that redirection might have been most appropriate, or perhaps a 405 "Method Not Allowed"
+if they are only handling GET requests. But even if they responded appropriately, there are plenty
+of other ways for a network request to be mishandled or distorted. There is no strict requirement
+for servers and network nodes to all honor the same standards. The network is not to be trusted
+outright.
 
 The developers on this team were conscious of the need to check the response from the server. And
 since this was still in the prototype phase, a 100% robust solution was not the primary objective.
