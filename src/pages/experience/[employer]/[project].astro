@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
     return {
       params: {
-        employer: post.data.employer.slug,
+        employer: post.data.employer.id,
         project: lastSlug,
         slug: lastSlug,
       },
@@ -27,7 +27,11 @@ const {post} = Astro.props
 const {Content} = await post.render()
 const {title} = post.data
 
-const employer = await getEntry('employers', post.data.employer.slug)
+const employer = await getEntry('employers', post.data.employer.id)
+
+if (employer == null) {
+  throw new Error(`Employer with ID "${post.data.employer.id}" not found.`)
+}
 ---
 
 <BaseLayout openGraphType="article" title={title}>

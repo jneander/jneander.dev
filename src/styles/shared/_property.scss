@@ -1,5 +1,6 @@
 @use 'sass:list';
 @use 'sass:map';
+@use 'sass:meta';
 
 @use './lists';
 
@@ -41,7 +42,7 @@
     @error "Property #{lists.to-string($keys, '.')} not found in property-map.";
   }
 
-  @if type-of($property-map) == 'map' {
+  @if meta.type-of($property-map) == 'map' {
     @error "$property-map is not a custom property map.";
   }
 
@@ -56,7 +57,7 @@
  * without modification.
  */
 @function get-default-value($property-or-value, $keys...) {
-  @if type-of($property-or-value) == 'map' {
+  @if meta.type-of($property-or-value) == 'map' {
     @return get($property-or-value, list.append($keys, 'defaultValue')...);
   }
 
@@ -71,7 +72,7 @@
  * be returned without modification.
  */
 @function get-identifier($property-or-identifier, $keys...) {
-  @if type-of($property-or-identifier) == 'map' {
+  @if meta.type-of($property-or-identifier) == 'map' {
     @return get($property-or-identifier, list.append($keys, 'identifier')...);
   }
 
@@ -86,7 +87,7 @@
  * modification.
  */
 @function get-value($property-or-var, $keys...) {
-  @if type-of($property-or-var) == 'map' {
+  @if meta.type-of($property-or-var) == 'map' {
     @return get($property-or-var, list.append($keys, 'var')...);
   }
 
